@@ -1,0 +1,36 @@
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f7f7f9;
+    border-width: .2rem 0 0;
+}
+.input-group {
+    position: relative;
+}
+.input-group label.error {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 12px;
+    color: #ff0000;
+    display: block;
+    margin: 0;
+}
+.card-body {
+    position: relative;
+}
+#loader {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url(../images/loader.gif) no-repeat center #fff;
+    opacity: 0.6;
+}
+
+.js-add-maino.pull-right {
+    float: right;
+}
