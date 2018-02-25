@@ -26,7 +26,7 @@ if (isset($_POST['staus']) && $_POST['staus'] == 'addmessage') {
 $sql = "SELECT mes.*, fro.fio fromname, too.fio toname FROM `messages` as mes ".
        "	LEFT JOIN `users` as fro ON fro.id_user = mes.user_id_from ".
        "	LEFT JOIN `users` as too ON too.id_user = mes.user_id_to ".
-       "	WHERE user_id_from=".$id_user." OR user_id_to = ".$id_user .") AND parent_id = 0 ".
+       "	WHERE (user_id_from=".$id_user." OR user_id_to = ".$id_user .") AND parent_id = 0 ".
        " order BY timestamp";
 $rows = $db->fetch_all_array($sql);
 $db->close();

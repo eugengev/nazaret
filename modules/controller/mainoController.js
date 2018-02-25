@@ -100,6 +100,7 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestGetFileMainoSuccess: function (data) {
+            console.log('11');
             console.log(data);
             $(nzr).trigger('MainoControlerView.listTabFileShow', data);
         },

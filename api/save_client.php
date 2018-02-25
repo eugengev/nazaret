@@ -24,7 +24,7 @@ if (isset($_POST['staus']) && $_POST['staus'] == 'addClient') {
 		"adres1"    => $_POST['adres1'],
 		"adres2"    => $_POST['adres2'],
 		"phone1"    => $_POST['phone1'],
-		"res"       => $_POST['res'],
+		"ras"       => $_POST['ras'],
 		"mfo"       => $_POST['mfo'],
 		"bank"      => $_POST['bank'],
 	);
@@ -50,7 +50,7 @@ if (isset($_POST['staus']) && $_POST['staus'] == 'updateClient') {
 		"adres1"    => $_POST['adres1'],
 		"adres2"    => $_POST['adres2'],
 		"phone1"    => $_POST['phone1'],
-		"res"       => $_POST['res'],
+		"ras"       => $_POST['ras'],
 		"mfo"       => $_POST['mfo'],
 		"bank"      => $_POST['bank'],
 	);
@@ -80,7 +80,7 @@ foreach ( $rows as $record ) {
 		"adres1"    => $record['adres1'],
 		"adres2"    => $record['adres2'],
 		"phone1"    => $record['phone1'],
-		"res"       => $record['res'],
+		"ras"       => $record['ras'],
 		"mfo"       => $record['mfo'],
 		"bank"      => $record['bank'],
 	);

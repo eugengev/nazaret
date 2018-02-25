@@ -49,7 +49,7 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestgetClientListSuccess: function (data) {
-            var clientList = new ClientList(data);
+            var clientList = new ClientList(data['client']);
             $(nzr).trigger('ClientFormController.getClientList', clientList);
         },
         _requestgetClientListError: function () {
@@ -101,7 +101,6 @@ nzr.controller = nzr.controller || {};
         },
         _requestSaveClientInfoSuccess: function (data) {
             var clientList = new ClientList(data);
-            console.log(clientList);
             $(nzr).trigger('ClientFormController.getClientList', clientList);
         },
         _requestSaveClientInfoError: function (data) {
@@ -156,7 +155,6 @@ nzr.controller = nzr.controller || {};
         },
         _requestUpdateClientInfoSuccess: function (data) {
             var clientList = new ClientList(data);
-            console.log(clientList);
             $(nzr).trigger('ClientFormController.getClientList', clientList);
         },
         _requestUpdateClientInfoError: function (data) {
@@ -217,8 +215,12 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestEditClientInfoSuccess: function (data) {
-            var clientone = new ClientList(data);
-            $(nzr).trigger('ClientFormController.getClientEdit', clientone);
+            var clientone = new ClientList(data['client']),
+                adress1   = new Adress(data['adress1']),
+                adress2   = new Adress(data['adress2']),
+                adress3   = new Adress(data['adress3']),
+                adress4   = new Adress(data['adress4']);
+            $(nzr).trigger('ClientFormController.getClientEdit', {'c':clientone, 'a1': adress1 , 'a2' : adress2, 'a3': adress3 , 'a4' : adress4 });
         },
         _requestEditClientInfoError: function () {
             console.log('_requestEditClientInfoError');

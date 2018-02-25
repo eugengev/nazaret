@@ -17,6 +17,7 @@ nzr.view = nzr.view || {};
             this.formFirst = null;
             this.container = $('#content');
             this.getButtonList = $('#js-firma-list');
+            this.modalSpr = $('#sprModalCenter');
             this.buttonAddFirma = null;
             this.autoNomDog = null;
             this.formAddFirma = null;
@@ -25,6 +26,7 @@ nzr.view = nzr.view || {};
             this.getButtonList.on('click', _.bind(this.onClickFirmasList, this));
             $(nzr).on('FirmaFormController.getFirmaList', _.bind(this.getFirmaList, this));
             $(nzr).on('FirmaFormController.EditFirmaList', _.bind(this.editFormFirma, this));
+            $(nzr).on('FirmaFormController.bankList', _.bind(this.bankListFirm, this));
 
         },
 
@@ -55,6 +57,12 @@ nzr.view = nzr.view || {};
             this.buttonAddFirma = this.container.find('.js-save-firma-cancel');
             this.buttonAddFirma.on('click', _.bind(this.onClickFirmasList, this));
 
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+
+            this.buttonSaveAddr = this.container.find('.js-save-addr-firma-form');
+            this.buttonSaveAddr.on('click', _.bind(this.onSaveAdress, this));
+
             this.formAddFirma = this.container.find('#js-add-firma-form');
 
             this.container.find('.js-date').datepicker({
@@ -70,7 +78,7 @@ nzr.view = nzr.view || {};
                 self.formAddFirma.submit();
             });
 
-            this.formEditFirma.validate({
+            this.formAddFirma.validate({
                 rules: {
                     name: {
                         required: true
@@ -105,15 +113,6 @@ nzr.view = nzr.view || {};
                     svidot_organ: {
                         required: true
                     },
-                    ras: {
-                        required: true
-                    },
-                    mfo: {
-                        required: true
-                    },
-                    bank: {
-                        required: true
-                    },
                 },
                 submitHandler: function(form) {
                     $('#loader').show();
@@ -128,15 +127,35 @@ nzr.view = nzr.view || {};
 
         },
 
-        editFormFirma: function(event, firma){
-            var template = this.renderTemplate('FirmaViewForm-Edit', firma.items[0]),
+        editFormFirma: function(event, data){
+            var firma = data['f'],
+                adress1 = data['a1'],
+                adress2 = data['a2'],
+                banki = data['b'];
+            console.log(firma, adress1, adress2, banki);
+            var template = this.renderTemplate('FirmaViewForm-Edit', {"items": firma.items, "adf": adress1, "ad2": adress2}),
                 self = this;
             this.container.html(template);
 
+            var templateBank = this.renderTemplate('FirmaViewBanksList', {"items": banki.items});
+            this.container.find('.js-bank-table-row').html(templateBank);
+
             this.buttonCancel = this.container.find('.js-edit-firma-cancel');
             this.buttonCancel.on('click', _.bind(this.onClickFirmasList, this));
+            
+            this.buttonSaveAddr = this.container.find('.js-save-addr-firma-form');
+            this.buttonSaveAddr.on('click', _.bind(this.onSaveAdress, this));
 
             this.formEditFirma = this.container.find('#js-edit-firma-form');
+
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+
+            this.buttonsAddBank = this.container.find('.js-add-bank');
+            this.buttonsAddBank.on('click', _.bind(this.onAddBank, this));
+
+            this.buttonsSaveBank = this.container.find('.js-save-bank-firma');
+            this.buttonsSaveBank.on('click', _.bind(this.onSaveBank, this));
 
             this.container.find('.js-date').datepicker({
                 dateFormat: 'dd.mm.yy',
@@ -186,15 +205,6 @@ nzr.view = nzr.view || {};
                     svidot_organ: {
                         required: true
                     },
-                    ras: {
-                        required: true
-                    },
-                    mfo: {
-                        required: true
-                    },
-                    bank: {
-                        required: true
-                    },
                 },
                 submitHandler: function(form) {
                     $('#loader').show();
@@ -203,6 +213,7 @@ nzr.view = nzr.view || {};
                         var nameInput = $(this).attr('name');
                         firma[nameInput] = $(this).val();
                     });
+                    firma['id'] = $('input[name=idf]').val();
                     $(nzr).trigger('FirmaFormView.updateFirmaForm',firma);
                 }
             });
@@ -219,6 +230,75 @@ nzr.view = nzr.view || {};
             var firmaId = $(event.target).data('idfirma');
             $(nzr).trigger('FirmaFormView.editFirmaInfo',firmaId);
         },
+
+        onModalSprClick: function(event){
+            $('#loader').show();
+            this.modalSpr.data('name', event.currentTarget.dataset.name);
+            this.modalSpr.data('table', event.currentTarget.dataset.spr);
+            var field = {
+                'idCity': 0,
+                'table': event.currentTarget.dataset.spr
+            };
+
+            field.idCity = 0;
+            console.log(field);
+            $(nzr).trigger('ReestrFormView.getListSpr', field);
+        },
+        
+        onSaveAdress: function (event) {
+            $('#loader').show();
+
+            var trForm = $(event.target).parents('tr'),
+                adress = new Adress();
+
+            trForm.find('input').each(function(){
+                var nameInput = $(this).attr('name'),
+                    dname = $(this).data('name');
+                if (dname != null) {
+                    nameInput = $(this).data('name');
+                }
+                adress[nameInput] = $(this).val();
+            });
+
+            $(nzr).trigger('FirmaFormView.updateAdress',adress);
+        },
+
+        onAddBank: function() {
+            var data = {
+                'idf': this.container.find('input[name=idf]').val(),
+                'type': 'f'
+            };
+            $(nzr).trigger('FirmaFormView.addBank',data);
+        },
+
+        bankListFirm: function(event, data) {
+            var template = this.renderTemplate('FirmaViewBanksList', {"items": data.items}),
+                self = this;
+            this.container.find('.js-bank-table-row').html(template);
+
+            this.buttonsSaveBank = this.container.find('.js-save-bank-firma');
+            this.buttonsSaveBank.on('click', _.bind(this.onSaveBank, this));
+        },
+
+        onSaveBank: function() {
+            $('#loader').show();
+
+            var trForm = $(event.target).parents('tr'),
+                bank = new Bank();
+
+            trForm.find('input').each(function(){
+                var nameInput = $(this).attr('name'),
+                    dname = $(this).data('name');
+                if (dname != null) {
+                    nameInput = $(this).data('name');
+                }
+                bank[nameInput] = $(this).val();
+            });
+
+            console.log(bank);
+
+            $(nzr).trigger('FirmaFormView.updateBank',bank);
+        }
 
     });
 

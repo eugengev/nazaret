@@ -35,6 +35,8 @@ nzr.view = nzr.view || {};
             $(nzr).on('ReestrFormController.addForm', _.bind(this.onReestrForm, this));
             $(nzr).on('ReestrFormController.sprModal', _.bind(this.onModalSprOpen, this));
             $(nzr).on('ReestrFormController.nomerDog', _.bind(this.changeNomerDog, this));
+            // $(nzr).on('ReestrFormController.onTrClickSpr', _.bind(this.onTrClickSpr, this));
+
         },
 
         onSaveActNomerDate: function(){
@@ -53,6 +55,11 @@ nzr.view = nzr.view || {};
         onClickEdit: function(event) {
             $('#loader').show();
             $(nzr).trigger('ReestrFormView.EditReestr', event.currentTarget.dataset.id);
+        },
+
+        onClickDelete: function(event) {
+            $('#loader').show();
+            $(nzr).trigger('ReestrFormView.DeleteReestr', event.currentTarget.dataset.id);
         },
 
         onListReestr: function(event, modelList){
@@ -74,6 +81,9 @@ nzr.view = nzr.view || {};
 
             this.buttonsEditOrder = this.container.find('.js-edit-reestr-item');
             this.buttonsEditOrder.on('click', _.bind(this.onClickEdit, this));
+
+            this.buttonsDeleteOrder = this.container.find('.js-delete-reestr-item');
+            this.buttonsDeleteOrder.on('click', _.bind(this.onClickDelete, this));
         },
 
         onPageReestrForm: function(event) {

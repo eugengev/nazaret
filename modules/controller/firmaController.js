@@ -10,11 +10,16 @@ nzr.controller = nzr.controller || {};
         _ajaxRequest: null,
         _ajaxSprRequest: null,
         _ajaxUpdate: null,
+        _ajaxUpdateAdress: null,
         _ajaxAddNew: null,
         _ajaxEditSave: null,
         _ajaxDelete: null,
+        _ajaxUpdateBank: null,
         _getFirmaListApi: '/api/get_firma_list.php',
         _saveFirmaApi: '/api/save_firma.php',
+        _addBankApi: '/api/add_bank.php',
+        _saveAdressApi: '/api/save_adress.php',
+        _saveBankApi: '/api/save_bank.php',
         _deleteFirmaApi: '/api/delete_firma.php',
 
         init: function() {
@@ -27,6 +32,9 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('FirmaFormView.deleteFirmaInfo',  _.bind(this.deleteFirmaInfo, this));
             $(nzr).on('FirmaFormView.editFirmaInfo',  _.bind(this.editFirmaList, this));
             $(nzr).on('FirmaFormView.updateFirmaForm',  _.bind(this.updateFirmaInfo, this));
+            $(nzr).on('FirmaFormView.updateAdress',  _.bind(this.updateAdress, this));
+            $(nzr).on('FirmaFormView.addBank',  _.bind(this.addBankFirm, this));
+            $(nzr).on('FirmaFormView.updateBank',  _.bind(this.updateBank, this));
         },
 
         getFirmaList: function(){
@@ -46,7 +54,7 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestgetFirmaListSuccess: function (data) {
-            var firmaList = new FirmaList(data);
+            var firmaList = new FirmaList(data['firma']);
             $(nzr).trigger('FirmaFormController.getFirmaList', firmaList);
         },
         _requestgetFirmaListError: function () {
@@ -103,7 +111,6 @@ nzr.controller = nzr.controller || {};
         },
         _requestSaveFirmaInfoSuccess: function (data) {
             var firmaList = new FirmaList(data);
-            console.log(firmaList);
             $(nzr).trigger('FirmaFormController.getFirmaList', firmaList);
         },
         _requestSaveFirmaInfoError: function (data) {
@@ -165,8 +172,11 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestEditFirmaListSuccess: function (data) {
-            var firmaList = new FirmaList(data);
-            $(nzr).trigger('FirmaFormController.EditFirmaList', firmaList);
+            var firmaList = new FirmaList(data['firma']),
+                adress1   = new Adress(data['adress1']),
+                adress2   = new Adress(data['adress2']),
+                banki     = new BankList(data['bank']);
+            $(nzr).trigger('FirmaFormController.EditFirmaList', {'f':firmaList, 'a1': adress1, 'a2': adress2, 'b': banki});
         },
         _requestEditFirmaListError: function () {
             console.log('_requestEditFirmaListError');
@@ -186,7 +196,7 @@ nzr.controller = nzr.controller || {};
 
             var dataFirma = {
                 staus:       'editFirma',
-                id:      this.Firma.id,
+                id:        this.Firma.id,
                 name:      this.Firma.name,
                 autonomer: this.Firma.autonomer,
                 lastnomer: this.Firma.lastnomer,
@@ -196,13 +206,11 @@ nzr.controller = nzr.controller || {};
                 ras:       this.Firma.ras,
                 bank:      this.Firma.bank,
                 mfo:       this.Firma.mfo,
-                adress:    this.Firma.adress,
                 email:     this.Firma.email,
                 full_name:    this.Firma.full_name,
                 dir_role:     this.Firma.dir_role,
                 dir_fio:      this.Firma.dir_fio,
                 buh_fio:      this.Firma.buh_fio,
-                adres_yur:    this.Firma.adres_yur,
                 tel1:         this.Firma.tel1,
                 svidot_nomer: this.Firma.svidot_nomer,
                 svidot_date:  this.Firma.svidot_date,
@@ -232,6 +240,120 @@ nzr.controller = nzr.controller || {};
             console.log('_requestUpdareFirmaInfoComplete');
             $('#loader').hide();
         },
+
+        updateAdress: function(event, adressInfo){
+            if (this._ajaxUpdateAdress) {
+                this._ajaxUpdateAdress.abort();
+                this._ajaxUpdateAdress = null;
+            }
+
+            var dataAdress = {
+                staus:    'updateAdress',
+                id:       adressInfo.id,
+                zip:      adressInfo.zip,
+                oblast:   adressInfo.oblast,
+                raion:    adressInfo.raion,
+                t_pynkt:  adressInfo.t_pynkt,
+                pynkt:    adressInfo.pynkt,
+                t_street: adressInfo.t_street,
+                street:   adressInfo.street,
+                dom:      adressInfo.dom
+            };
+
+            var self = this;
+            this._ajaxUpdateAdress = $.ajax({
+                type: "POST",
+                data: dataAdress,
+                url: this._saveAdressApi,
+                success: function(data){
+                    self._requestUpdateAdressSuccess(data);
+                },
+                error: _.bind(this._requestUpdateAdressError, this),
+                complete: _.bind(this._requestUpdateAdressComplete, this)
+            });
+        },
+        _requestUpdateAdressSuccess: function (data) {
+            // var firmaList = new FirmaList(data['firma']);
+            // $(nzr).trigger('FirmaFormController.getFirmaList', firmaList);
+        },
+        _requestUpdateAdressError: function (data) {
+            console.log('_requestUpdateFirmaInfoError');
+        },
+        _requestUpdateAdressComplete: function (data) {
+            console.log('_requestUpdareFirmaInfoComplete');
+            $('#loader').hide();
+        },
+
+        addBankFirm: function(event, data){
+            if (this._ajaxRequest) {
+                this._ajaxRequest.abort();
+                this._ajaxRequest = null;
+            }
+
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                type: "POST",
+                data: data,
+                url: this._addBankApi,
+                success: function(data){
+                    self._requestAddBankFirmSuccess(data);
+                },
+                error: _.bind(this._requestAddBankFirmError, this),
+                complete: _.bind(this._requestAddBankFirmComplete, this)
+            });
+        },
+        _requestAddBankFirmSuccess: function (data) {
+            var banklist = new BankList(data);
+            $(nzr).trigger('FirmaFormController.bankList', banklist);
+        },
+        _requestAddBankFirmError: function () {
+            console.log('_requestEditFirmaListError');
+        },
+        _requestAddBankFirmComplete: function () {
+            console.log('_requestEditFirmaListComplete');
+            $('#loader').hide();
+        },
+
+        updateBank: function(event, bankInfo){
+            if (this._ajaxUpdateBank) {
+                this._ajaxUpdateBank.abort();
+                this._ajaxUpdateBank = null;
+            }
+
+            var dataBank = {
+                staus:     'updateBank',
+                id:        bankInfo.id,
+                mfo:       bankInfo.mfo,
+                bank:      bankInfo.bank,
+                ras:       bankInfo.ras,
+                parent_id: bankInfo.parent_id,
+                type:      bankInfo.type,
+            };
+
+            var self = this;
+            this._ajaxUpdateBank = $.ajax({
+                type: "POST",
+                data: dataBank,
+                url: this._saveBankApi,
+                success: function(data){
+                    self._requestUpdateBankSuccess(data);
+                },
+                error: _.bind(this._requestUpdateBankError, this),
+                complete: _.bind(this._requestUpdateBankComplete, this)
+            });
+        },
+        _requestUpdateBankSuccess: function (data) {
+            var banklist = new BankList(data);
+            $(nzr).trigger('FirmaFormController.bankList', banklist);
+        },
+        _requestUpdateBankError: function (data) {
+            console.log('_requestUpdateFirmaInfoError');
+        },
+        _requestUpdateBankComplete: function (data) {
+            console.log('_requestUpdareFirmaInfoComplete');
+            $('#loader').hide();
+        },
+
     });
 
     ns.FirmaFormController = FirmaFormController;

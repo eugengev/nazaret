@@ -48,4 +48,8 @@
 <script src="/modules/controller/ocenkaController.js" ></script>
 <script src="/modules/view/ocenkaView.js" ></script>
 
+<script src="/modules/model/spravoch.js" ></script>
+<script src="/modules/controller/spravochController.js" ></script>
+<script src="/modules/view/spravochView.js" ></script>
+
 <script src="/modules/nzr/init.js" ></script>

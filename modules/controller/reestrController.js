@@ -9,6 +9,11 @@ nzr.controller = nzr.controller || {};
     _.extend(ReestrFormController.prototype, {
         _ajaxRequest: null,
         _ajaxSprRequest: null,
+        _ajaxSprRequestf: null,
+        _ajaxSprRequestc: null,
+        _ajaxSprRequests: null,
+        _ajaxSprRequestb: null,
+        _ajaxSprRequestn: null,
         _ajaxUpdate: null,
         _ajaxAddNew: null,
         _ajaxEditSave: null,
@@ -20,6 +25,7 @@ nzr.controller = nzr.controller || {};
         _listFirmaApi: '/api/listfirma.php',
         _listCityApi: '/api/listcity.php',
         _listBankApi: '/api/listbank.php',
+        _deleteReestrApi: '/api/delete_reestr.php',
         _listManagerApi: '/api/listmanager.php',
         _listSaveActDataNomer: '/api/save_act.php',
         _listReestrSaveFirst: '/api/listreestrsavefirst.php',
@@ -30,10 +36,11 @@ nzr.controller = nzr.controller || {};
             // Запрашиваем заказы при инициализации!
             setTimeout(_.bind(this.getReestr, this), 0);
             $(nzr).on('ReestrFormView.listReestr', _.bind(this.getReestr, this));
-            $(nzr).on('ReestrFormView.listClient', _.bind(this.getClientList, this));
-            $(nzr).on('ReestrFormView.listFirma',  _.bind(this.getFirmaList, this));
+            $(nzr).on('ReestrFormView.listClient', _.bind(this.getSprFirstList, this));
+            $(nzr).on('ReestrFormView.listFirma',  _.bind(this.getSprFirstList, this));
             $(nzr).on('ReestrFormView.saveFirstForm',  _.bind(this.saveFirstForm, this));
             $(nzr).on('ReestrFormView.EditReestr',  _.bind(this.getReestrOne, this));
+            $(nzr).on('ReestrFormView.DeleteReestr',  _.bind(this.deleteReestrOne, this));
             $(nzr).on('ReestrFormView.getListSpr',  _.bind(this.getSpravList, this));
             $(nzr).on('ReestrFormView.getListNomFirm',  _.bind(this.getListNomFirm, this));
             $(nzr).on('ReestrFormView.saveActDateNomer',  _.bind(this.saveActDateNomer, this));
@@ -230,15 +237,24 @@ nzr.controller = nzr.controller || {};
             $('#loader').hide();
         },
 
+        getSprFirstList: function () {
+            var self = this;
+            self.getClientList();
+            self.getFirmaList();
+            self.getCityList();
+            self.getBankList();
+            self.getManagerList();
+        },
+
         getFirmaList: function(){
             console.log('getFirmaList');
-            if (this._ajaxRequest) {
-                this._ajaxRequest.abort();
-                this._ajaxRequest = null;
+            if (this._ajaxSprRequestf) {
+                this._ajaxSprRequestf.abort();
+                this._ajaxSprRequestf = null;
             }
 
             var self = this;
-            this._ajaxRequest = $.ajax({
+            this._ajaxSprRequestf = $.ajax({
                 url: this._listFirmaApi,
                 success: function(data){
                     self._requestSuccessFirma(data);
@@ -254,20 +270,19 @@ nzr.controller = nzr.controller || {};
         _requestErrorFirma: function (data) {
         },
         _requestCompleteFirma: function (data) {
-            var self = this;
-            self.getClientList();
+            $('#loader').hide();
         },
 
 
         getClientList: function(){
             console.log('getClientList');
-            if (this._ajaxRequest) {
-                this._ajaxRequest.abort();
-                this._ajaxRequest = null;
+            if (this._ajaxSprRequestc) {
+                this._ajaxSprRequestc.abort();
+                this._ajaxSprRequestc = null;
             }
 
             var self = this;
-            this._ajaxRequest = $.ajax({
+            this._ajaxSprRequestc = $.ajax({
                 url: this._listclientApi,
                 success: function(data){
                     self._requestSuccessClient(data);
@@ -283,19 +298,18 @@ nzr.controller = nzr.controller || {};
         _requestErrorClient: function (data) {
         },
         _requestCompleteClient: function (data) {
-            var self = this;
-            self.getCityList();
+            $('#loader').hide();
         },
 
         getCityList: function(){
             console.log('getCityList');
-            if (this._ajaxRequest) {
-                this._ajaxRequest.abort();
-                this._ajaxRequest = null;
+            if (this._ajaxSprRequests) {
+                this._ajaxSprRequests.abort();
+                this._ajaxSprRequests = null;
             }
 
             var self = this;
-            this._ajaxRequest = $.ajax({
+            this._ajaxSprRequests = $.ajax({
                 url: this._listCityApi,
                 success: function(data){
                     self._requestSuccessCity(data);
@@ -311,19 +325,18 @@ nzr.controller = nzr.controller || {};
         _requestErrorCity: function (data) {
         },
         _requestCompleteCity: function (data) {
-            var self = this;
-            self.getBankList();
+            $('#loader').hide();
         },
 
         getBankList: function(){
             console.log('getBankList');
-            if (this._ajaxRequest) {
-                this._ajaxRequest.abort();
-                this._ajaxRequest = null;
+            if (this._ajaxSprRequestb) {
+                this._ajaxSprRequestb.abort();
+                this._ajaxSprRequestb = null;
             }
 
             var self = this;
-            this._ajaxRequest = $.ajax({
+            this._ajaxSprRequestb = $.ajax({
                 url: this._listBankApi,
                 success: function(data){
                     self._requestSuccessBank(data);
@@ -339,19 +352,18 @@ nzr.controller = nzr.controller || {};
         _requestErrorBank: function (data) {
         },
         _requestCompleteBank: function (data) {
-            var self = this;
-            self.getManagerList();
+            $('#loader').hide();
         },
 
         getManagerList: function(){
             console.log('getBankList');
-            if (this._ajaxRequest) {
-                this._ajaxRequest.abort();
-                this._ajaxRequest = null;
+            if (this._ajaxSprRequestm) {
+                this._ajaxSprRequestm.abort();
+                this._ajaxSprRequestm = null;
             }
 
             var self = this;
-            this._ajaxRequest = $.ajax({
+            this._ajaxSprRequestm = $.ajax({
                 url: this._listManagerApi,
                 success: function(data){
                     self._requestSuccessManager(data);
@@ -452,6 +464,37 @@ nzr.controller = nzr.controller || {};
             console.log('_requestErrorOne');
         },
         _requestCompleteOne: function (data) {
+            $('#loader').hide();
+        },
+
+        deleteReestrOne: function(event, id){
+            if (this._ajaxDelete) {
+                this._ajaxDelete.abort();
+                this._ajaxDelete = null;
+            }
+
+            var self = this;
+            this._ajaxDelete = $.ajax({
+                data: {'id':id},
+                type: "POST",
+                url: this._deleteReestrApi,
+                success: function(data){
+                    console.log(data);
+                    self._requestDeleteSuccessOne(data);
+                },
+                error: _.bind(this._requestDeleteErrorOne, this),
+                complete: _.bind(this._requestDeleteCompleteOne, this)
+            });
+        },
+        _requestDeleteSuccessOne: function (data) {
+            var reestrList = new ReestrList(data);
+            $(nzr).trigger('ReestrFormController.requestListSuccess', reestrList);
+        },
+        _requestDeleteErrorOne: function (data) {
+            console.log(data);
+            console.log('_requestErrorOne');
+        },
+        _requestDeleteCompleteOne: function (data) {
             $('#loader').hide();
         },
     });

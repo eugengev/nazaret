@@ -32,7 +32,8 @@ if (isset($_POST['id'])) {
 	       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
 	       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
 	       "LEFT JOIN s_manager ON reestr.manager_id = s_manager.id ".
-	       "ORDER BY ID DESC ".$limit;
+	       "WHERE NOT status = 'd' ".
+	       "ORDER BY timestamp DESC ".$limit;
 }
 $rows = $db->fetch_all_array($sql);
 

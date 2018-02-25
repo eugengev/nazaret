@@ -46,7 +46,7 @@ nzr.view = nzr.view || {};
 
         listTabFileShow: function(event, data) {
             console.log(data);
-            var tempMainoFileForm = this.renderTemplate('ReestrFormView-TableMainoListFile', {"items": data.items, "files": data.files});
+            var tempMainoFileForm = this.renderTemplate('ReestrFormView-TableMainoListFile', {"items": data.items, "files": data.files, "maino": data.maino});
             this.tabFileMaino = this.container.find('.js-block-files');
             this.tabFileMaino.html(tempMainoFileForm);
 

@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="" />
+    <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/add_bank.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/add_to_spr.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/delete_reestr.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/get_search_spr.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/save_adress.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/save_bank.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/api/get_client_list.php" afterPath="$PROJECT_DIR$/api/get_client_list.php" />
+      <change beforePath="$PROJECT_DIR$/api/get_firma_list.php" afterPath="$PROJECT_DIR$/api/get_firma_list.php" />
+      <change beforePath="$PROJECT_DIR$/api/list_file_maino.php" afterPath="$PROJECT_DIR$/api/list_file_maino.php" />
+      <change beforePath="$PROJECT_DIR$/api/listreestr.php" afterPath="$PROJECT_DIR$/api/listreestr.php" />
+      <change beforePath="$PROJECT_DIR$/api/save_client.php" afterPath="$PROJECT_DIR$/api/save_client.php" />
+      <change beforePath="$PROJECT_DIR$/api/save_firma.php" afterPath="$PROJECT_DIR$/api/save_firma.php" />
+      <change beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/clientController.js" afterPath="$PROJECT_DIR$/modules/controller/clientController.js" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/firmaController.js" afterPath="$PROJECT_DIR$/modules/controller/firmaController.js" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/mainoController.js" afterPath="$PROJECT_DIR$/modules/controller/mainoController.js" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/reestrController.js" afterPath="$PROJECT_DIR$/modules/controller/reestrController.js" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/spravochController.js" afterPath="$PROJECT_DIR$/modules/controller/spravochController.js" />
+      <change beforePath="$PROJECT_DIR$/modules/model/firma.js" afterPath="$PROJECT_DIR$/modules/model/firma.js" />
+      <change beforePath="$PROJECT_DIR$/modules/nzr/init.js" afterPath="$PROJECT_DIR$/modules/nzr/init.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/clientView.js" afterPath="$PROJECT_DIR$/modules/view/clientView.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/firmaView.js" afterPath="$PROJECT_DIR$/modules/view/firmaView.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/mainoView.js" afterPath="$PROJECT_DIR$/modules/view/mainoView.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/messageView.js" afterPath="$PROJECT_DIR$/modules/view/messageView.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/reestrView.js" afterPath="$PROJECT_DIR$/modules/view/reestrView.js" />
+      <change beforePath="$PROJECT_DIR$/modules/view/spravochView.js" afterPath="$PROJECT_DIR$/modules/view/spravochView.js" />
+      <change beforePath="$PROJECT_DIR$/template/client.php" afterPath="$PROJECT_DIR$/template/client.php" />
+      <change beforePath="$PROJECT_DIR$/template/firma.php" afterPath="$PROJECT_DIR$/template/firma.php" />
+      <change beforePath="$PROJECT_DIR$/template/message.php" afterPath="$PROJECT_DIR$/template/message.php" />
+      <change beforePath="$PROJECT_DIR$/template/reestr.php" afterPath="$PROJECT_DIR$/template/reestr.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,72 +60,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="modal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/modal.php">
+      <file leaf-file-name="message.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="71" lean-forward="false" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+            <state relative-caret-position="474">
+              <caret line="47" column="126" lean-forward="false" selection-start-line="47" selection-start-column="116" selection-end-line="47" selection-end-column="126" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reestrView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+      <file leaf-file-name="messageView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/view/messageView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="578">
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spravochView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
+      <file leaf-file-name="save_new_messag.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/save_new_messag.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spravochController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/controller/spravochController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reestr.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/model/reestr.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spravoch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/model/spravoch.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/view/userView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="476">
+              <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+              <folding>
+                <marker date="1519599096977" expanded="true" signature="629:963" ph="SELECT mes.*... messages" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,40 +104,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>firma</find>
-      <find>js-modal-sprv</find>
-      <find>his.modalSpr = $('#sprModalCenter');</find>
-      <find>modalSprmodalSpr</find>
-      <find>modalSpr</find>
-      <find>getSpravList</find>
-      <find>_listSpravApi</find>
-      <find>_listSpravApi: '/api/listspr.php',_listSpravApi: '/api/listspr.php',</find>
-      <find>ReestrFormView.getListSpr</find>
-      <find>res</find>
-      <find>ns.ClientFormView = ClientFormView;</find>
+      <find>input-group mb-3</find>
       <find>onModalSprClick</find>
-      <find>getListSpr</find>
-      <find>getClientList</find>
-      <find>onClickClientsList</find>
-      <find>edit</find>
-      <find>idd</find>
-      <find>idd}</find>
-      <find>ClientFormView.editClientInfo</find>
-      <find>editClientInfo</find>
-      <find>updateFirmaForm</find>
-      <find>editFirmaList</find>
-      <find>updateFirmaInfo</find>
-      <find>getReestrPage</find>
-      <find>new</find>
-      <find>add</find>
-      <find>modal-body</find>
-      <find>Client</find>
-      <find>user</find>
-      <find>User</find>
+      <find>data-spr</find>
+      <find>modalSpr</find>
+      <find>addr1</find>
+      <find>dom</find>
+      <find>svidot_date</find>
+      <find>date1</find>
+      <find>Опис майна</find>
+      <find>maino</find>
+      <find>updateA</find>
+      <find>firmaid</find>
+      <find>143</find>
+      <find>res</find>
+      <find>adress2</find>
+      <find>Розразунковий номер</find>
+      <find>adт</find>
+      <find>onSaveAdress</find>
+      <find>TableMainoListRow</find>
+      <find>showTableMainoListFileRowshowTableMainoListFileRow</find>
+      <find>TableMainoListFile</find>
+      <find>showTableMainoListFileRow</find>
+      <find>onOpenTabFile</find>
+      <find>ReestrFormView.openTabFile</find>
+      <find>openTabFile</find>
+      <find>onGetFileMainoRows</find>
+      <find>s_maino</find>
+      <find>_listRowFileMainoApi</find>
+      <find>listTabFileShow</find>
+      <find>js-open-file-tab</find>
     </findStrings>
     <replaceStrings>
-      <replace>SettingsView</replace>
-      <replace>Settings</replace>
       <replace>nzr</replace>
       <replace>Organiz</replace>
       <replace>OrganizFormController</replace>
@@ -166,6 +158,14 @@
       <replace>s</replace>
       <replace>spravoch</replace>
       <replace>Spravoch</replace>
+      <replace>input-group input-group-sm mb-3</replace>
+      <replace>it.adf</replace>
+      <replace>dom</replace>
+      <replace>id=&quot;#date1&quot;</replace>
+      <replace>clientid</replace>
+      <replace>Розразунковий рахунок</replace>
+      <replace>ras</replace>
+      <replace>adn</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -174,32 +174,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/get_messages.php" />
-        <option value="$PROJECT_DIR$/api/save_new_messag.php" />
-        <option value="$PROJECT_DIR$/assets/controller/messageController.js" />
-        <option value="$PROJECT_DIR$/assets/view/messageView.js" />
-        <option value="$PROJECT_DIR$/api/get_new_messages.php" />
-        <option value="$PROJECT_DIR$/api/get_view_messages.php" />
-        <option value="$PROJECT_DIR$/template.php" />
-        <option value="$PROJECT_DIR$/conf.php" />
-        <option value="$PROJECT_DIR$/template/template_message.php" />
-        <option value="$PROJECT_DIR$/template/user.php" />
-        <option value="$PROJECT_DIR$/modules/view/userView.js" />
-        <option value="$PROJECT_DIR$/modules/controller/userController.js" />
-        <option value="$PROJECT_DIR$/modules/model/firma.js" />
         <option value="$PROJECT_DIR$/api/delete_firma.php" />
-        <option value="$PROJECT_DIR$/modules/view/clientView.js" />
-        <option value="$PROJECT_DIR$/api/save_firma.php" />
-        <option value="$PROJECT_DIR$/api/get_firma_list.php" />
-        <option value="$PROJECT_DIR$/modules/view/firmaView.js" />
-        <option value="$PROJECT_DIR$/modules/controller/firmaController.js" />
         <option value="$PROJECT_DIR$/modules/model/reestr.js" />
-        <option value="$PROJECT_DIR$/api/listreestr.php" />
-        <option value="$PROJECT_DIR$/template/reestr.php" />
-        <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
-        <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/template/template.php" />
-        <option value="$PROJECT_DIR$/modules/nzr/init.js" />
         <option value="$PROJECT_DIR$/modules/model/ocenka.js" />
         <option value="$PROJECT_DIR$/api/get_ocenka_list_init.php" />
         <option value="$PROJECT_DIR$/template/ocenka.php" />
@@ -207,13 +184,8 @@
         <option value="$PROJECT_DIR$/modules/view/ocenkaView.js" />
         <option value="$PROJECT_DIR$/api/get_ocenka_list.php" />
         <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/template/firma.php" />
         <option value="$PROJECT_DIR$/modules/model/client.js" />
-        <option value="$PROJECT_DIR$/api/get_client_list.php" />
-        <option value="$PROJECT_DIR$/api/save_client.php" />
         <option value="$PROJECT_DIR$/api/delete_client.php" />
-        <option value="$PROJECT_DIR$/template/client.php" />
-        <option value="$PROJECT_DIR$/modules/controller/clientController.js" />
         <option value="$PROJECT_DIR$/print/zajava.php" />
         <option value="$PROJECT_DIR$/print/act.php" />
         <option value="$PROJECT_DIR$/print/schet.php" />
@@ -221,10 +193,38 @@
         <option value="$PROJECT_DIR$/modules/controller/spavochController.js" />
         <option value="$PROJECT_DIR$/modules/model/spavoch.js" />
         <option value="$PROJECT_DIR$/modules/model/spravoch.js" />
+        <option value="$PROJECT_DIR$/template/modal.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
+        <option value="$PROJECT_DIR$/api/get_search_spr.php" />
         <option value="$PROJECT_DIR$/modules/controller/spravochController.js" />
         <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
-        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
-        <option value="$PROJECT_DIR$/template/modal.php" />
+        <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
+        <option value="$PROJECT_DIR$/api/delete_reestr.php" />
+        <option value="$PROJECT_DIR$/api/listreestr.php" />
+        <option value="$PROJECT_DIR$/modules/nzr/init.js" />
+        <option value="$PROJECT_DIR$/api/save_adress.php" />
+        <option value="$PROJECT_DIR$/api/save_firma.php" />
+        <option value="$PROJECT_DIR$/api/add_to_spr.php" />
+        <option value="$PROJECT_DIR$/api/add_bank.php" />
+        <option value="$PROJECT_DIR$/modules/model/firma.js" />
+        <option value="$PROJECT_DIR$/modules/view/firmaView.js" />
+        <option value="$PROJECT_DIR$/api/save_bank.php" />
+        <option value="$PROJECT_DIR$/api/get_firma_list.php" />
+        <option value="$PROJECT_DIR$/modules/controller/firmaController.js" />
+        <option value="$PROJECT_DIR$/api/save_client.php" />
+        <option value="$PROJECT_DIR$/modules/controller/clientController.js" />
+        <option value="$PROJECT_DIR$/template/firma.php" />
+        <option value="$PROJECT_DIR$/api/get_client_list.php" />
+        <option value="$PROJECT_DIR$/template/client.php" />
+        <option value="$PROJECT_DIR$/modules/view/clientView.js" />
+        <option value="$PROJECT_DIR$/modules/view/mainoView.js" />
+        <option value="$PROJECT_DIR$/modules/controller/mainoController.js" />
+        <option value="$PROJECT_DIR$/api/list_file_maino.php" />
+        <option value="$PROJECT_DIR$/template/reestr.php" />
+        <option value="$PROJECT_DIR$/template/message.php" />
+        <option value="$PROJECT_DIR$/modules/view/messageView.js" />
+        <option value="$PROJECT_DIR$/api/save_new_messag.php" />
       </list>
     </option>
   </component>
@@ -381,12 +381,12 @@
       <workItem from="1519123052420" duration="8428000" />
       <workItem from="1519201451337" duration="217000" />
       <workItem from="1519214425498" duration="4241000" />
-      <workItem from="1519311570773" duration="2888000" />
+      <workItem from="1519311570773" duration="33222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254480000" />
+    <option name="totallyTimeSpent" value="284814000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,245 +434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/conf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/clientView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="149" column="68" lean-forward="false" selection-start-line="149" selection-start-column="68" selection-end-line="149" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/firmaController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="83" lean-forward="false" selection-start-line="28" selection-start-column="83" selection-end-line="28" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/firmaView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="205" column="65" lean-forward="false" selection-start-line="205" selection-start-column="50" selection-end-line="205" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_firma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/listsprmainoprice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/21e7b316/2c4e919f-9cde-4f1e-a41c-5e71253f2e3a/rybolov_nazaret.reestr">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="159" column="24" lean-forward="false" selection-start-line="159" selection-start-column="13" selection-end-line="159" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="229" column="31" lean-forward="false" selection-start-line="229" selection-start-column="31" selection-end-line="229" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/organizModel.js" />
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/listreestrsavefirst.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/saveuserinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/getuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/listreestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="96" lean-forward="false" selection-start-line="16" selection-start-column="96" selection-end-line="16" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/nzr/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/ocenka.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_ocenka_list_init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="49" lean-forward="false" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/ocenkaController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/ocenka.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/ocenkaView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_ocenka_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_firma_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/firma.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_client_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="84" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/delete_client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2125">
-          <caret line="69" column="81" lean-forward="false" selection-start-line="69" selection-start-column="81" selection-end-line="69" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/firma.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3172">
-          <caret line="65" column="81" lean-forward="false" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/clientController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="132" column="26" lean-forward="false" selection-start-line="132" selection-start-column="26" selection-end-line="132" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/zajava.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/act.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="112" column="5" lean-forward="false" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/schet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="109" column="5" lean-forward="false" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/print/dogovor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -701,13 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/reestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="60" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/model/spavoch.js" />
     <entry file="file://$PROJECT_DIR$/modules/controller/spavochController.js" />
     <entry file="file://$PROJECT_DIR$/modules/view/spavochView.js" />
@@ -728,49 +482,392 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/model/reestr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="17">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/listspr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="2" />
+          <folding>
+            <marker date="1517480159615" expanded="true" signature="320:372" ph="SELECT * FRO... ${$_POST['table']}" />
+            <marker date="1517480159615" expanded="true" signature="469:504" ph="SELECT * FRO... ${$_POST['table']}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/nzr/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/model/spravoch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+    <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="848">
+          <caret line="52" column="35" lean-forward="false" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/modal.php">
+    <entry file="file://$PROJECT_DIR$/api/get_search_spr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="71" lean-forward="false" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/saveuserinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <marker date="1518465559554" expanded="true" signature="632:653" ph="SELECT * FRO... users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="712">
+          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/controller/spravochController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/listreestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <marker date="1519571048895" expanded="true" signature="1742:1797" ph="SELECT round... reestr" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/nzr/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/delete_reestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <marker date="1519571042015" expanded="true" signature="377:419" ph="UPDATE reestr... " />
+            <marker date="1519571042015" expanded="true" signature="383:419" ph="DELETE FROM reestr... " />
+            <marker date="1519571042015" expanded="true" signature="1178:1233" ph="SELECT round... reestr" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/mysql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1734">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1516644958358" expanded="true" signature="6805:6840" ph="INSERT INTO `${$this-&gt;pre}`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/ocenkaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/save_firma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <marker date="1519582579304" expanded="true" signature="1775:1798" ph="SELECT * FRO... s_firma" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/firma.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="120" column="13" lean-forward="false" selection-start-line="120" selection-start-column="13" selection-end-line="120" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/add_bank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <marker date="1519587993099" expanded="true" signature="404:444" ph="SELECT * FRO... ${$_POST['table']}" />
+            <marker date="1519587993099" expanded="true" signature="404:445" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:461" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:477" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:478" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:494" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:496" ph="SELECT * FRO... banki" />
+            <marker date="1519587993099" expanded="true" signature="404:497" ph="SELECT * FRO... banki" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/save_adress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/add_to_spr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/save_bank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <marker date="1519590983818" expanded="true" signature="503:601" ph="SELECT * FRO... banki" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/firmaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/get_firma_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <marker date="1519591593951" expanded="true" signature="260:297" ph="SELECT * FRO... s_firma" />
+            <marker date="1519591593951" expanded="true" signature="283:297" ph="SELECT * FRO... s_firma" />
+            <marker date="1519591593951" expanded="true" signature="706:743" ph="SELECT * FRO... s_firma" />
+            <marker date="1519591593951" expanded="true" signature="782:805" ph="SELECT * FRO... s_firma" />
+            <marker date="1519591593951" expanded="true" signature="1818:1854" ph="SELECT * FRO... s_adress" />
+            <marker date="1519591593951" expanded="true" signature="1947:1983" ph="SELECT * FRO... s_adress" />
+            <marker date="1519591593951" expanded="true" signature="2079:2132" ph="SELECT * FRO... banki" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/firmaView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="247" column="0" lean-forward="false" selection-start-line="247" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/get_client_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <marker date="1519596488355" expanded="true" signature="261:299" ph="SELECT * FRO... s_client" />
+            <marker date="1519596488355" expanded="true" signature="1061:1099" ph="SELECT * FRO... s_client" />
+            <marker date="1519596488355" expanded="true" signature="1141:1165" ph="SELECT * FRO... s_client" />
+            <marker date="1519596488355" expanded="true" signature="2074:2110" ph="SELECT * FRO... s_adress" />
+            <marker date="1519596488355" expanded="true" signature="2204:2240" ph="SELECT * FRO... s_adress" />
+            <marker date="1519596488355" expanded="true" signature="2334:2370" ph="SELECT * FRO... s_adress" />
+            <marker date="1519596488355" expanded="true" signature="2467:2503" ph="SELECT * FRO... s_adress" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/save_client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <marker date="1519593409934" expanded="true" signature="1682:1706" ph="SELECT * FRO... s_client" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/clientController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2098">
+          <caret line="222" column="116" lean-forward="false" selection-start-line="222" selection-start-column="116" selection-end-line="222" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/firma.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="243" column="62" lean-forward="false" selection-start-line="243" selection-start-column="59" selection-end-line="243" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4984">
+          <caret line="477" column="70" lean-forward="false" selection-start-line="477" selection-start-column="70" selection-end-line="477" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/clientView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/load_file_maino.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-393">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1517924052029" expanded="true" signature="1661:1763" ph="SELECT id,fi... maino_file" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/listsprmainorow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <marker date="1518467625902" expanded="true" signature="391:414" ph="SELECT * FRO... s_maino" />
+            <marker date="1518467625902" expanded="true" signature="626:677" ph="SELECT id_us... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/mainoView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="48" column="142" lean-forward="false" selection-start-line="48" selection-start-column="137" selection-end-line="48" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/mainoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="102" column="27" lean-forward="false" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/list_file_maino.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="67" column="7" lean-forward="false" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+          <folding>
+            <marker date="1519597956754" expanded="true" signature="273:315" ph="SELECT * FRO... maino" />
+            <marker date="1519597956754" expanded="true" signature="764:811" ph="SELECT * FRO... maino_file" />
+            <marker date="1519597956754" expanded="true" signature="1130:1153" ph="SELECT * FRO... s_maino" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="252" column="54" lean-forward="true" selection-start-line="252" selection-start-column="28" selection-end-line="252" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/reestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="451" column="20" lean-forward="false" selection-start-line="451" selection-start-column="20" selection-end-line="451" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="47" column="126" lean-forward="false" selection-start-line="47" selection-start-column="116" selection-end-line="47" selection-end-column="126" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/messageView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/save_new_messag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding>
+            <marker date="1519599096977" expanded="true" signature="629:963" ph="SELECT mes.*... messages" />
+          </folding>
         </state>
       </provider>
     </entry>

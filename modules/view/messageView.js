@@ -93,7 +93,12 @@ nzr.view = nzr.view || {};
                 submitHandler: function(form) {
                     $('#loader').show();
                     var message = new Message();
-                    $(form).find('input,select').each(function(){
+                    message['user_id_to'] = [];
+                    $(form).find('input:checked').each(function(){
+                        message['user_id_to'].push($(this).val());
+                    });
+
+                    $(form).find('textarea').each(function(){
                         var nameInput = $(this).attr('name');
                         message[nameInput] = $(this).val();
                     });

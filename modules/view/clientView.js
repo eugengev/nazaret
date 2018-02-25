@@ -101,12 +101,6 @@ nzr.view = nzr.view || {};
                     email: {
                         required: true
                     },
-                    adres1: {
-                        required: true
-                    },
-                    adres2: {
-                        required: true
-                    },
                     phone: {
                         required: true
                     },
@@ -133,6 +127,7 @@ nzr.view = nzr.view || {};
                         var nameInput = $(this).attr('name');
                         client[nameInput] = $(this).val();
                     });
+                    client['id'] = $('input[name=idc]').val();
                     $(nzr).trigger('ClientFormView.saveClientForm',client);
                 }
             });
@@ -145,9 +140,13 @@ nzr.view = nzr.view || {};
             $(nzr).trigger('ClientFormView.editClientInfo', clientId);
         },
 
-        getClientEdit: function(event, client) {
-            console.log(client);
-            var template = this.renderTemplate('ClientViewForm-Edit', client.items[0]),
+        getClientEdit: function(event, data) {
+            var client = data['c'],
+                adress1 = data['a1'],
+                adress2 = data['a2'],
+                adress3 = data['a3'],
+                adress4 = data['a4'];
+            var template = this.renderTemplate('ClientViewForm-Edit', {"client": client.items[0], "adf": adress1, "ad2": adress2, "ady": adress3, "adn": adress4}),
                 self = this;
             this.container.html(template);
 
@@ -155,6 +154,13 @@ nzr.view = nzr.view || {};
             this.buttonCancelClient.on('click', _.bind(this.onClickClientsList, this));
 
             this.formEditClient = this.container.find('#js-edit-client-form');
+
+            this.buttonSaveAddr = this.container.find('.js-save-addr-firma-form');
+            this.buttonSaveAddr.on('click', _.bind(this.onSaveAdress, this));
+
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+
 
             this.container.find('.js-date').datepicker({
                 dateFormat: 'dd.mm.yy',
@@ -189,12 +195,6 @@ nzr.view = nzr.view || {};
                     email: {
                         required: true
                     },
-                    adres1: {
-                        required: true
-                    },
-                    adres2: {
-                        required: true
-                    },
                     phone: {
                         required: true
                     },
@@ -221,7 +221,7 @@ nzr.view = nzr.view || {};
                         var nameInput = $(this).attr('name');
                         client[nameInput] = $(this).val();
                     });
-                    console.log(client);
+                    client['id'] = $('input[name=idc]').val();
                     $(nzr).trigger('ClientFormView.updateClientForm',client);
                 }
             });
@@ -237,19 +237,35 @@ nzr.view = nzr.view || {};
         onModalSprClick: function(event){
             $('#loader').show();
             this.modalSpr.data('name', event.currentTarget.dataset.name);
+            this.modalSpr.data('table', event.currentTarget.dataset.spr);
             var field = {
-                'idCity': this.container.find('input[name="city"]').data('id'),
+                'idCity': 0,
                 'table': event.currentTarget.dataset.spr
             };
-            if (event.currentTarget.dataset.spr == 's_manager') {
-                console.log(field);
-                $(nzr).trigger('ReestrFormView.getListSpr', field);
-            } else {
-                field.idCity = 0;
-                console.log(field);
-                $(nzr).trigger('ReestrFormView.getListSpr', field);
-            }
+
+            field.idCity = 0;
+            console.log(field);
+            $(nzr).trigger('ReestrFormView.getListSpr', field);
         },
+
+        onSaveAdress: function (event) {
+            $('#loader').show();
+
+            var trForm = $(event.target).parents('tr'),
+                adress = new Adress();
+
+            trForm.find('input').each(function(){
+                var nameInput = $(this).attr('name'),
+                    dname = $(this).data('name');
+                if (dname != null) {
+                    nameInput = $(this).data('name');
+                }
+                adress[nameInput] = $(this).val();
+            });
+
+            $(nzr).trigger('FirmaFormView.updateAdress',adress);
+        },
+
 
 
     });

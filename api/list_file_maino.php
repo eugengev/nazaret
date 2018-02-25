@@ -50,6 +50,23 @@ foreach($rows as $record){
 $datall['files'] = $data;
 
 
+
+$sql = "SELECT * FROM `s_maino`";
+$rows = $db->fetch_all_array($sql);
+
+$data = [];
+
+foreach($rows as $record){
+	$list = array(
+		"id" => $record['id'],
+		"name" => $record['name'],
+	);
+
+	$data[] = $list;
+}
+
+$datall['maino'] = $data;
+
 $db->close();
 
 

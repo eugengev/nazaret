@@ -41,16 +41,16 @@
 			<form id='js-new-message-form'>
 				<div class='row'>
 					<div class='col'>
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Кому</span>
-							</div>
-							<select multiple  name="user_id_to" class="form-control">
-								{{~it.items :value:itm}}
-								<option value="{{=value.id}}">{{=value.fio}}</option>
-								{{~}}
-							</select>
-						</div>
+                            {{~it.items :value:itm}}
+                            <div class="input-group" >
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" aria-label="Checkbox for following text input" name="user_id_to" value="{{=value.id}}">
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Text input with checkbox" value="{{=value.fio}}" readonly>
+                            </div>
+                            {{~}}
 					</div>
 				</div>
 				<div class='row'>

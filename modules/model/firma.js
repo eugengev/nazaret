@@ -9,13 +9,13 @@ function Firma(data) {
     this.ras = '';
     this.bank = '';
     this.mfo = '';
-    this.adress = '';
+    this.adress = 0;
     this.email = '';
     this.full_name = '';
     this.dir_role = '';
     this.dir_fio = '';
     this.buh_fio = '';
-    this.adres_yur = '';
+    this.adres_yur = 0;
     this.tel1 = '';
     this.svidot_nomer = '';
     this.svidot_date = '2001-01-01';
@@ -63,6 +63,92 @@ FirmaList.prototype.init = function(data) {
     if (data.length) {
         for (var i = 0; i < data.length; i++){
             var item = new Firma(data[i]);
+            this.items[i] = item;
+        }
+    }
+};
+
+
+function Adress(data) {
+    this.id   = 0;
+    this.zip = '';
+    this.oblast = '';
+    this.raion = '';
+    this.t_pynkt = '';
+    this.pynkt = '';
+    this.t_street = '';
+    this.street = '';
+    this.dom = '';
+
+    if (data) {
+        this.init(data);
+    }
+};
+
+Adress.prototype.init = function(data) {
+    this.id       = data.id;
+    this.zip      = data.zip;
+    this.oblast   = data.oblast;
+    this.raion    = data.raion;
+    this.t_pynkt  = data.t_pynkt;
+    this.pynkt    = data.pynkt;
+    this.t_street = data.t_street;
+    this.street   = data.street;
+    this.dom      = data.dom;
+};
+
+function AdressList(data) {
+    this.items = [];
+    if (data) {
+        this.init(data);
+    }
+};
+
+AdressList.prototype.init = function(data) {
+    this.items = [];
+    if (data.length) {
+        for (var i = 0; i < data.length; i++){
+            var item = new Adress(data[i]);
+            this.items[i] = item;
+        }
+    }
+};
+
+
+function Bank(data) {
+    this.id   = 0;
+    this.mfo = '';
+    this.bank = '';
+    this.ras = '';
+    this.type = '';
+    this.parent_id = 0;
+
+    if (data) {
+        this.init(data);
+    }
+};
+
+Bank.prototype.init = function(data) {
+    this.id        = data.id;
+    this.mfo       = data.mfo;
+    this.bank      = data.bank;
+    this.ras       = data.ras;
+    this.type      = data.type;
+    this.parent_id = data.parent_id;
+};
+
+function BankList(data) {
+    this.items = [];
+    if (data) {
+        this.init(data);
+    }
+};
+
+BankList.prototype.init = function(data) {
+    this.items = [];
+    if (data.length) {
+        for (var i = 0; i < data.length; i++){
+            var item = new Bank(data[i]);
             this.items[i] = item;
         }
     }

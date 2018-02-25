@@ -28,7 +28,7 @@
 				<td>{{=value.date}}</td>
 				<td>{{=value.date}}</td>
 				<td>{{=value.date}}</td>
-				<td class='text-center'><a href="#" class="btn btn-success btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;<a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+				<td class='text-center'><a href="#" class="btn btn-success btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;<a href="#" class="btn btn-danger btn-sm js-delete-reestr-item" data-id="{{=value.id}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
 			</tr>
 			{{~}}
 			</tbody>
@@ -447,7 +447,10 @@
 
 	{{~it.items :value:itm}}
 	<div>
-		<h3>{{=value.opis}}</h3>
+		<h3>{{~it.maino :vallue:itmm}}
+                {{? vallue.id == value.vid_id }} {{=vallue.name}} {{?}}
+            {{~}} - {{=value.opis}}
+        </h3>
 		<ul class="nav nav-pills mb-3" id="pills-{{=value.id}}-tab" role="tablist">
 			<li class="nav-item">
 				<a class="nav-link active" id="pills-{{=value.id}}-1-tab" data-toggle="pill" href="#pills-{{=value.id}}-1" role="tab" aria-controls="pills-{{=value.id}}-1" aria-selected="true">Технічна документація</a>
@@ -455,9 +458,6 @@
 			<li class="nav-item">
 				<a class="nav-link" id="pills-{{=value.id}}-2-tab" data-toggle="pill" href="#pills-{{=value.id}}-2" role="tab" aria-controls="pills-{{=value.id}}-2" aria-selected="false">Бух.Дані</a>
 			</li>
-			<!--                <li class="nav-item">-->
-			<!--                    <a class="nav-link" id="pills-{{=value.id}}-3-tab" data-toggle="pill" href="#pills-{{=value.id}}-3" role="tab" aria-controls="pills-{{=value.id}}-3" aria-selected="false">Аналоги</a>-->
-			<!--                </li>-->
 			<li class="nav-item">
 				<a class="nav-link" id="pills-{{=value.id}}-4-tab" data-toggle="pill" href="#pills-{{=value.id}}-4" role="tab" aria-controls="pills-{{=value.id}}-4" aria-selected="false">Фото</a>
 			</li>

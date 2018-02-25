@@ -34,6 +34,8 @@ $(document).ready(function() {
 
     var firmaForm = new Firma();
     var firmaListForm = new FirmaList();
+    var adressForm = new Adress();
+    var adressListForm = new AdressList();
     // Создаем все главные вьюхи
     var firmaView = new nzr.view.FirmaFormView(firmaForm, firmaListForm);
     //  И теперь контроллеры!
@@ -41,9 +43,7 @@ $(document).ready(function() {
 
     var clientForm = new Client();
     var clientListForm = new ClientList();
-    // Создаем все главные вьюхи
     var clientView = new nzr.view.ClientFormView(clientForm, clientListForm);
-    //  И теперь контроллеры!
     var clientController = new nzr.controller.ClientFormController(clientForm, clientListForm);
 
     var ocenkaForm = new Ocenka();
@@ -62,5 +62,11 @@ $(document).ready(function() {
     var messageView = new nzr.view.MessageFormView(messageForm, messagesListForm);
     //  И теперь контроллеры!
     var messageController = new nzr.controller.MessageFormController(messageForm, messagesListForm);
+
+
+    var spravochForm = new Spravoch();
+    var spravochListForm = new SpravochList();
+    var spravochView = new nzr.view.SpravochFormView(spravochForm, spravochListForm);
+    var spravochController = new nzr.controller.SpravochFormController(spravochForm, spravochListForm);
 
 });
