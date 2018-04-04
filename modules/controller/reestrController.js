@@ -163,7 +163,7 @@ nzr.controller = nzr.controller || {};
             this._ajaxSprRequest = $.ajax({
                 url: this._listSpravApi,
                 type: 'POST',
-                data: {'table': field.table, 'idcity' : field.idCity},
+                data: {'table': field.table, 'idcity' : field.idCity, 'idmarka' : field.idmarka},
                 success: function(data){
                     console.log(data);
                     self._requestSpravSuccess(data);

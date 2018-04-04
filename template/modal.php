@@ -1,8 +1,8 @@
 <div class="modal fade bd-example-modal-lg" id="sprModalCenter" tabindex="-1" role="dialog" aria-labelledby="sprModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+	<div class="modal-dialog modal-lg alert alert-success" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="sprModalLongTitle">Довідник</h5>
+				<h5 class="modal-title text-danger" id="sprModalLongTitle">Довідник</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>

@@ -69,4 +69,11 @@ $(document).ready(function() {
     var spravochView = new nzr.view.SpravochFormView(spravochForm, spravochListForm);
     var spravochController = new nzr.controller.SpravochFormController(spravochForm, spravochListForm);
 
+
+    var ocencaautoView = new nzr.view.OcencaAutoFormView(ocenkaForm, ocenkaListForm);
+    //  И теперь контроллеры!
+    var ocencaautoController = new nzr.controller.OcencaAutoFormController(ocenkaForm, ocenkaListForm);
+
+
+
 });

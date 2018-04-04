@@ -38,7 +38,8 @@ nzr.view = nzr.view || {};
             var tempReestrFormFirst = this.renderTemplate('OcenkaFormView-List', {"items": ocenkaList.items}),
                 self = this;
             this.container.html(tempReestrFormFirst);
-
+            this.btnOcencaAuto = this.container.find('.js-ocenca-auto');
+            this.btnOcencaAuto.on('click', _.bind(this.onOcencaAuto, this));
         },
 
         showOcenkaInit: function(event, ocentainit) {
@@ -52,6 +53,12 @@ nzr.view = nzr.view || {};
             var tempReestrFormFirst = this.renderTemplate('OcenkaFormView-Init', {"items": ocentainit.items}),
                 self = this;
             this.ocenkainit.html(tempReestrFormFirst);
+
+        },
+
+        onOcencaAuto: function (event ) {
+            $('#loader').show();
+            $(nzr).trigger('OcencaAutoFormView.getOcencaView');
 
         }
 

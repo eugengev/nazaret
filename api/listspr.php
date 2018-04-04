@@ -11,12 +11,14 @@ if (isset($_POST['table'])) {
 	if (isset($_POST['idcity']) && $_POST['idcity'] != 0) {
 		$sql  = "SELECT * FROM `".$_POST['table']."` WHERE `city_id`=".$_POST['idcity'];
 		$rows = $db->fetch_all_array( $sql );
-		$db->close();
+	} elseif (isset($_POST['idmarka']) && $_POST['idmarka'] != '') {
+		$sql  = "SELECT * FROM `".$_POST['table']."` WHERE `marka_id` in (SELECT id FROM `s_marka` WHERE `name` = '".$_POST['idmarka']."')";
+		$rows = $db->fetch_all_array( $sql );
 	} else {
 		$sql  = "SELECT * FROM `".$_POST['table']."`";
 		$rows = $db->fetch_all_array( $sql );
-		$db->close();
 	}
+	$db->close();
 
 	$data = [];
 

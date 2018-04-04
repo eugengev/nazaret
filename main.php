@@ -13,17 +13,17 @@
         <div class="main-menu">
             <h5 class="sidenav-heading">Меню</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-home"></i>Реєстр</a>
-                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                        <li><a href="#" id="listReestr">Реєстр замовлень</a></li>
-                        <li><a href="#" id="js-ocenka-list">Реєстр робіт оцінки</a></li>
-                    </ul>
-                </li>
+                        <li><a href="#" id="listReestr"><i class="icon-home"></i> Реєстр замовлень</a></li>
+                        <li><a href="#" id="js-ocenka-list"><i class="icon-home"></i> Реєстр робіт оцінки</a></li>
                 <li><a href="#exampledropdownDropdown1" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Налаштування</a>
                     <ul id="exampledropdownDropdown1" class="collapse list-unstyled ">
                         <li><a href="#" id="js-user-list">Користувачи</a></li>
                         <li><a href="#" id="js-firma-list">Фірми віконввці</a></li>
                         <li><a href="#" id="js-client-list">Замовники</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> Архів</a>
+                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                     </ul>
                 </li>
             </ul>

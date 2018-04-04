@@ -34,3 +34,17 @@
 .js-add-maino.pull-right {
     float: right;
 }
+
+.modal-xxl {
+    max-width: 90% !important;
+}
+
+#ui-datepicker-div {
+    z-index: 4000 !important;
+}
+
+.short_link {
+    width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

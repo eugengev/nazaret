@@ -4,3 +4,4 @@
 <?php include_once 'template/firma.php'; ?>
 <?php include_once 'template/client.php'; ?>
 <?php include_once 'template/ocenka.php'; ?>
+<?php include_once 'template/ocencaauto.php'; ?>

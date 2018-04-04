@@ -8,7 +8,6 @@
 				<th>Банк/Мета</th>
 				<th>Город</th>
 				<th>Майно/Адреса</th>
-
 				<th>Статус</th>
 				<th>Дія</th>
 			</tr>
@@ -20,11 +19,11 @@
 				<td>{{=value.datework}}</td>
 				<td>{{=value.bank}} / {{=value.meta}}</td>
 				<td>{{=value.city}}</td>
-				<td>{{=value.opis}}</td>
+				<td>{{=value.mname}} / {{=value.opis}}</td>
 				<td>
 					{{? value.status == 'n' }} новое заданиеы {{?}}
 				</td>
-				<td class='text-center'><a href="#" class="btn btn-success btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;<a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+				<td class='text-center'><a href="#" class="btn btn-success btn-sm {{? value.vid_id == '3' }} js-ocenca-auto {{?}}" data-id="{{=value.id}}" data-rid="{{=value.rid}}"><i class="fa fa-pencil-square-o"></i></a></td>
 			</tr>
 			{{~}}
 			</tbody>

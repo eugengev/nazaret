@@ -1,9 +1,9 @@
 <?php include_once 'template/template.php'; ?>
 <?php include_once 'template/template_buh.php'; ?>
 <?php include_once 'template/modal.php'; ?>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/popper.min.js"></script>
+<script src="/assets/js/jquery-ui.js"></script>
 
 <script src="/assets/js/bootstrap.min.js" ></script>
 <script src="/assets/js/doT.min.js" ></script>
@@ -51,5 +51,9 @@
 <script src="/modules/model/spravoch.js" ></script>
 <script src="/modules/controller/spravochController.js" ></script>
 <script src="/modules/view/spravochView.js" ></script>
+
+<script src="/modules/model/ocencaauto.js" ></script>
+<script src="/modules/controller/ocencaautoController.js" ></script>
+<script src="/modules/view/ocancaautoView.js" ></script>
 
 <script src="/modules/nzr/init.js" ></script>

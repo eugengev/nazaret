@@ -9,12 +9,13 @@ $db->connect();
 
 $id_user = $_SESSION['id_user'];
 
-$sql = "SELECT maino.*, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta ".
+$sql = "SELECT maino.*, reestr.id as rid, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_maino.name as mname ".
 	   " FROM `maino` ".
-	       "LEFT JOIN reestr ON reestr.id  = maino.reestr_id ".
-           "LEFT JOIN s_city ON reestr.city_id   = s_city.id ".
-	       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
-	       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ";
+	        "LEFT JOIN reestr ON reestr.id  = maino.reestr_id ".
+            "LEFT JOIN s_city ON reestr.city_id   = s_city.id ".
+	        "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
+            "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
+            "LEFT JOIN s_maino   ON maino.vid_id    = s_maino.id ";
 //       " WHERE vikon = ".$id_user;
 $rows = $db->fetch_all_array($sql);
 
@@ -26,12 +27,15 @@ foreach($rows as $record){
 	$list = array(
 		"id"       => $record['id'],
 		"opis"     => $record['opis'],
+		"mname"    => $record['mname'],
+		"vid_id"   => $record['vid_id'],
 		"nomber"   => $record['nomber'],
 		"datework" => $record['datework'],
 		"status"   => $record['status'],
 		"city"     => $record['city'],
 		"bank"     => $record['bank'],
 		"meta"     => $record['meta'],
+		"rid"     => $record['rid'],
 	);
 
 	$data[] = $list;

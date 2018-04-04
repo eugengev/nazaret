@@ -7,7 +7,10 @@ function Ocenka(data) {
     this.city = '';
     this.meta = '';
     this.bank = '';
-
+    this.count = 0;
+    this.mname = '';
+    this.vid_id = '';
+    this.rid = '';
 
     if (data) {
         this.init(data);
@@ -21,8 +24,12 @@ Ocenka.prototype.init = function(data) {
     this.datework = data.datework;
     this.status   = data.status;
     this.city     = data.city;
+    this.vid_id   = data.vid_id;
+    this.mname    = data.mname;
     this.meta     = data.meta;
     this.bank     = data.bank;
+    this.count    = data.count;
+    this.rid      = data.rid;
 };
 
 
