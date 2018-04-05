@@ -32,7 +32,11 @@ if (isset($_POST['link']) && isset($_POST['id'])) {
 		'ocenca_auto_id' => $id,
 		'url'  => $link,
 		'curency' => 'UAH',
-		'name' => $rowa['name'],
+		"kor_torg"     => 1,
+		"kor_year"     => 1,
+		"kor_tech"     => 1,
+		"kor_model"    => 1,
+		'name' => $rowa['marka'].'/'.$rowa['model'],
 		'year' => $rowa['year']
 	);
 

@@ -20,15 +20,16 @@
 .card-body {
     position: relative;
 }
-#loader {
+#loader, .loader {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     background: url(../images/loader.gif) no-repeat center #fff;
     opacity: 0.6;
+    z-index: 500000;
 }
 
 .js-add-maino.pull-right {
@@ -45,6 +46,7 @@
 
 .short_link {
     width: 100px;
+    height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
 }

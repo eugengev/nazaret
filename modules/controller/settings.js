@@ -17,7 +17,6 @@ nzr.controller = nzr.controller || {};
             var self = this;
 
             setTimeout(_.bind(this.getSettingsInfo, this), 0);
-            $(nzr).on('SettingsView.onChoseMetod', _.bind(this.onUpdateSettingsMetod, this));
         },
 
         getSettingsInfo: function(){
@@ -40,8 +39,8 @@ nzr.controller = nzr.controller || {};
 
         _requestSuccess: function(data) {
             // console.log('_requestSuccess');
-            var payment = new SettingsList(data);
-            $(nzr).trigger('SettingsFormController.requestSuccess', Settings);
+            // var payment = new SettingsList(data);
+            // $(nzr).trigger('SettingsFormController.requestSuccess', Settings);
         },
 
         _requestError: function(data) {
@@ -52,46 +51,6 @@ nzr.controller = nzr.controller || {};
             // console.log('_requestComplete');
             this._ajaxRequest = null;
         },
-
-        onUpdateSettingsMetod: function(event, metodId) {
-            if (this._ajaxUpdate) {
-                this._ajaxUpdate.abort();
-                this._ajaxUpdate = null;
-            }
-
-            var dataUpdate = {
-                settings_system: metodId
-            };
-
-            var self = this;
-            this._ajaxUpdate = $.ajax({
-                url: this._settingsApi,
-                type: "POST",
-                data: dataUpdate,
-                success: function(data){
-                    self._updateSuccess(data);
-                },
-                error: _.bind(this._updateError, this),
-                complete: _.bind(this._updateComplete, this)
-            });
-
-        },
-
-        _updateSuccess: function(data) {
-            // console.log('_updateSuccess');
-            var payment = new PaymentList(data);
-            $(nzr).trigger('SettingsFormController.requestSuccess', payment);
-        },
-
-        _updateError: function(data) {
-            // console.log('_updateError');
-        },
-
-        _updateComplete: function(data) {
-            // console.log('_updateComplete');
-            this._ajaxUpdate = null;
-            $(nzr).trigger('SettingsView.onChoseMetodComplete');
-        }
 
     });
 

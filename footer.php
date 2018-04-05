@@ -20,6 +20,10 @@
 <script src="/modules/nzr/utils.js" ></script>
 <script src="/modules/view/BaseView.js" ></script>
 
+<script src="/modules/model/settings.js" ></script>
+<script src="/modules/controller/settings.js" ></script>
+<script src="/modules/view/settings.js" ></script>
+
 <script src="/modules/model/reestr.js" ></script>
 <script src="/modules/controller/reestrController.js" ></script>
 <script src="/modules/view/reestrView.js" ></script>

@@ -358,9 +358,9 @@
 											<th>Джероло Інформації</th>
 											<th>Марка, модель</th>
 											<th>Рік випуску</th>
-                                            <th>Валюта</th>
+                                            <th style="width: 80px">Валюта</th>
 											<th>Вартість пропозиції</th>
-											<th>Вартість пропозиції, без ПДВ</th>
+											<th>Вартість пропозиції, без ПДВ в грн</th>
                                             <th>без ПДВ</th>
 											<th>Коригування на торг</th>
 											<th>Коригування на рік випуску</th>
@@ -374,9 +374,9 @@
 										</tbody>
 										<tfoot>
 										<tr>
-											<td colspan="11" class="text-center">Середнє</td>
+											<td colspan="11" class="text-center" style="vertical-align: middle">Середнє</td>
                                             <td class="text-center"><button type="button" class="btn w-100 btn-success btn-sm pull-right js-refresh-analog">Оновити</button></td>
-											<td class="text-center">0</td>
+											<td class="text-center" style="vertical-align: middle"><h4 class="js-analog-ocenca-auto-avg"></h4></td>
 										</tr>
 										</tfoot>
 									</table>
@@ -525,7 +525,6 @@
 						<div class="tab-pane fade show" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab">
 						</div>
 					</div>
-
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Закрити</button>
@@ -573,31 +572,32 @@
                 <option {{? value.curency == 'UAH'}} selected {{?}} value="UAH">UAH</option>
                 <option {{? value.curency == 'USD'}} selected {{?}} value="USD">USD</option>
                 <option {{? value.curency == 'EUR'}} selected {{?}} value="EUR">EUR</option>
+                <option {{? value.curency == 'RUB'}} selected {{?}} value="RUB">RUB</option>
             </select>
         </td>
-        <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.price}}" name="price">
+        <td class="text-right">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.price}}" name="price">
         </td>
-        <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.price_bez}}" name="price_bez">
+        <td class="text-right">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.price_bez}}" name="price_bez" readonly>
         </td>
         <td>
             <input type="checkbox" class="form-control form-control-sm" value="1" name="pdv" {{? value.pdv == '1'}} checked {{?}} />
         </td>
-        <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.kor_torg}}" name="kor_torg">
+        <td class="text-right">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.kor_torg}}" name="kor_torg">
+        </td>
+        <td class="text-right">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.kor_year}}" name="kor_year">
+        </td>
+        <td class="text-right">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.kor_tech}}" name="kor_tech">
         </td>
         <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.kor_year}}" name="kor_year">
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.kor_model}}" name="kor_model">
         </td>
         <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.kor_tech}}" name="kor_tech">
-        </td>
-        <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.kor_model}}" name="kor_model">
-        </td>
-        <td>
-            <input type="number" class="form-control form-control-sm" value="{{=value.vartis}}" name="vartis" readonly>
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.vartis}}" name="vartis" readonly>
         </td>
     </tr>
     {{~}}

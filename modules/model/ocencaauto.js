@@ -85,6 +85,7 @@ function OcencaAutoAnalog(data) {
     this.kor_tech         = '';
     this.kor_model        = '';
     this.vartis           = '';
+    this.avgsum           = 0;
 
 
     if (data) {
@@ -108,6 +109,7 @@ OcencaAutoAnalog.prototype.init = function(data) {
     this.kor_tech         = data.kor_tech;
     this.kor_model        = data.kor_model;
     this.vartis           = data.vartis;
+    this.avgsum           = data.avgsum;
 }
 
 

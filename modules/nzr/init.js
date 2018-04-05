@@ -5,9 +5,14 @@ $(document).ready(function() {
 
     var clientAuto = new Client();
     var clientListAuto = new ClientList();
+    var settings = new Settings();
+
+    var settingController = new nzr.controller.SettingsFormController(settings);
 
     // Создаем все главные вьюхи
     var reestrView = new nzr.view.ReestrFormView(reestrForm, clientListAuto);
+
+
 
     //  И теперь контроллеры!
     var reestrListController = new nzr.controller.ReestrFormController(reestrListForm, reestrForm);

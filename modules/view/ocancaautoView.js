@@ -89,6 +89,7 @@ nzr.view = nzr.view || {};
 
             console.log(data);
             var template = this.renderTemplate('OcencaAutoOne', data);
+            this.container.find('.js-analog-ocenca-auto-avg').text(data['sale_price']);
             this.container.find('.js-ocenca-auto-one').html(template);
             var options = {
                 'show' : true
@@ -219,8 +220,10 @@ nzr.view = nzr.view || {};
         },
 
         showOcencaAnalogAuto: function(event, data) {
-            var template = this.renderTemplate('OcencaAutoAnalogTableRows', data);
+            var template = this.renderTemplate('OcencaAutoAnalogTableRows', data), onerow = data['items'][0]['avgsum'];
             this.container.find('.js-analog-ocenca-auto-row').html(template);
+            console.log(data, onerow);
+            this.container.find('.js-analog-ocenca-auto-avg').text(onerow);
         }
 
 
