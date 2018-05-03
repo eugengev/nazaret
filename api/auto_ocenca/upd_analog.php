@@ -35,10 +35,12 @@ if (isset($_POST['items'])) {
 		unset($item['items']);
 		unset($item['id']);
 		unset($item['ocenca_auto_id']);
+		unset($item['avgsum2']);
+		unset($item['avgsum3']);
 
 		$sum = $item['price']*$val_rate;
 
-		$pdvv = ($sum*20)/100;
+		$pdvv =$sum/6;
 		$item['price_bez'] = round($sum - $pdvv);
 
 		if ($item['pdv'] == '1') {
@@ -63,12 +65,50 @@ if ($ocenca_auto_id != 0) {
 	$sql     = "SELECT AVG(vartis) as vavg FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id;
 	$rowavg = $db->query_first( $sql );
 	$avgsum = round($rowavg['vavg']);
-	$item = array( 'sale_price' => round($rowavg['vavg']));
-	$db->query_update('ocenca_auto', $item, 'id='.$ocenca_auto_id);
+	$items = array( 'sale_price' => round($rowavg['vavg']));
+	$db->query_update('ocenca_auto', $items, 'id='.$ocenca_auto_id);
+
+	$sql     = "SELECT vartis FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id. " ORDER BY vartis ASC";
+	$rowanal = $db->fetch_all_array( $sql );
+
+	unset($rowanal[count($rowanal)-1]);
+	unset($rowanal[0]);
+
+	$count = 0;
+	$mediane = 0;
+	foreach ($rowanal as $item) {
+		$count++;
+		$mediane = $mediane + (float) $item['vartis'];
+	}
+	$mediane = round($mediane/$count);
+
+	$items = array( 'sale_price_2' => round($mediane));
+	$db->query_update('ocenca_auto', $items, 'id='.$ocenca_auto_id);
+
+	$sql     = "SELECT vartis FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id. " ORDER BY vartis ASC";
+	$rowanal = $db->fetch_all_array( $sql );
+
+	while (count($rowanal) > 2) {
+		array_shift($rowanal);
+		array_pop($rowanal);
+	}
+
+	$count = 0;
+	$sered = 0;
+	foreach ($rowanal as $item) {
+		$count++;
+		$sered = $sered + (float) $item['vartis'];
+	}
+	$sered = round($sered/$count);
+
+	$items = array( 'sale_price_3' => round($sered));
+	$db->query_update('ocenca_auto', $items, 'id='.$ocenca_auto_id);
 
 	$sql     = "SELECT * FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id;
 	$rowanal = $db->fetch_all_array( $sql );
+
 }
+
 
 $db->close();
 
@@ -89,7 +129,9 @@ foreach($rowanal as $record){
 		"kor_tech"     => $record['kor_tech'],
 		"kor_model"    => $record['kor_model'],
 		"vartis"       => $record['vartis'],
-		"avgsum"       => $avgsum
+		"avgsum"       => $avgsum,
+		"avgsum2"      => $mediane,
+		"avgsum3"      => $sered,
 
 	);
 	$data[] = $items;

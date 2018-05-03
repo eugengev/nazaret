@@ -21,6 +21,14 @@ if (isset($_POST['type']) && $_POST['type'] == 'addzero' ) {
 	}
 }
 
+if (isset($_POST['type']) && $_POST['type'] == 'deleterow' ) {
+	$sql = "DELETE FROM `ocenca_auto` WHERE `id` = ".$_POST['idoa'];
+	$rowc = $db->query($sql);
+	$sql = "DELETE FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = ".$_POST['idoa'];
+	$rowc = $db->query($sql);
+}
+
+
 if (isset($_POST['idr'])) {
 	$sql = "SELECT reestr.*, s_client.name as client, s_firma.name as firma, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_manager.name as manager ".
 	       "FROM reestr ".
@@ -98,6 +106,8 @@ foreach($rowa as $record){
 		"year"       => $record['year'],
 		"vin"        => $record['vin'],
 		"sale_price" => $record['sale_price'],
+		"sale_price_2"=> $record['sale_price_2'],
+		"sale_price_3"=> $record['sale_price_3'],
 	);
 }
 $data['items'] = $items;

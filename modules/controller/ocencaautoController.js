@@ -21,6 +21,8 @@ nzr.controller = nzr.controller || {};
         _getAnalogInfoApi: '/api/auto_ocenca/get_analog.php',
         _getAddAnalogAutoApi: '/api/auto_ocenca/add_analog.php',
         _getAnalogUpdApi: '/api/auto_ocenca/upd_analog.php',
+        _getAnalogCalcApi: '/api/auto_ocenca/calc_analog.php',
+        _listLoadFileMainoApi: '/api/auto_ocenca/load_file.php',
 
         init: function() {
             var self = this;
@@ -34,6 +36,56 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('OcencaAutoFormView.getAnalogInfo', _.bind(this.getAnalogInfo, this));
             $(nzr).on('OcencaAutoFormView.addAnaloAuto', _.bind(this.addAnaloAuto, this));
             $(nzr).on('OcencaAutoFormView.updAnalogInfo', _.bind(this.updAnalogInfo, this));
+            $(nzr).on('OcencaAutoFormView.calcAnalogInfo', _.bind(this.calcAnalogInfo, this));
+            $(nzr).on('OcencaAutoFormView.deleteOcencaRow', _.bind(this.deleteOcencaRow, this));
+            $(nzr).on('OcencaAutoFormView.onLoadFiles', _.bind(this.onLoadFiles, this));
+        },
+        onLoadFiles: function(event, field){
+            if (this._ajaxUpdate) {
+                this._ajaxUpdate.abort();
+                this._ajaxUpdate = null;
+            }
+
+            var form_data = new FormData();
+            var ins = document.getElementById(field).files.length;
+            for (var x = 0; x < ins; x++) {
+                form_data.append("files[]", document.getElementById(field).files[x]);
+            }
+
+            var id = $('#reestrid').val();
+            form_data.append("restrid", id);
+            form_data.append("mainoid", $('.js-maino-id').val());
+            form_data.append("type", 'load_excel');
+
+            var self = this;
+            this._ajaxUpdate = $.ajax({
+                contentType:false,
+                cache:false,
+                processData:false,
+                data: form_data,
+                type: 'post',
+                url: this._listLoadFileMainoApi,
+                success: function(data){
+                    self._requestLoadFilesSuccess(data, field);
+                },
+                error: _.bind(this._requestLoadFilesoError, this),
+                complete: _.bind(this._requestLoadFilesComplete, this)
+            });
+        },
+        _requestLoadFilesSuccess: function (data, field) {
+            console.log('_requestLoadFilesSuccess');
+            console.log(data);
+            var ocenсaAuto = new OcencaAuto(data);
+            $(nzr).trigger('OcencaAutoFormView.showOcencaAddZero', ocenсaAuto);
+
+        },
+        _requestLoadFilesoError: function (data) {
+            console.log('_requestLoadFilesoError');
+            console.log(data);
+        },
+        _requestLoadFilesComplete: function (data) {
+            console.log('_requestLoadFilesComplete');
+            $('#loader').hide();
         },
 
         getOcencaInfo: function(event, data) {
@@ -284,10 +336,10 @@ nzr.controller = nzr.controller || {};
             var ocencaAutoAnalogList = new OcencaAutoAnalogList(data);
             $(nzr).trigger('OcencaAutoFormView.showOcencaAnalogAuto', ocencaAutoAnalogList);
 
-            // data = {
-            //     idoa : ocencaAutoAnalogList.items[0].ocenca_auto_id
-            // };
-            // $(nzr).trigger('OcencaAutoFormView.getOcencaAutoOneInfo', data);
+            datta = {
+                ocenca_auto_id : ocencaAutoAnalogList.items[0].ocenca_auto_id
+            };
+            $(nzr).trigger('OcencaAutoFormView.calcAnalogInfo', datta);
 
         },
         _request_updAnalogInfoError: function (data) {
@@ -296,6 +348,70 @@ nzr.controller = nzr.controller || {};
         },
         _request_updAnalogInfoComplete: function () {
             console.log('_request_getOcencaInfoComplete');
+            $('#loader').hide();
+        },
+
+
+        calcAnalogInfo: function(event, data) {
+            if (this._ajaxUpdate) {
+                this._ajaxUpdate.abort();
+                this._ajaxUpdate = null;
+            }
+
+            var self = this;
+            this._ajaxUpdate = $.ajax({
+                type: 'POST',
+                data: datta,
+                url: this._getAnalogCalcApi,
+                success: function(data){
+                    self._request_calcAnalogInfoSuccess(data);
+                },
+                error: _.bind(this._request_calcAnalogInfoError, this),
+                complete: _.bind(this._request_calcAnalogInfoComplete, this)
+            });
+        },
+        _request_calcAnalogInfoSuccess: function (data) {
+            console.log(data);
+            $(nzr).trigger('OcencaAutoFormView.showCalcOcencaAnalogAuto', data);
+        },
+        _request_calcAnalogInfoError: function (data) {
+            console.log('_request_getOcencaInfoError');
+            console.log(data);
+        },
+        _request_calcAnalogInfoComplete: function () {
+            console.log('_request_getOcencaInfoComplete');
+            $('#loader').hide();
+        },
+
+        deleteOcencaRow: function(event, data) {
+            if (this._ajaxAddNew) {
+                this._ajaxAddNew.abort();
+                this._ajaxAddNew = null;
+            }
+
+            var self = this;
+            this._ajaxAddNew = $.ajax({
+                type: 'POST',
+                data: data,
+                url: this._getOcencaInfoApi,
+                success: function(data){
+                    self._request_deleteOcencaRowSuccess(data);
+                },
+                error: _.bind(this._request_deleteOcencaRowError, this),
+                complete: _.bind(this._request_deleteOcencaRowComplete, this)
+            });
+        },
+        _request_deleteOcencaRowSuccess: function (data) {
+            console.log(data);
+            var ocenсaAuto = new OcencaAuto(data);
+            $(nzr).trigger('OcencaAutoFormView.showOcencaAddZero', ocenсaAuto);
+        },
+        _request_deleteOcencaRowError: function (data) {
+            console.log('_request_addOcencaZeroError');
+            console.log(data);
+        },
+        _request_deleteOcencaRowComplete: function () {
+            console.log('_request_addOcencaZeroComplete');
             $('#loader').hide();
         },
 

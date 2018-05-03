@@ -6,7 +6,9 @@ function OcencaAutoItem(data) {
     this.marka              = '';
     this.year               = '1901';
     this.vin                = '';
-    this.sale_price         = '';
+    this.sale_price         = 0;
+    this.sale_price_2       = 0;
+    this.sale_price_3       = 0;
     this.proiz              = '';
     this.dizelbenzinelectro = '';
     this.obem               = '';
@@ -44,6 +46,8 @@ OcencaAutoItem.prototype.init = function(data) {
     this.year               = data.year;
     this.vin                = data.vin;
     this.sale_price         = data.sale_price;
+    this.sale_price_2       = data.sale_price_2;
+    this.sale_price_3       = data.sale_price_3;
     this.proiz              = data.proiz;
     this.dizelbenzinelectro = data.dizelbenzinelectro;
     this.obem               = data.obem;
@@ -86,6 +90,8 @@ function OcencaAutoAnalog(data) {
     this.kor_model        = '';
     this.vartis           = '';
     this.avgsum           = 0;
+    this.avgsum2           = 0;
+    this.avgsum3           = 0;
 
 
     if (data) {
@@ -110,6 +116,8 @@ OcencaAutoAnalog.prototype.init = function(data) {
     this.kor_model        = data.kor_model;
     this.vartis           = data.vartis;
     this.avgsum           = data.avgsum;
+    this.avgsum2          = data.avgsum2;
+    this.avgsum3          = data.avgsum3;
 }
 
 

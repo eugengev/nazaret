@@ -50,7 +50,7 @@ nzr.view = nzr.view || {};
             this.tabFileMaino = this.container.find('.js-block-files');
             this.tabFileMaino.html(tempMainoFileForm);
 
-            var inputFile = this.tabFileMaino.find('.js-file-input');
+            var inputFile = this.tabFileMaino.find('.js-file-input-excel');
             inputFile.on('change', _.bind(this.loadFileMino, this));
         },
 

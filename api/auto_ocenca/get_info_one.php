@@ -31,6 +31,8 @@ foreach($rowa as $record){
 		"year"                  => $record['year'],
 		"vin"                   => $record['vin'],
 		"sale_price"            => $record['sale_price'],
+		"sale_price_2"          => $record['sale_price_2'],
+		"sale_price_3"          => $record['sale_price_3'],
 		"proiz"                 => $record['proiz'],
 		"dizelbenzinelectro"    => $record['dizelbenzinelectro'],
 		"obem"                  => $record['obem'],

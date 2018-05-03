@@ -28,6 +28,7 @@ nzr.view = nzr.view || {};
             $(nzr).on('OcencaAutoFormView.showOcencaAutoOne', _.bind(this.showOcencaAutoOne, this));
             $(nzr).on('OcencaAutoFormView.showOcencaAutoOneUpd', _.bind(this.showOcencaAutoOneUpd, this));
             $(nzr).on('OcencaAutoFormView.showOcencaAnalogAuto', _.bind(this.showOcencaAnalogAuto, this));
+            $(nzr).on('OcencaAutoFormView.showCalcOcencaAnalogAuto', _.bind(this.showCalcOcencaAnalogAuto, this));
         },
 
         getOcencaView: function() {
@@ -48,8 +49,23 @@ nzr.view = nzr.view || {};
             this.btnShowModalAuto = this.container.find('.js-open-modal-ocenca-auto');
             this.btnShowModalAuto.on('click', _.bind(this.getInfoOcencaAuto, this));
             this.container.find('.js-date').datepicker({
-                dateFormat: 'dd.mm.yy',
+                dateFormat: 'dd.mm.yy'
             });
+
+            this.btDeleteRow = this.container.find('.js-delete-ocenca-auto');
+            this.btDeleteRow.on('click', _.bind(this.onOcencaAutoDeleteRow, this));
+
+            var inputFileExcel = this.container.find('.js-file-input-excel');
+            inputFileExcel.on('change', _.bind(this.loadFileExcel, this));
+        },
+
+        loadFileExcel: function(event) {
+            $('#loader').show();
+            var idForm = $(event.target).attr('id');
+
+            console.log('Loadfile',idForm);
+
+            $(nzr).trigger('OcencaAutoFormView.onLoadFiles', idForm);
         },
 
         onOcencaAutoAddZero: function() {
@@ -58,12 +74,22 @@ nzr.view = nzr.view || {};
             $(nzr).trigger('OcencaAutoFormView.addOcencaZero', data);
         },
 
+        onOcencaAutoDeleteRow: function() {
+            $('#loader').show();
+            var btclick = $(event.currentTarget),
+                data = { 'idoa': btclick.data('ocencaautoid'), 'type' : 'deleterow', 'countOscenca' : this.container.find('.js-ocenca-count').val(), 'idm' : this.container.find('.js-maino-id').val(), 'idr' : this.container.find('.js-reestr-id').val()};
+            console.log(data);
+            $(nzr).trigger('OcencaAutoFormView.deleteOcencaRow', data);
+        },
+
         showOcencaAddZero: function(event, data) {
             console.log(data);
             var template = this.renderTemplate('OcencaAutoTableRows', {items: data.items.items});
             this.container.find('.js-ocenca-auto-table-row').html(template);
             this.btnShowModalAuto = this.container.find('.js-open-modal-ocenca-auto');
             this.btnShowModalAuto.on('click', _.bind(this.getInfoOcencaAuto, this));
+            this.btDeleteRow = this.container.find('.js-delete-ocenca-auto');
+            this.btDeleteRow.on('click', _.bind(this.onOcencaAutoDeleteRow, this));
         },
 
         getInfoOcencaAuto: function() {
@@ -90,6 +116,8 @@ nzr.view = nzr.view || {};
             console.log(data);
             var template = this.renderTemplate('OcencaAutoOne', data);
             this.container.find('.js-analog-ocenca-auto-avg').text(data['sale_price']);
+            this.container.find('.js-analog-ocenca-auto-avg2').text(data['sale_price_2']);
+            this.container.find('.js-analog-ocenca-auto-avg3').text(data['sale_price_3']);
             this.container.find('.js-ocenca-auto-one').html(template);
             var options = {
                 'show' : true
@@ -116,6 +144,16 @@ nzr.view = nzr.view || {};
                 id : this.container.find('#formOcencaAutoOne input[name=id]').val()
             };
             $(nzr).trigger('OcencaAutoFormView.getAnalogInfo', data);
+
+
+            this.inputCalcFull = this.container.find('.js-calc-auto-full-calc input');
+            this.inputCalcFull.on('change', _.bind(this.onCalcFull, this));
+
+            this.inputCalcGk = this.container.find('.js-calc-auto-gk input');
+            this.inputCalcGk.on('change', _.bind(this.onCalcFullGk, this));
+
+            this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
+            this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
         },
 
         onRefreshAnalog: function() {
@@ -141,6 +179,9 @@ nzr.view = nzr.view || {};
             });
 
             $(nzr).trigger('OcencaAutoFormView.updAnalogInfo', ocencaAutoAnalogList);
+
+            this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
+            this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
         },
 
         onAddAnalog: function() {
@@ -222,8 +263,96 @@ nzr.view = nzr.view || {};
         showOcencaAnalogAuto: function(event, data) {
             var template = this.renderTemplate('OcencaAutoAnalogTableRows', data), onerow = data['items'][0]['avgsum'];
             this.container.find('.js-analog-ocenca-auto-row').html(template);
-            console.log(data, onerow);
             this.container.find('.js-analog-ocenca-auto-avg').text(onerow);
+            this.container.find('.js-analog-ocenca-auto-avg2').text(data['items'][0]['avgsum2']);
+            this.container.find('.js-analog-ocenca-auto-avg3').text(data['items'][0]['avgsum3']);
+            this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
+            this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
+
+        },
+
+        showCalcOcencaAnalogAuto: function(event, data) {
+            console.log(data['avgsum']);
+            this.container.find('.js-analog-ocenca-auto-avg').text(data['avgsum']);
+            this.container.find('.js-analog-ocenca-auto-avg2').text(data['avgsum2']);
+            this.container.find('.js-analog-ocenca-auto-avg3').text(data['avgsum3']);
+            this.container.find('.js-analog-ocenca-auto-min').text(data['min']);
+            this.container.find('.js-analog-ocenca-auto-max').text(data['max']);
+            this.container.find('.js-analog-ocenca-auto-vid').text(data['vid']);
+        },
+
+        onCalcFull: function () {
+            var procent = 0, b1 = 0, b2 = 0, b3 = 0, b3 = 0, b4 = 0, k1 = 1;
+
+            this.container.find('.js-calc-auto-plus input[type=checkbox]:checked').each(function () {
+                var parent = $(this).parents('.input-group');
+                b1 = parseFloat(b1) + parseFloat(parent.find('input[type=number]').val());
+            });
+
+            this.container.find('.js-calc-auto-minus-1 input[type=radio]:checked').each(function () {
+                var parent = $(this).parents('.input-group');
+                b2 = parseFloat(b2) - parseFloat(parent.find('input[type=number]').val());
+            });
+
+            this.container.find('.js-calc-auto-minus-2 input[type=checkbox]:checked').each(function () {
+                var parent = $(this).parents('.input-group');
+                b3 = parseFloat(b3) - parseFloat(parent.find('input[type=number]').val());
+            });
+
+            this.container.find('.js-calc-auto-minus-3 input[type=checkbox]:checked').each(function () {
+                var parent = $(this).parents('.input-group');
+                b4 = parseFloat(b4) - parseFloat(parent.find('input[type=number]').val());
+            });
+
+            if ( this.container.find('.js-analog-ocenca-auto-gruz').prop('checked') ) {
+                k1 = parseFloat(k1) / 2;
+            }
+
+            if ( this.container.find('.js-analog-ocenca-auto-8-let').prop('checked') ) {
+                k1 = parseFloat(k1) / 2;
+            }
+
+            this.container.find('.js-analog-ocenca-auto-itogo-minus').val(k1);
+
+            // k1 = parseFloat(this.container.find('.js-analog-ocenca-auto-itogo-minus').val());
+
+            procent =  parseFloat(b1) + parseFloat(b2) + (parseFloat(b3)*k1) + parseFloat(b4);
+
+            this.container.find('.js-analog-ocenca-auto-itogo-minus').val((parseFloat(b3)*parseFloat(k1)));
+
+            this.container.find('.js-calc-suto-itog').text(procent+' %');
+            this.container.find('.js-calc-suto-itog').data('proc',procent+' %');
+            if (procent < 30 ) {
+                this.container.find('.js-calc-suto-itog').removeClass('alert-danger').addClass('alert-success');
+            } else {
+                this.container.find('.js-calc-suto-itog').addClass('alert-danger').removeClass('alert-success');
+            }
+        },
+
+        onCalcFullGk: function () {
+
+            var koefic = parseFloat(this.container.find('.js-calc-auto-gk input[name=koefic]').val()),
+                probeg_norm = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_norm]').val()),
+                fullyear = parseFloat(this.container.find('input[name=fullyear]').val()),
+                probeg_fact = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_fact]').val()),
+                probeg_fact_sred = probeg_fact/fullyear,
+                probeg_nedop = probeg_fact_sred - probeg_norm;
+
+                this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(probeg_fact_sred);
+                this.container.find('.js-calc-auto-gk input[name=probeg_nedop]').val(probeg_nedop);
+
+        },
+
+        onDeleteAnalog: function () {
+            var tr = $(event.currentTarget).parents('tr'),
+                id = tr.find('input[name=id]').val();
+            var field = {
+                'link': '',
+                'id': this.container.find('#formOcencaAutoOne input[name=id]').val(),
+                'idd': id,
+                'type': 'deleterow'
+            };
+            $(nzr).trigger('OcencaAutoFormView.addAnaloAuto', field);
         }
 
 

@@ -20,7 +20,7 @@ function screen($url, $razr, $razm, $form, $name)
 $db = new Database($db_host, $db_login, $db_passwd, $db_name);
 $db->connect();
 
-if (isset($_POST['link']) && isset($_POST['id'])) {
+if (isset($_POST['link']) && $_POST['link'] != '' && isset($_POST['id'])) {
 
 	$link = $_POST['link'];
 	$id = $_POST['id'];
@@ -49,37 +49,10 @@ if (isset($_POST['link']) && isset($_POST['id'])) {
 		'link_pic' => $link
 	);
 	$db->query_update('ocenca_auto_analog', $userinfo, 'id='.$idan);
-
-}
-/*
-$data = [];
-
-$sql = "SELECT * FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = ".$_POST['id'];
-$rowanal = $db->fetch_all_array($sql);
-
-$db->close();
-
-foreach($rowa as $record){
-	$items = array(
-		"id"                => $record['id'],
-		"ocenca_auto_id"    => $record['ocenca_auto_id'],
-		"url"          => $record['url'],
-		"link_pic"     => $record['link_pic'],
-		"name"         => $record['name'],
-		"year"         => $record['year'],
-		"curency"      => $record['curency'],
-		"price"        => $record['price'],
-		"price_bez"    => $record['price_bez'],
-		"kor_torg"     => $record['kor_torg'],
-		"kor_year"     => $record['kor_year'],
-		"kor_tech"     => $record['kor_tech'],
-		"kor_model"    => $record['kor_model'],
-		"vartis"       => $record['vartis'],
-
-	);
-	$data[] = $items;
 }
 
-die(json_encode($data, 256));
-*/
+if (isset($_POST['type']) && $_POST['type'] == 'deleterow' && isset($_POST['idd']) ) {
+	$sql = "DELETE FROM `ocenca_auto_analog` WHERE `id` = ".$_POST['idd'];
+	$db->query($sql);
+}
 ?>
