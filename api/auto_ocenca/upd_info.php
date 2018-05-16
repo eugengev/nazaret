@@ -9,15 +9,24 @@ $db->connect();
 
 $data = [];
 
-if (isset($_POST['id'])) {
-	$post = $_POST;
-	$id = $_POST['id'];
-	unset($post['id']);
-	unset($post['maino_id']);
-	$rowr = $db->query_update('ocenca_auto', $post, 'id = '.$id);
 
-	$sql = "SELECT * FROM `ocenca_auto` WHERE `id` = ".$_POST['id']." LIMIT 1";
-	$rowa = $db->fetch_all_array($sql);
+if (isset($_POST['type']) && $_POST['type'] == 'upadetedz') {
+	$field = array(
+		'dz' => $_POST['dz'],
+		'dz_json' => json_encode($_POST['dza'])
+	);
+	$id = $db->query_update('ocenca_auto', $field, 'id='.$_POST['id']);
+} else {
+	if ( isset( $_POST['id'] ) && isset( $_POST['maino_id'] ) ) {
+		$post = $_POST;
+		$id   = $_POST['id'];
+		unset( $post['id'] );
+		unset( $post['maino_id'] );
+		$rowr = $db->query_update( 'ocenca_auto', $post, 'id = ' . $id );
+
+		$sql  = "SELECT * FROM `ocenca_auto` WHERE `id` = " . $_POST['id'] . " LIMIT 1";
+		$rowa = $db->fetch_all_array( $sql );
+	}
 }
 
 $db->close();
@@ -55,7 +64,11 @@ foreach($rowa as $record){
 		"vladel_adres"          => $record['vladel_adres'],
 		"vlad_tot"              => $record['vlad_tot'],
 		"kts"                   => $record['kts'],
-		"kyzov"                 => $record['kyzov']
+		"kyzov"                 => $record['kyzov'],
+		"data_vedenja"          => $record['data_vedenja'],
+		"zavod_nomer"           => $record['zavod_nomer'],
+		"invent_nomer"          => $record['invent_nomer'],
+		"teh_har"               => $record['teh_har'],
 	);
 }
 $data[] = $items;

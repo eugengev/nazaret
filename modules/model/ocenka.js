@@ -1,6 +1,7 @@
 function Ocenka(data) {
     this.id   = 0;
     this.opis = '';
+    this.nomer = '';
     this.nomber = '';
     this.datework = '';
     this.status = '';
@@ -11,6 +12,9 @@ function Ocenka(data) {
     this.mname = '';
     this.vid_id = '';
     this.rid = '';
+    this.oglad_date = '';
+    this.oglad_sutok = '';
+    this.oglad_prisut = '';
 
     if (data) {
         this.init(data);
@@ -20,6 +24,7 @@ function Ocenka(data) {
 Ocenka.prototype.init = function(data) {
     this.id       = data.id;
     this.opis     = data.opis;
+    this.nomer    = data.nomer;
     this.nomber   = data.nomber;
     this.datework = data.datework;
     this.status   = data.status;
@@ -30,6 +35,9 @@ Ocenka.prototype.init = function(data) {
     this.bank     = data.bank;
     this.count    = data.count;
     this.rid      = data.rid;
+    this.oglad_date = data.oglad_date;
+    this.oglad_sutok = data.oglad_sutok;
+    this.oglad_prisut = data.oglad_prisut;
 };
 
 

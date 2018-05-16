@@ -15,7 +15,7 @@ nzr.controller = nzr.controller || {};
         _ajaxDelete: null,
         _getOcenkaListApi: '/api/get_ocenka_list.php',
         _getOcenkaInitApi: '/api/get_ocenka_list_init.php',
-        _saveOcenkaApi: '/api/save_ocenka.php',
+        _saveOcenkaApi: '/api/ocenca/save_ocenka.php',
         _deleteOcenkaApi: '/api/delete_ocenka.php',
 
         init: function() {
@@ -24,6 +24,7 @@ nzr.controller = nzr.controller || {};
             // Запрашиваем заказы при инициализации!
             setTimeout(_.bind(this.getOcenkaInitList, this), 0);
             $(nzr).on('OcenkaFormView.getOcenkaList', _.bind(this.getOcenkaList, this));
+            $(nzr).on('OcenkaFormView.saveOcenkaInfo', _.bind(this.saveOcenkaInfo, this));
         },
 
         getOcenkaInitList: function(){
@@ -78,6 +79,39 @@ nzr.controller = nzr.controller || {};
             console.log('_requestgetOcenkaListError');
         },
         _requestgetOcenkaListComplete: function () {
+            console.log('_requestgetOcenkaListComplete');
+            $('#loader').hide();
+        },
+
+
+        saveOcenkaInfo: function(event, datta){
+            if (this._ajaxRequest) {
+                this._ajaxRequest.abort();
+                this._ajaxRequest = null;
+            }
+
+            console.log(datta);
+
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                type: "POST",
+                data: datta,
+                url: this._saveOcenkaApi,
+                success: function(data){
+                    self._requestSaveOcenkaInfoSuccess(data);
+                },
+                error: _.bind(this._requestSaveOcenkaInfoError, this),
+                complete: _.bind(this._requestSaveOcenkaInfoComplete, this)
+            });
+        },
+        _requestSaveOcenkaInfoSuccess: function (data) {
+            // var ocenkaList = new OcenkaList(data);
+            // $(nzr).trigger('OcenkaFormController.getOcenkaList', ocenkaList);
+        },
+        _requestSaveOcenkaInfoError: function () {
+            console.log('_requestgetOcenkaListError');
+        },
+        _requestSaveOcenkaInfoComplete: function () {
             console.log('_requestgetOcenkaListComplete');
             $('#loader').hide();
         },

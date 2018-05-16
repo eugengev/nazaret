@@ -17,6 +17,7 @@ nzr.controller = nzr.controller || {};
         _listRowFileMainoApi: '/api/list_file_maino.php',
         _listLoadFileMainoApi: '/api/load_file_maino.php',
         _saveRowMainoApi: '/api/saverowsmaino.php',
+        _listDeleteFileMainoApi: '/api/reestr/delete_file.php',
         _listSprMainoPriceApi: '/api/listsprmainoprice.php',
         init: function() {
             var self = this;
@@ -28,6 +29,7 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('MainoFormView.onSaveMainoRows', _.bind(this.saveRowMaino, this));
             $(nzr).on('MainoFormView.onGetFileMainoRows', _.bind(this.onGetFileMainoRows, this));
             $(nzr).on('MainoFormView.onLoadFiles', _.bind(this.onLoadFiles, this));
+            $(nzr).on('MainoFormView.onDeleteFile', _.bind(this.onDeleteFile, this));
             $(nzr).on('ReestrFormView.getListRowMaino', _.bind(this.getRowMainoList, this));
         },
         onLoadFiles: function(event, field){
@@ -77,6 +79,43 @@ nzr.controller = nzr.controller || {};
             console.log(data);
         },
         _requestLoadFilesComplete: function (data) {
+            console.log('_requestLoadFilesComplete');
+            $('#loader').hide();
+        },
+
+
+        onDeleteFile: function(event, idFile){
+            if (this._ajaxUpdate) {
+                this._ajaxUpdate.abort();
+                this._ajaxUpdate = null;
+            }
+
+            var form_data = new FormData();
+            form_data.append("id", idFile);
+
+            var self = this;
+            this._ajaxUpdate = $.ajax({
+                contentType:false,
+                cache:false,
+                processData:false,
+                data: form_data,
+                type: 'post',
+                url: this._listDeleteFileMainoApi,
+                success: function(data){
+                    self._requestDeleteFilesSuccess(data);
+                },
+                error: _.bind(this._requestDeleteFilesoError, this),
+                complete: _.bind(this._requestDeleteFilesComplete, this)
+            });
+        },
+        _requestDeleteFilesSuccess: function (data, field) {
+            $(nzr).trigger('ReestrFormView.openTabFile');
+        },
+        _requestDeleteFilesoError: function (data) {
+            console.log('_requestLoadFilesoError');
+            console.log(data);
+        },
+        _requestDeleteFilesComplete: function (data) {
             console.log('_requestLoadFilesComplete');
             $('#loader').hide();
         },

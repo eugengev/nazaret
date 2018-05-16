@@ -4,6 +4,7 @@
 			<thead>
 			<tr class="text-center">
 				<th>№ Договора</th>
+                <th>№ Оценки</th>
 				<th>ДАТА</th>
 				<th>Банк/Мета</th>
 				<th>Город</th>
@@ -16,6 +17,7 @@
 			{{~it.items :value:itm}}
 			<tr class="js-Reestr-Item{{=value.id}}">
 				<td class="text-center">{{=value.nomber}}</td>
+                <td class="text-center">{{=value.nomer}}</td>
 				<td>{{=value.datework}}</td>
 				<td>{{=value.bank}} / {{=value.meta}}</td>
 				<td>{{=value.city}}</td>

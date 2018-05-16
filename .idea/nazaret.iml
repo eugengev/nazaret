@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/CachedObjectStorage" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Calculation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Cell" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Reader" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/RichText" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Shared" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Style" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Worksheet" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/Writer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPExcel/locale" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPWord/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPWord/samples" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPWord/src" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/PHPWord/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPExcel/Build" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPExcel/Classes" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPExcel/Documentation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPExcel/Examples" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPExcel/unitTests" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPWord/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPWord/samples" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPWord/src" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/_PHPWord/tests" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/pclzip" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/phpoffice" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vendor/zendframework" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

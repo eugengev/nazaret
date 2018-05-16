@@ -50,8 +50,23 @@ nzr.view = nzr.view || {};
             this.tabFileMaino = this.container.find('.js-block-files');
             this.tabFileMaino.html(tempMainoFileForm);
 
-            var inputFile = this.tabFileMaino.find('.js-file-input-excel');
+            var inputFile = this.tabFileMaino.find('.js-file-input');
             inputFile.on('change', _.bind(this.loadFileMino, this));
+
+
+            var btDeleteFile = this.tabFileMaino.find('.js-to-delete-file');
+            btDeleteFile.on('click', _.bind(this.deleteFileMino, this));
+        },
+
+
+        deleteFileMino: function() {
+            $('#loader').show();
+            console.log()
+            var idFile = $(event.target).data('idfile');
+
+            console.log('deletefile',idFile);
+
+            $(nzr).trigger('MainoFormView.onDeleteFile', idFile);
         },
 
         loadFileMino: function(event) {

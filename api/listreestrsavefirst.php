@@ -20,6 +20,9 @@ if (isset($_POST['status']) && $_POST['status'] == 'addfirstform') {
 	$bank = $_POST['bank'];
 	$meta = $_POST['meta'];
 	$manager = $_POST['manager'];
+	$vidygodi = $_POST['vidygodi'];
+	$nomerygodi = $_POST['nomerygodi'];
+	$dateygodi = $_POST['dateygodi'];
 
 	if (!( !is_int($client) ? (ctype_digit($client)) : true )) {
 		$id = $db->query_insert( 's_client',array('name' => $client));
@@ -62,6 +65,12 @@ if (isset($_POST['status']) && $_POST['status'] == 'addfirstform') {
 		$manager = $id;
 	}
 
+
+	if (!( !is_int($vidygodi) ? (ctype_digit($vidygodi)) : true )) {
+		$id = $db->query_insert( 's_vidygodi',array('name' => $vidygodi));
+		$vidygodi = $id;
+	}
+
 	$field = array(
 		'nomber' => $nomber,
 		'date' => $date,
@@ -73,6 +82,9 @@ if (isset($_POST['status']) && $_POST['status'] == 'addfirstform') {
 		'bank_id' => $bank,
 		'meta_id' => $meta,
 		'manager_id' => $manager,
+		'vidygodi_id' => $vidygodi,
+		'nomerygodi' => $nomerygodi,
+		'dateygodi' => $dateygodi,
 		'status' => 'n',
 	);
 

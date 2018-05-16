@@ -15,13 +15,13 @@ if (isset($_POST['items'])) {
 	$items = $_POST['items'];
 	foreach ($items as $item) {
 
-		$sql = "SELECT re.datework as dat FROM `ocenca_auto` as oa, `maino` as ma, `reestr` as re WHERE oa.id = ".$item['id']." AND ma.id = oa.maino_id AND re.id = ma.reestr_id";
+		$sql = "SELECT re.datework as dat FROM `ocenca_auto` as oa, `maino` as ma, `reestr` as re WHERE oa.id = ".$item['ocenca_auto_id']." AND ma.id = oa.maino_id AND re.id = ma.reestr_id";
 		$vald = $db->query_first($sql);
 
 		$datwork = $vald['dat'];
 
-		$sql = "SELECT * FROM `s_valute` WHERE `date`='".$datwork."'";
-		$val = $db->fetch_all_array($sql);
+		$sqll = "SELECT * FROM `s_valute` WHERE `date`='".$datwork."' AND `currency`='".$item['curency']."'";
+		$val = $db->fetch_all_array($sqll);
 
 		$val_rate = 1.0;
 		foreach ($val as $v) {
@@ -39,6 +39,7 @@ if (isset($_POST['items'])) {
 		unset($item['avgsum3']);
 
 		$sum = $item['price']*$val_rate;
+		$item['price_uah'] = $sum;
 
 		$pdvv =$sum/6;
 		$item['price_bez'] = round($sum - $pdvv);
@@ -106,7 +107,6 @@ if ($ocenca_auto_id != 0) {
 
 	$sql     = "SELECT * FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id;
 	$rowanal = $db->fetch_all_array( $sql );
-
 }
 
 
@@ -123,12 +123,14 @@ foreach($rowanal as $record){
 		"curency"      => $record['curency'],
 		"price"        => $record['price'],
 		"price_bez"    => $record['price_bez'],
+		"price_uah"    => $record['price_uah'],
 		"pdv"          => $record['pdv'],
 		"kor_torg"     => $record['kor_torg'],
 		"kor_year"     => $record['kor_year'],
 		"kor_tech"     => $record['kor_tech'],
 		"kor_model"    => $record['kor_model'],
 		"vartis"       => $record['vartis'],
+		"sale_price_chose" => $record['sale_price_chose'],
 		"avgsum"       => $avgsum,
 		"avgsum2"      => $mediane,
 		"avgsum3"      => $sered,

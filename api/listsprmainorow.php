@@ -8,7 +8,17 @@ $db = new Database($db_host, $db_login, $db_passwd, $db_name);
 $db->connect();
 
 if (isset($_POST['reestrid'])) {
-	$id = $db->query_insert( 'maino',array('reestr_id' => $_POST['reestrid'], 'status' => 'n'));
+	$sql = "SELECT * FROM `reestr` WHERE id = ".$_POST['reestrid'].' LIMIT 1';
+	$rows = $db->fetch_all_array($sql);
+	$nomer = $rows[0]['nomber'];
+
+
+	$sql = "SELECT count(id) as cnt FROM `maino` WHERE reestr_id = ".$_POST['reestrid'];
+	$rows = $db->fetch_all_array($sql);
+	$nomer = $nomer.'-'.(intval($rows[0]['cnt'])+1);
+
+
+	$id = $db->query_insert( 'maino',array('reestr_id' => $_POST['reestrid'], 'nomber' => $nomer, 'status' => 'n'));
 } else {
 	$id = 0;
 }

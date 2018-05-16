@@ -69,6 +69,27 @@ if ($ocenca_auto_id != 0) {
 
 	$vid = (1 - ($min / $max))*100;
 
+
+	$sql     = "SELECT sale_price_chose FROM `ocenca_auto_analog` WHERE `ocenca_auto_id` = " . $ocenca_auto_id. " LIMIT 1";
+	$rowanal =  $db->query_first( $sql );
+
+	$sale_price_chose = $rowanal['sale_price_chose'];
+
+	switch ($sale_price_chose) {
+		case 'sale_price':
+			$sql     = "UPDATE `ocenca_auto` SET `sale_price` = '".$avgsum."' WHERE id = ". $ocenca_auto_id;
+			$rowanal = $db->query( $sql );
+			break;
+		case 'sale_price_2':
+			$sql     = "UPDATE `ocenca_auto` SET `sale_price` = '".$mediane."' WHERE id = ". $ocenca_auto_id;
+			$rowanal = $db->query( $sql );
+			break;
+		case 'sale_price_3':
+			$sql     = "UPDATE `ocenca_auto` SET `sale_price` = '".$sered."' WHERE id = ". $ocenca_auto_id;
+			$rowanal = $db->query( $sql );
+			break;
+	}
+
 }
 
 $db->close();
@@ -80,6 +101,8 @@ $items = array(
 	"min"           => $min,
 	"max"           => $max,
 	"vid"           => $vid.' %',
+	"sale_price_chose" => $sale_price_chose,
+
 );
 $data = $items;
 

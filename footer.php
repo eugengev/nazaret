@@ -1,6 +1,7 @@
 <?php include_once 'template/template.php'; ?>
 <?php include_once 'template/template_buh.php'; ?>
 <?php include_once 'template/modal.php'; ?>
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=fxip4lgrwm7oy1syvzw6l280r6bfmqk2t7i3g9elkilkllpe"></script>
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/js/popper.min.js"></script>
 <script src="/assets/js/jquery-ui.js"></script>

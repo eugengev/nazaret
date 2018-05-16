@@ -29,6 +29,10 @@ nzr.view = nzr.view || {};
             $(nzr).on('OcencaAutoFormView.showOcencaAutoOneUpd', _.bind(this.showOcencaAutoOneUpd, this));
             $(nzr).on('OcencaAutoFormView.showOcencaAnalogAuto', _.bind(this.showOcencaAnalogAuto, this));
             $(nzr).on('OcencaAutoFormView.showCalcOcencaAnalogAuto', _.bind(this.showCalcOcencaAnalogAuto, this));
+            $(nzr).on('OcencaAutoFormView.showOcencaFiles', _.bind(this.showOcencaFiles, this));
+            $(nzr).on('OcencaAutoFormView.showOcencaLiterals', _.bind(this.showOcencaLiterals, this));
+
+
         },
 
         getOcencaView: function() {
@@ -55,8 +59,36 @@ nzr.view = nzr.view || {};
             this.btDeleteRow = this.container.find('.js-delete-ocenca-auto');
             this.btDeleteRow.on('click', _.bind(this.onOcencaAutoDeleteRow, this));
 
+            this.btSaveOglad = this.container.find('.js-ocenca-auto-save-oglad');
+            this.btSaveOglad.on('click', _.bind(this.onSaveOglad, this));
+
+            this.container.find('input[name=oglad_date]').val(data.ocenca.oglad_date);
+            this.container.find('input[name=oglad_sutok]').val(data.ocenca.oglad_sutok);
+            this.container.find('input[name=oglad_prisut]').val(data.ocenca.oglad_prisut);
+
             var inputFileExcel = this.container.find('.js-file-input-excel');
             inputFileExcel.on('change', _.bind(this.loadFileExcel, this));
+
+            this.btFileShow = this.container.find('.js-ocenca-show-files');
+            this.btFileShow.on('click', _.bind(this.onShowFiles, this));
+
+            this.btLiterShow = this.container.find('.js-ocenca-show-literal');
+            this.btLiterShow.on('click', _.bind(this.onShowLiteral, this));
+
+            this.btCreateFile = this.container.find('.js-ocenca-create-file');
+            this.btCreateFile.on('click', _.bind(this.onCreateFile, this));
+        },
+
+        onSaveOglad: function() {
+            $('#loader').show();
+            var data = {
+                'oglad_date' : this.container.find('input[name=oglad_date]').val(),
+                'oglad_sutok' : this.container.find('input[name=oglad_sutok]').val() ,
+                'oglad_prisut' : this.container.find('input[name=oglad_prisut]').val(),
+                'type' : 'updateogljad',
+                'id' : this.container.find('#idocenka').val()
+            };
+            $(nzr).trigger('OcenkaFormView.saveOcenkaInfo', data);
         },
 
         loadFileExcel: function(event) {
@@ -77,7 +109,12 @@ nzr.view = nzr.view || {};
         onOcencaAutoDeleteRow: function() {
             $('#loader').show();
             var btclick = $(event.currentTarget),
-                data = { 'idoa': btclick.data('ocencaautoid'), 'type' : 'deleterow', 'countOscenca' : this.container.find('.js-ocenca-count').val(), 'idm' : this.container.find('.js-maino-id').val(), 'idr' : this.container.find('.js-reestr-id').val()};
+                data = { 'idoa': btclick.data('ocencaautoid'),
+                         'type' : 'deleterow',
+                        'countOscenca' : this.container.find('.js-ocenca-count').val(),
+                        'idm' : this.container.find('.js-maino-id').val(),
+                    'idr' : this.container.find('.js-reestr-id').val()
+                };
             console.log(data);
             $(nzr).trigger('OcencaAutoFormView.deleteOcencaRow', data);
         },
@@ -154,6 +191,8 @@ nzr.view = nzr.view || {};
 
             this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
             this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
+
+            tinymce.init({ selector:'textarea' });
         },
 
         onRefreshAnalog: function() {
@@ -175,13 +214,17 @@ nzr.view = nzr.view || {};
                         ocencaAutoAnalog[name] = val;
                     };
                 });
+                $('input[name=sale_price_chose]:checked').each(function(){
+                    var name = $(this).attr('name'), val = $(this).val();
+                    if (name != undefined) {
+                        ocencaAutoAnalog[name] = val;
+                    };
+                });
                 ocencaAutoAnalogList.items.push(ocencaAutoAnalog);
             });
 
-            $(nzr).trigger('OcencaAutoFormView.updAnalogInfo', ocencaAutoAnalogList);
 
-            this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
-            this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
+            $(nzr).trigger('OcencaAutoFormView.updAnalogInfo', ocencaAutoAnalogList);
         },
 
         onAddAnalog: function() {
@@ -215,7 +258,7 @@ nzr.view = nzr.view || {};
         onSubmitForm: function () {
             var ocencaAutoOne = new OcencaAutoItem();
             this.formone = this.container.find('#formOcencaAutoOne');
-            this.formone.find('input,select').each(function () {
+            this.formone.find('input,select,textarea').each(function () {
                 var name = $(this).attr('name'), val = $(this).val();
                 if (name != undefined) {
                     console.log(name, val);
@@ -231,6 +274,8 @@ nzr.view = nzr.view || {};
             });
             console.log(ocencaAutoOne);
             $(nzr).trigger('OcencaAutoFormView.updOcencaInfo', ocencaAutoOne);
+
+            tinymce.init({ selector:'textarea' });
         },
 
         showOcencaAutoOneUpd: function(event, data) {
@@ -269,6 +314,10 @@ nzr.view = nzr.view || {};
             this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
             this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
 
+            datta = {
+                ocenca_auto_id : data['items'][0]['ocenca_auto_id']
+            };
+            $(nzr).trigger('OcencaAutoFormView.calcAnalogInfo', datta);
         },
 
         showCalcOcencaAnalogAuto: function(event, data) {
@@ -279,29 +328,60 @@ nzr.view = nzr.view || {};
             this.container.find('.js-analog-ocenca-auto-min').text(data['min']);
             this.container.find('.js-analog-ocenca-auto-max').text(data['max']);
             this.container.find('.js-analog-ocenca-auto-vid').text(data['vid']);
+            this.container.find('input[name=sale_price_chose]').prop('checked',false);
+            this.container.find('input[value='+data['sale_price_chose']+']').prop('checked',true);
         },
 
         onCalcFull: function () {
             var procent = 0, b1 = 0, b2 = 0, b3 = 0, b3 = 0, b4 = 0, k1 = 1;
+            var dzArray = [];
 
             this.container.find('.js-calc-auto-plus input[type=checkbox]:checked').each(function () {
                 var parent = $(this).parents('.input-group');
                 b1 = parseFloat(b1) + parseFloat(parent.find('input[type=number]').val());
+                dz = {
+                    'chose' : 1,
+                    'name'  : $(this).attr('name'),
+                    'label' : parent.find('span').text(),
+                    'value' : parseFloat(parent.find('input[type=number]').val())
+                };
+                dzArray.push(dz);
             });
 
             this.container.find('.js-calc-auto-minus-1 input[type=radio]:checked').each(function () {
                 var parent = $(this).parents('.input-group');
                 b2 = parseFloat(b2) - parseFloat(parent.find('input[type=number]').val());
+                dz = {
+                    'chose' : 1,
+                    'name'  : $(this).attr('name'),
+                    'label' : parent.find('span').text(),
+                    'value' : parseFloat(parent.find('input[type=number]').val())
+                };
+                dzArray.push(dz);
             });
 
             this.container.find('.js-calc-auto-minus-2 input[type=checkbox]:checked').each(function () {
                 var parent = $(this).parents('.input-group');
                 b3 = parseFloat(b3) - parseFloat(parent.find('input[type=number]').val());
+                dz = {
+                    'chose' : 1,
+                    'name'  : $(this).attr('name'),
+                    'label' : parent.find('span').text(),
+                    'value' : parseFloat(parent.find('input[type=number]').val())
+                };
+                dzArray.push(dz);
             });
 
             this.container.find('.js-calc-auto-minus-3 input[type=checkbox]:checked').each(function () {
                 var parent = $(this).parents('.input-group');
                 b4 = parseFloat(b4) - parseFloat(parent.find('input[type=number]').val());
+                dz = {
+                    'chose' : 1,
+                    'name'  : $(this).attr('name'),
+                    'label' : parent.find('span').text(),
+                    'value' : parseFloat(parent.find('input[type=number]').val())
+                };
+                dzArray.push(dz);
             });
 
             if ( this.container.find('.js-analog-ocenca-auto-gruz').prop('checked') ) {
@@ -321,12 +401,22 @@ nzr.view = nzr.view || {};
             this.container.find('.js-analog-ocenca-auto-itogo-minus').val((parseFloat(b3)*parseFloat(k1)));
 
             this.container.find('.js-calc-suto-itog').text(procent+' %');
-            this.container.find('.js-calc-suto-itog').data('proc',procent+' %');
+            this.container.find('.js-calc-suto-itog').data('proc',procent);
             if (procent < 30 ) {
                 this.container.find('.js-calc-suto-itog').removeClass('alert-danger').addClass('alert-success');
             } else {
                 this.container.find('.js-calc-suto-itog').addClass('alert-danger').removeClass('alert-success');
             }
+
+            console.log(dzArray);
+
+            var field = {
+                'dz': procent,
+                'dza': dzArray,
+                'id': this.container.find('#formOcencaAutoOne input[name=id]').val(),
+                'type': 'upadetedz'
+            };
+            $(nzr).trigger('OcencaAutoFormView.updOcencaDz', field);
         },
 
         onCalcFullGk: function () {
@@ -353,8 +443,76 @@ nzr.view = nzr.view || {};
                 'type': 'deleterow'
             };
             $(nzr).trigger('OcencaAutoFormView.addAnaloAuto', field);
-        }
+        },
 
+
+        showOcencaFiles: function(event, data) {
+            console.log(data);
+            var template = this.renderTemplate('OcencaAutoFilesList', {items: data.items});
+            this.container.find('.js-ocenca-file-list').html(template);
+
+            this.fileChange = this.container.find('.js-chose-file-change');
+            this.fileChange.on('change', _.bind(this.onFileChange, this));
+
+        },
+
+        onFileChange: function(){
+            $('#loader').show();
+            var field = {
+                'id' : this.container.find('#idocenka').val(),
+                'idfile': $(event.currentTarget).data('id'),
+                'type': 'changefile'
+            };
+            $(nzr).trigger('OcencaAutoFormView.getOcencaFiles', field);
+
+        },
+
+        onShowFiles: function() {
+            $('#loader').show();
+            var field = {
+                id : this.container.find('#idocenka').val()
+            };
+            $(nzr).trigger('OcencaAutoFormView.getOcencaFiles', field);
+        },
+
+        onShowLiteral: function() {
+            $('#loader').show();
+            var field = {
+                id : this.container.find('#idocenka').val()
+            };
+            $(nzr).trigger('OcencaAutoFormView.getOcencaLiteral', field);
+        },
+
+
+        showOcencaLiterals: function(event, data) {
+            console.log(data);
+            var template = this.renderTemplate('OcencaAutoLiterList', {items: data.items});
+            this.container.find('.js-ocenca-liter-list').html(template);
+
+            this.fileChange = this.container.find('.js-chose-liter-change');
+            this.fileChange.on('change', _.bind(this.onLitarlChange, this));
+
+        },
+
+        onLitarlChange: function(){
+            $('#loader').show();
+            var field = {
+                'id' : this.container.find('#idocenka').val(),
+                'idfile': $(event.currentTarget).data('id'),
+                'type': 'changefile'
+            };
+            $(nzr).trigger('OcencaAutoFormView.getOcencaFiles', field);
+
+        },
+
+
+        onCreateFile: function() {
+            $('#loader').show();
+            var field = {
+                id : this.container.find('#idocenka').val()
+            };
+            $(nzr).trigger('OcencaAutoFormView.onCreateFile', field);
+        },
 
     });
 

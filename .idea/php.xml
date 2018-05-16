@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/locale" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Shared" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/CachedObjectStorage" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/RichText" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Style" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Calculation" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Cell" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Writer" />
+      <path value="$PROJECT_DIR$/vendor/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/vendor/zendframework" />
+      <path value="$PROJECT_DIR$/vendor/vendor/pclzip" />
+      <path value="$PROJECT_DIR$/vendor/vendor/phpoffice" />
+      <path value="$PROJECT_DIR$/vendor/_PHPWord/src" />
+      <path value="$PROJECT_DIR$/vendor/_PHPWord/samples" />
+      <path value="$PROJECT_DIR$/vendor/_PHPWord/.git" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/src" />
+      <path value="$PROJECT_DIR$/vendor/_PHPWord/tests" />
+      <path value="$PROJECT_DIR$/vendor/_PHPWord/docs" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/Documentation" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/unitTests" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/samples" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/tests" />
+      <path value="$PROJECT_DIR$/vendor/PHPWord/docs" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/.git" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/Build" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Worksheet" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/Examples" />
+      <path value="$PROJECT_DIR$/vendor/PHPExcel/Reader" />
+      <path value="$PROJECT_DIR$/vendor/_PHPExcel/Classes" />
+    </include_path>
+  </component>
+</project>

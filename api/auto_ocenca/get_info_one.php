@@ -54,7 +54,11 @@ foreach($rowa as $record){
 		"vladel_adres"          => $record['vladel_adres'],
 		"vlad_tot"              => $record['vlad_tot'],
 		"kts"                   => $record['kts'],
-		"kyzov"                 => $record['kyzov']
+		"kyzov"                 => $record['kyzov'],
+		"data_vedenja"          => $record['data_vedenja'],
+		"zavod_nomer"           => $record['zavod_nomer'],
+		"invent_nomer"          => $record['invent_nomer'],
+		"teh_har"               => $record['teh_har'],
 	);
 }
 $data[] = $items;

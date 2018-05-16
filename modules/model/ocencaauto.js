@@ -31,6 +31,10 @@ function OcencaAutoItem(data) {
     this.vlad_tot           = '';
     this.kts                = '';
     this.kyzov              = '';
+    this.data_vedenja       = '';
+    this.zavod_nomer        = '';
+    this.invent_nomer       = '';
+    this.teh_har            = '';
 
     if (data) {
         this.init(data);
@@ -70,6 +74,10 @@ OcencaAutoItem.prototype.init = function(data) {
     this.vlad_tot           = data.vlad_tot;
     this.kts                = data.kts;
     this.kyzov              = data.kyzov;
+    this.data_vedenja       = data.data_vedenja;
+    this.zavod_nomer        = data.zavod_nomer;
+    this.invent_nomer       = data.invent_nomer;
+    this.teh_har            = data.teh_har;
 };
 
 
@@ -82,7 +90,8 @@ function OcencaAutoAnalog(data) {
     this.year             = '1901';
     this.curency          = '';
     this.price            = '';
-    this.price_bez        = '';
+    this.price_bez        = 0;
+    this.price_uah        = 0;
     this.pdv              = '0';
     this.kor_torg         = '';
     this.kor_year         = '';
@@ -90,8 +99,9 @@ function OcencaAutoAnalog(data) {
     this.kor_model        = '';
     this.vartis           = '';
     this.avgsum           = 0;
-    this.avgsum2           = 0;
-    this.avgsum3           = 0;
+    this.avgsum2          = 0;
+    this.avgsum3          = 0;
+    this.sale_price_chose = '';
 
 
     if (data) {
@@ -109,6 +119,7 @@ OcencaAutoAnalog.prototype.init = function(data) {
     this.curency          = data.curency;
     this.price            = data.price;
     this.price_bez        = data.price_bez;
+    this.price_uah        = data.price_uah;
     this.pdv              = data.pdv;
     this.kor_torg         = data.kor_torg;
     this.kor_year         = data.kor_year;
@@ -118,6 +129,7 @@ OcencaAutoAnalog.prototype.init = function(data) {
     this.avgsum           = data.avgsum;
     this.avgsum2          = data.avgsum2;
     this.avgsum3          = data.avgsum3;
+    this.sale_price_chose = data.sale_price_chose;
 }
 
 
@@ -173,3 +185,76 @@ OcencaAuto.prototype.init = function(data) {
     this.ocenca = new Ocenka(data.ocenca);
     this.items  = new OcencaAutoItems(data.items);
 };
+
+
+function OcencaAutoFile(data) {
+    this.id                 = 0;
+    this.file_pach           = 0;
+    this.name               = '';
+    this.type              = '';
+    this.chosen              = '';
+
+    if (data) {
+        this.init(data);
+    }
+};
+
+OcencaAutoFile.prototype.init = function(data) {
+    this.id           = data.id;
+    this.file_pach    = data.file_pach;
+    this.name         = data.name;
+    this.type         = data.type;
+    this.chosen       = data.chosen;
+};
+
+function OcencaAutoFileList(data) {
+    this.items = [];
+    if (data) {
+        this.init(data);
+    }
+};
+
+OcencaAutoFileList.prototype.init = function(data) {
+    this.items = [];
+    if (data.length) {
+        for (var i = 0; i < data.length; i++){
+            var item = new OcencaAutoFile(data[i]);
+            this.items[i] = item;
+        }
+    }
+};
+
+
+function OcencaAutoLiteral(data) {
+    this.id                 = 0;
+    this.name               = '';
+    this.chose              = '';
+
+    if (data) {
+        this.init(data);
+    }
+};
+
+OcencaAutoLiteral.prototype.init = function(data) {
+    this.id           = data.id;
+    this.name         = data.name;
+    this.chose       = data.chose;
+};
+
+function OcencaAutoLiteralList(data) {
+    this.items = [];
+    if (data) {
+        this.init(data);
+    }
+};
+
+OcencaAutoLiteralList.prototype.init = function(data) {
+    this.items = [];
+    if (data.length) {
+        for (var i = 0; i < data.length; i++){
+            var item = new OcencaAutoLiteral(data[i]);
+            this.items[i] = item;
+        }
+    }
+};
+

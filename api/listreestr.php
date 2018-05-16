@@ -14,17 +14,18 @@ if (isset($_POST['pagenom'])) {
 }
 
 if (isset($_POST['id'])) {
-	$sql = "SELECT reestr.*, s_client.name as client, s_firma.name as firma, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_manager.name as manager ".
+	$sql = "SELECT reestr.*, s_vidygodi.name as vidygodi, s_client.name as client, s_firma.name as firma, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_manager.name as manager ".
 	       "FROM reestr ".
-		       "LEFT JOIN s_client  ON reestr.client_id  = s_client.id ".
-		       "LEFT JOIN s_firma   ON reestr.firma_id   = s_firma.id ".
-		       "LEFT JOIN s_city    ON reestr.city_id    = s_city.id ".
-		       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
-		       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
-		       "LEFT JOIN s_manager ON reestr.manager_id = s_manager.id ".
+		       "LEFT JOIN s_client   ON reestr.client_id  = s_client.id ".
+		       "LEFT JOIN s_firma    ON reestr.firma_id   = s_firma.id ".
+		       "LEFT JOIN s_city     ON reestr.city_id    = s_city.id ".
+		       "LEFT JOIN s_bank     ON reestr.bank_id    = s_bank.id ".
+		       "LEFT JOIN s_meta     ON reestr.meta_id    = s_meta.id ".
+		       "LEFT JOIN s_manager  ON reestr.manager_id = s_manager.id ".
+	           "LEFT JOIN s_vidygodi ON reestr.vidygodi_id = s_vidygodi.id ".
 	       "WHERE reestr.id = ".$_POST['id']." ";
 } else {
-	$sql = "SELECT reestr.*, s_client.name as client, s_firma.name as firma, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_manager.name as manager ".
+	$sql = "SELECT reestr.*, s_vidygodi.name as vidygodi, s_client.name as client, s_firma.name as firma, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_manager.name as manager ".
 	       "FROM reestr ".
 	       "LEFT JOIN s_client  ON reestr.client_id  = s_client.id ".
 	       "LEFT JOIN s_firma   ON reestr.firma_id   = s_firma.id ".
@@ -32,6 +33,7 @@ if (isset($_POST['id'])) {
 	       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
 	       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
 	       "LEFT JOIN s_manager ON reestr.manager_id = s_manager.id ".
+	       "LEFT JOIN s_vidygodi ON reestr.vidygodi_id = s_vidygodi.id ".
 	       "WHERE NOT status = 'd' ".
 	       "ORDER BY timestamp DESC ".$limit;
 }
@@ -61,6 +63,9 @@ foreach($rows as $record){
 		"manager"    => $record['manager'],
 		"nomer_act"  => $record['nomer_act'],
 		"date_act"   => $record['date_act'],
+		"vidygodi"   => $record['vidygodi'],
+		"nomerygodi" => $record['nomerygodi'],
+		"dateygodi"  => $record['dateygodi'],
 		"countpage"  => $rowp['page'],
 	);
 

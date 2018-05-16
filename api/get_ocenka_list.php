@@ -9,7 +9,7 @@ $db->connect();
 
 $id_user = $_SESSION['id_user'];
 
-$sql = "SELECT maino.*, reestr.id as rid, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_maino.name as mname ".
+$sql = "SELECT maino.*, maino.nomber as nomer, reestr.id as rid, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_maino.name as mname ".
 	   " FROM `maino` ".
 	        "LEFT JOIN reestr ON reestr.id  = maino.reestr_id ".
             "LEFT JOIN s_city ON reestr.city_id   = s_city.id ".
@@ -26,6 +26,7 @@ $data = [];
 foreach($rows as $record){
 	$list = array(
 		"id"       => $record['id'],
+		"nomer"    => $record['nomer'],
 		"opis"     => $record['opis'],
 		"mname"    => $record['mname'],
 		"vid_id"   => $record['vid_id'],

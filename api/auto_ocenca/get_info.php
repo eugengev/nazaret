@@ -38,19 +38,19 @@ if (isset($_POST['idr'])) {
 	       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
 	       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
 	       "LEFT JOIN s_manager ON reestr.manager_id = s_manager.id ".
-	       "WHERE reestr.id = ".$_POST['idr']." LIMIT 0, 1";
+	       "WHERE reestr.id = ".$_POST['idr']." LIMIT 1";
 	$rowr = $db->fetch_all_array($sql);
 }
 
 if (isset($_POST['idm'])) {
-	$sql = "SELECT maino.*, reestr.id as rid, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_maino.name as mname ".
+	$sql = "SELECT maino.*, maino.nomber as nomer,  reestr.id as rid, reestr.nomber, reestr.datework, s_city.name as city, s_bank.name as bank, s_meta.name as meta, s_maino.name as mname ".
 	       " FROM `maino` ".
 	       "LEFT JOIN reestr ON reestr.id  = maino.reestr_id ".
 	       "LEFT JOIN s_city ON reestr.city_id   = s_city.id ".
 	       "LEFT JOIN s_bank    ON reestr.bank_id    = s_bank.id ".
 	       "LEFT JOIN s_meta    ON reestr.meta_id    = s_meta.id ".
 	       "LEFT JOIN s_maino   ON maino.vid_id    = s_maino.id ".
-	       "WHERE maino.id = ".$_POST['idm']." LIMIT 0, 1";
+	       "WHERE maino.id = ".$_POST['idm']." LIMIT 1";
 	$rowm = $db->fetch_all_array($sql);
 
 	$sql = "SELECT * FROM `ocenca_auto` WHERE `maino_id` = ".$_POST['idm'];
@@ -80,6 +80,7 @@ $data['reestr'] = $list;
 foreach($rowm as $record){
 	$list = array(
 		"id"       => $record['id'],
+		"nomer"    => $record['nomer'],
 		"opis"     => $record['opis'],
 		"mname"    => $record['mname'],
 		"vid_id"   => $record['vid_id'],
@@ -91,6 +92,9 @@ foreach($rowm as $record){
 		"bank"     => $record['bank'],
 		"meta"     => $record['meta'],
 		"rid"      => $record['rid'],
+		"oglad_date"   => $record['oglad_date'],
+		"oglad_sutok"  => $record['oglad_sutok'],
+		"oglad_prisut" => $record['oglad_prisut'],
 	);
 }
 $data['ocenca'] = $list;

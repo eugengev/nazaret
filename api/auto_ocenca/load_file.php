@@ -60,6 +60,7 @@ if (isset($_FILES['files']) && !empty($_FILES['files'])) {
 
 		$objXLS->disconnectWorksheets();
 		unset($objXLS);
+		unlink($f);
 	}
 
 

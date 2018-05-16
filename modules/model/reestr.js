@@ -13,6 +13,9 @@ function Reestr(data) {
     this.nomer_act  = '';
     this.date_act   = '';
     this.countpage = 0;
+    this.vidygodi = 0;
+    this.nomerygodi = '';
+    this.dateygodi = '2010-01-01';
 
     if (data) {
         this.init(data);
@@ -34,6 +37,9 @@ Reestr.prototype.init = function(data) {
     this.nomer_act  = data.nomer_act;
     this.date_act   = data.date_act;
     this.countpage  = data.countpage;
+    this.vidygodi  = data.vidygodi;
+    this.nomerygodi  = data.nomerygodi;
+    this.dateygodi  = data.dateygodi;
 };
 
 function ReestrList(data) {

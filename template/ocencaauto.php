@@ -4,16 +4,16 @@
             <a class="nav-link active" id="pils-1-tab" data-toggle="pill" href="#pils-1" role="tab" aria-controls="pils-1" aria-selected="true"><i class="fa fa-cloud"></i> Загальні відомости</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " id="pils-2-tab" data-toggle="pill" href="#pils-2" role="tab" aria-controls="pils-2" aria-selected="false"><i class="fa fa-bars"></i> Огляд</a>
+            <a class="nav-link js-ocenca-show-oglad" id="pils-2-tab" data-toggle="pill" href="#pils-2" role="tab" aria-controls="pils-2" aria-selected="false"><i class="fa fa-bars"></i> Огляд</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="pils-3-tab" data-toggle="pill" href="#pils-3" role="tab" aria-controls="pils-3" aria-selected="false"><i class="fa fa-cloud"></i> Вибор Файлі справи</a>
+            <a class="nav-link js-ocenca-show-files" id="pils-3-tab" data-toggle="pill" href="#pils-3" role="tab" aria-controls="pils-3" aria-selected="false"><i class="fa fa-cloud"></i> Вибор Файлі справи</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> Литература</a>
+            <a class="nav-link js-ocenca-show-literal" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> Литература</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="pils-5-tab" data-toggle="pill" href="#pils-5" role="tab" aria-controls="pils-5" aria-selected="false"><i class="fa fa-cloud"></i> Фрпмування справи</a>
+            <a class="nav-link" id="pils-5-tab" data-toggle="pill" href="#pils-5" role="tab" aria-controls="pils-5" aria-selected="false"><i class="fa fa-cloud"></i> Формування справи</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -23,25 +23,18 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-2">
                             <div class="input-group-prepend">
+                                <span class="input-group-text">Номер Оценки</span>
+                            </div>
+                            <input type="hidden" id='idocenka' value="{{=it.ocenca.id}}" >
+                            <input type="text" class="form-control" readonly name='nomber' value="{{=it.ocenca.nomer}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-2">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text">Номер Договору</span>
                             </div>
                             <input type="text" class="form-control" readonly name='nomber' value="{{=it.reestr.nomber}}" >
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Дата Договору</span>
-                            </div>
-                            <input type="text" class="form-control" readonly name="date" value="{{=it.reestr.date}}" >
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Дата оцінки</span>
-                            </div>
-                            <input type="text" class="form-control" readonly data-id="#datework"  value="{{=it.reestr.datework}}" >
                         </div>
                     </div>
                     <div class='col'>
@@ -58,6 +51,24 @@
                                 <span class="input-group-text">ID Договору</span>
                             </div>
                             <input type="text" class="form-control" readonly name="id" id="reestrid" value="{{=it.reestr.id}}" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Дата Договору</span>
+                            </div>
+                            <input type="text" class="form-control" readonly name="date" value="{{=it.reestr.date}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Дата оцінки</span>
+                            </div>
+                            <input type="text" class="form-control" readonly data-id="#datework"  value="{{=it.reestr.datework}}" >
                         </div>
                     </div>
                 </div>
@@ -134,9 +145,9 @@
                                     <td><input type="text" class="form-control form-control-sm" value="{{=it.ocenca.opis}}"></td>
                                     <td><input type="text" class="form-control form-control-sm text-right js-ocenca-count" placeholder="0" value="{{=it.ocenca.count}}" name="count"></td>
                                     <td class="text-center">
-                                        <div class="custom-file" style="width: 200px">
+                                        <div class="custom-file form-control-sm" style="width: 200px">
                                             <form id="loadexcel" method="post" enctype="multipart/form-data">
-                                                <input type="file" class="custom-file-input js-file-input-excel" data-id="loadexcel" id="validatedCustomFile" required>
+                                                <input type="file" class="custom-file-input js-file-input-excel  form-control-sm" data-id="loadexcel" id="validatedCustomFile" required>
                                                 <label class="custom-file-label" for="validatedCustomFile">Завантажити з Excel</label>
                                                 <div class="invalid-feedback">Example invalid custom file feedback</div>
                                             </form>
@@ -191,8 +202,8 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Осмотр транспортного средства производилось</span>
                         </div>
-                        <input type="text" class="form-control js-date" data-id="#dateo" >
-                        <input type="hidden" name="date" id="dateo">
+                        <input type="text" class="form-control js-date" data-id="#dateo" name="oglad_date" >
+                        <input type="hidden" name="date" id="dateo" name="oglad_date">
                     </div>
                 </div>
             </div>
@@ -202,7 +213,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">времмя суток при</span>
                         </div>
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" name="oglad_sutok" >
                     </div>
                 </div>
             </div>
@@ -212,103 +223,45 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">в присутствии</span>
                         </div>
-                        <input type="text" class="form-control" >
+                        <input type="text" class="form-control" name="oglad_prisut" >
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-sm btn-primary js-ocenca-auto-save-oglad" type="button">Зберегти</button>
                 </div>
             </div>
         </div>
         <div class="tab-pane fade show" id="pils-3" role="tabpanel" aria-labelledby="pils-3-tab">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-hover table-bordered table-sm">
+                        <thead>
+                        <tr class="text-center" style="font-size: 0.8em">
+                            <th>#</th>
+                            <th>отметка</th>
+                            <th>миниатюра</th>
+                            <th>имя файла</th>
+                            <th>тип файла</th>
+                        </tr>
+                        </thead>
+                        <tbody class="js-ocenca-file-list">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <div class="tab-pane fade show" id="pils-4" role="tabpanel" aria-labelledby="pils-4-tab">
             <div class="row">
                 <div class="col"><h2>Используемая литература</h2></div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="input-group input-group-sm mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
-                            </div>
-                        </div>
-                        <div class="input-group-prepend col-11">
-                            <span class="input-group-text col-12" id="basic-addon1">Закон Украини "Про оцінк майна, майнових прав та професійну оцінку діяльності в Укрвїні"</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="js-ocenca-liter-list">
+
             </div>
         </div>
         <div class="tab-pane fade show" id="pils-5" role="tabpanel" aria-labelledby="pils-5-tab">
+            <button class="btn btn-sm btn-primary js-ocenca-create-file" type="button">Формування справи</button>
         </div>
     </div>
 
@@ -351,57 +304,57 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" >
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_01" >
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Відсутність корозійних пошкоджень складових частин кузова легкових автомобілів</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10" min="0" max="10" step="0.1" name="chb_01_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" >
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_02" >
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Відсутність пошкоджень лакофарбового покриття легкового автомобіля за умови, що відновлювальний ремонт кузова не виконували</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1" name="chb_03_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_03">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Виконано капітальний ремонт двигуна не більше як за 1 рік до дати оцінки</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1" name="chb_03_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_04">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">капітальний ремонт кузова з повним пофарбуванням не більше як за 3 роки до дати оцінки</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="15.0" min="0" max="15" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="15.0" min="0" max="15" step="0.1" name="chb_04_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_05">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">заміну кузова на новий не більше як за 5 років до дати оцінки(1)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="30.0" min="0" max="30" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="30.0" min="0" max="30" step="0.1" name="chb_05_v" >
                                     </div>
                                 </div>
                                 <div class="col js-calc-auto-minus-1">
@@ -409,46 +362,46 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="radio" aria-label="Checkbox for following text input" name="minnusvarktz">
+                                                <input type="radio" aria-label="Checkbox for following text input"  name="chb_06"">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Нема</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0" min="0" max="0" step="0" >
+                                        <input type="number" class="form-control text-right" value="0" min="0" max="0" step="0"  name="chb_06_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="radio" aria-label="Checkbox for following text input" name="minnusvarktz">
+                                                <input type="radio" aria-label="Checkbox for following text input"  name="chb_07">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">автомобіль легковий, експлуатувався в режимі таксі, що передбачає надання послуг з перевезення пасажирів та їхнього багажу в індивідуальному порядку</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1"  name="chb_07_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="radio" aria-label="Checkbox for following text input" name="minnusvarktz">
+                                                <input type="radio" aria-label="Checkbox for following text input"  name="chb_08">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">автомобілі легкові та автобуси спеціалізованого призначення</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" name="chb_08_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="radio" aria-label="Checkbox for following text input" name="minnusvarktz">
+                                                <input type="radio" aria-label="Checkbox for following text input"  name="chb_09">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">КТЗ застосовувався поза дорогами загального користування (не менше 30% пробігу)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" name="chb_09_v" >
                                     </div>
                                 </div>
                                 <div class="col js-calc-auto-minus-2">
@@ -456,298 +409,298 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" >
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_10" >
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">1 Панель підлоги кузова, кабіни</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1" name="chb_10_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_11">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">2 Коробчасті елементи збільшення жорсткості (лонжерони, поперечини,підсилювачі, підмоторна рама)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="6.0" min="0" max="6" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="6.0" min="0" max="6" step="0.1" name="chb_11_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_12">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">3 Пороги кузова</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" name="chb_12_v" >
                                     </div>
                                     <h6>4 Передок кузова, кабіни:</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" >
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_13" >
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">4.1 бризковики передніх крил</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" name="chb_13_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_14">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">4.2 щиток передка</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1" name="chb_14_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_15">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">4.3 панелі передка (полиці щитків радіатора)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" name="chb_15_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_16">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">4.4 бризковик облицювання радіатора</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.3" min="0" max="0.3" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.3" min="0" max="0.3" step="0.1" name="chb_16_v" >
                                     </div>
                                     <h6>5 Боковина кузова, кабіни:</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_17">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">5.1 стояки боковин </span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1" name="chb_17_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_18">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">5.2 арки боковин (бризковики боковин)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1"  name="chb_19_v">
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_20">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">5.3 панелі боковин</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" name="chb_20_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_21">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">5.4 Двері</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" name="chb_21_v" >
                                     </div>
                                     <h6>6 Задок кузова, кабіни: </h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" name="dizelbenzin">
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_22">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">6.1 панелі задка </span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" name="chb_22_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_23">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">6.2 полиці задка з перегородкою (стінка моторного відсіку)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1"  name="chb_23_v">
                                     </div>
                                     <h6>7 Дах кузова, кабіни: </h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_24">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">7.1 панель даху</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" name="chb_24_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_25">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">7.2 панель бокова задня </span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.3" min="0" max="0.3" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.3" min="0" max="0.3" step="0.1" name="chb_25_v" >
                                     </div>
                                     <h6>8 Оперення:</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_26">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">8.1 крило знімне</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" name="chb_26_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_27">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">8.2 крило незнімне</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1"  name="chb_27_v">
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_28">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">8.3 капот</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" name="chb_29_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_30">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">8.4 кришка багажника</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" name="chb_30_v" >
                                     </div>
                                     <h6>ЕЛЕМЕНТИ КУЗОВА, КАБІНИ, РАМИ(5) (деформація)</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_31">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">9 Деформації без пошкодження лакофарбового покриття</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="5.0" min="0" max="5" step="0.1"  name="chb_31_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_32">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">10 Інформативні ознаки наявності перекосу кузова чи необхідності правки рами КТЗ (окрім випадків, що передбачають складання калькуляції відновлювального ремонту аварійно пошкодженого КТЗ)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="15.0" min="0" max="15" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="15.0" min="0" max="15" step="0.1" name="chb_32_v" >
                                     </div>
                                     <h6>ОББИВКА КУЗОВА, КАБІНИ(5) (забруднення, пошкодження, потертості)</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_33">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">11 Оббивка салону (даху, стояків, боковин, полиць, дверей)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1"  name="chb_33_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_34">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">12 Оббивка сидінь </span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="2.0" min="0" max="2" step="0.1" name="chb_34_v" >
                                     </div>
                                     <h6>ПОФАРБУВАННЯ КУЗОВА, КАБІНИ(5) (дефекти лакофарбового покриття)</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_35">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">13 Пофарбування кузова</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1"  name="chb_35_v">
                                     </div>
                                     <h6>ХРОМОВАНІ ДЕТАЛІ(5) (корозія, потьмяніння, відшарування)</h6>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_36">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">14 Хромовані покриття</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="3.0" min="0" max="3" step="0.1"  name="chb_36_v">
                                     </div>
                                     <h6>СКЛО(5) (потертості, пошкодження)</h6>
                                     <div class="input-group input-group-sm mb-3">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_37">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">15 Скло</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="0.5" min="0" max="0.5" step="0.1"  name="chb_37_v">
                                     </div>
                                 </div>
                             </div>
@@ -762,7 +715,7 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" class="js-analog-ocenca-auto-8-let"  />
+                                                <input type="checkbox" aria-label="Checkbox for following text input" class="js-analog-ocenca-auto-8-let"   name="chb_38" />
                                             </div>
                                         </div>
                                         <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="КТЗ,  термін експлуатації  яких  перевищує  8  років" >
@@ -770,7 +723,7 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" class="js-analog-ocenca-auto-gruz"  />
+                                                <input type="checkbox" aria-label="Checkbox for following text input" class="js-analog-ocenca-auto-gruz"  name="chb_39" />
                                             </div>
                                         </div>
                                         <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Для вантажних КТЗ,  причепів,  напівпричепів та автобусів
@@ -787,46 +740,46 @@
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input"  name="chb_40">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Кузовні складові КТЗ відновлювалися ремонтом У разі відновлення трьох і більше складових  кузова.</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" name="chb_40_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_41">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">Кузовні складові КТЗ відновлювалися ремонтом У разі відновлення не більше двох складових кузова</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="4.0" min="0" max="4" step="0.1"  name="chb_41_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_42">
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">КТЗ має складові частини, які потребують ремонту (окрім заміни чи капітального ремонту складової)</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="10.0" min="0" max="10" step="0.1" name="chb_42_v" >
                                     </div>
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
-                                                <input type="checkbox" aria-label="Checkbox for following text input" >
+                                                <input type="checkbox" aria-label="Checkbox for following text input" name="chb_43" >
                                             </div>
                                         </div>
                                         <div class="input-group-prepend col-11">
                                             <span class="input-group-text col-12" id="basic-addon1">КТЗ пофарбовано в колір, який не користується попитом</span>
                                         </div>
-                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1" >
+                                        <input type="number" class="form-control text-right" value="1.0" min="0" max="1" step="0.1"  name="chb_43_v" >
                                     </div>
                                 </div>
                             </div>
@@ -836,7 +789,7 @@
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend w-50">
-                                            <span class="input-group-text">Коєфіціет ринку регіону</span>
+                                            <span class="input-group-text w-100">Коєфіціет ринку регіону</span>
                                         </div>
                                         <select class="form-control" name="koefic" >
                                             <option value="0.97">0.97</option>
@@ -850,7 +803,7 @@
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend w-50">
-                                            <span class="input-group-text">Пробіг нормативний</span>
+                                            <span class="input-group-text w-100">Пробіг нормативний</span>
                                         </div>
                                         <input type="number" name="probeg_norm" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
@@ -860,7 +813,7 @@
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
                                         <div class="input-group-prepend w-50">
-                                            <span class="input-group-text">Пробіг фактичний</span>
+                                            <span class="input-group-text w-100">Пробіг фактичний</span>
                                         </div>
                                         <input type="number" name="probeg_fact" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
@@ -869,8 +822,8 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Фактичний середньогоддовий пробіг</span>
+                                        <div class="input-group-prepend w-50">
+                                            <span class="input-group-text w-100">Фактичний середньогоддовий пробіг</span>
                                         </div>
                                         <input type="number"  name="probeg_fact_sred" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
@@ -879,8 +832,8 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Середньогодовий перепробег (недопробег)</span>
+                                        <div class="input-group-prepend w-50">
+                                            <span class="input-group-text w-100">Середньогодовий перепробег (недопробег)</span>
                                         </div>
                                         <input type="number"  name="probeg_nedop" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
@@ -889,8 +842,8 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">Значення Гк</span>
+                                        <div class="input-group-prepend w-50">
+                                            <span class="input-group-text w-100">Значення Гк</span>
                                         </div>
                                         <input type="number" class="form-control text-right"  name="gk" >
                                     </div>
@@ -917,7 +870,7 @@
 											<th>Рік випуску</th>
                                             <th style="width: 80px">Валюта</th>
 											<th>Вартість пропозиції</th>
-											<th>Вартість пропозиції, без ПДВ в грн</th>
+											<th>Вартість пропозиції в грн</th>
                                             <th>без ПДВ</th>
 											<th>Коригування на торг</th>
 											<th>Коригування на рік випуску</th>
@@ -934,21 +887,21 @@
                                             <td colspan="3">min значення</td>
                                             <td colspan="2" class="text-right"><h5 class="js-analog-ocenca-auto-min">0</h5></td>
                                             <td colspan="5" class="text-center" style="vertical-align: middle"><label for="sale_price">Середне значення</label></td>
-                                            <td colspan="1" class="text-center"><input type="radio" name="sale" value="sale_price" id="sale_price" checked></td>
+                                            <td colspan="1" class="text-center"><input type="radio" name="sale_price_chose" value="sale_price" id="sale_price" checked></td>
 											<td colspan="2" class="text-center" style="vertical-align: middle"><h4 class="js-analog-ocenca-auto-avg">0</h4></td>
 										</tr>
                                         <tr>
                                             <td colspan="3">max значення</td>
                                             <td colspan="2" class="text-right"><h5 class="js-analog-ocenca-auto-max">0</h5></td>
                                             <td colspan="5" class="text-center" style="vertical-align: middle"><label for="sale_price_2">Серединне</label></td>
-                                            <td colspan="1" class="text-center"><input type="radio" name="sale" value="sale_price_2" id="sale_price_2"></td>
+                                            <td colspan="1" class="text-center"><input type="radio" name="sale_price_chose" value="sale_price_2" id="sale_price_2"></td>
                                             <td colspan="2" class="text-center" style="vertical-align: middle"><h4 class="js-analog-ocenca-auto-avg2">0</h4></td>
                                         </tr>
                                         <tr>
                                             <td colspan="3">відхілення</td>
                                             <td colspan="2" class="text-right"><h5 class="js-analog-ocenca-auto-vid">0</h5></td>
                                             <td colspan="5" class="text-center" style="vertical-align: middle"><label for="sale_price_3">Медианне</label></td>
-                                            <td colspan="1" class="text-center"><input type="radio" name="sale" value="sale_price_3" id="sale_price_3"></td>
+                                            <td colspan="1" class="text-center"><input type="radio" name="sale_price_chose" value="sale_price_3" id="sale_price_3"></td>
                                             <td colspan="2" class="text-center" style="vertical-align: middle"><h4 class="js-analog-ocenca-auto-avg3">0</h4></td>
                                         </tr>
                                         <tr>
@@ -1019,7 +972,7 @@
             <input type="number" class="form-control text-right form-control-sm" value="{{=value.price}}" name="price">
         </td>
         <td class="text-right">
-            <input type="number" class="form-control text-right form-control-sm" value="{{=value.price_bez}}" name="price_bez" readonly>
+            <input type="number" class="form-control text-right form-control-sm" value="{{=value.price_uah}}" name="price_uah" readonly>
         </td>
         <td>
             <input type="checkbox" class="form-control form-control-sm" value="1" name="pdv" {{? value.pdv == '1'}} checked {{?}} />
@@ -1118,6 +1071,32 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary  js-modal-sprv" data-spr="s_kyzov" data-name="kyzov" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class='col'>
+            <div class="input-group input-group-sm mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Дата Введення</span>
+                </div>
+                <input type="text" class="form-control js-date" data-id="#data_vedenja"  name="data_vedenja" value="{{=it.data_vedenja}}" >
+            </div>
+        </div>
+        <div class='col'>
+            <div class="input-group input-group-sm mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Заводской номер</span>
+                </div>
+                <input type="text" class="form-control" name="zavod_nomer" value="{{=it.zavod_nomer}}" >
+            </div>
+        </div>
+        <div class='col'>
+            <div class="input-group input-group-sm mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Инвентарний номер</span>
+                </div>
+                <input type="text" class="form-control" name="invent_nomer" value="{{=it.invent_nomer}}" >
             </div>
         </div>
     </div>
@@ -1281,6 +1260,8 @@
                 <input type="text" class="form-control" name="nom_shasi"  value="{{=it.nom_shasi}}"  >
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
@@ -1330,6 +1311,16 @@
         </div>
     </div>
     <div class="row">
+        <div class='col'>
+            <div class="input-groupinput-group-sm mb-2">
+                <div class="input-group-prepend w-100">
+                    <span class="input-group-text w-100 text-center">Техничні характеристики</span>
+                </div>
+                <textarea name="teh_har"  class="form-control" cols="30" rows="10">{{=it.teh_har}}</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class='col-md-10'>
         </div>
         <div class='col-md-2'>
@@ -1337,4 +1328,41 @@
         </div>
     </div>
     </form>
+</script>
+
+<script id="OcencaAutoFilesList" type="text/x-dot-template">
+    {{~it.items :value:itm}}
+    <tr class='text-center'>
+        <td>{{=itm+1}}</td>
+        <td><input type="checkbox" class="js-chose-file-change" data-id="{{=value.id}}" {{? value.chosen == 1}} checked {{?}}></td>
+        <td><img src="{{=value.file_pach}}" alt="" width="50"></td>
+        <td><a href="{{=value.file_pach}}" target="_blank">{{=value.name}}</a></td>
+        <td>
+            {{? value.type == 't'}} Технічна документація {{?}}
+            {{? value.type == 'b'}} Бух.Дані {{?}}
+            {{? value.type == 'f'}} Фото {{?}}
+            {{? value.type == 'y'}} Установчи {{?}}
+            {{? value.type == 'z'}} Різне {{?}}
+
+        </td>
+    </tr>
+    {{~}}
+</script>
+<script id="OcencaAutoLiterList" type="text/x-dot-template">
+    {{~it.items :value:itm}}
+    <div class="row">
+        <div class="col">
+            <div class="input-group input-group-sm mb-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" class="js-chose-liter-change" data-id="{{=value.id}}-{{=value.chose}}" {{? value.chose == 1}} checked {{?}}>
+                    </div>
+                </div>
+                <div class="input-group-prepend col-11" style="overflow: hidden">
+                    <span class="input-group-text col-12">{{=value.name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{~}}
 </script>

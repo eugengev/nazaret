@@ -1,5 +1,6 @@
 function Maino(data) {
     this.id   = 0;
+    this.nomber = '';
     this.reestr_id = 0;
     this.vid_id = 0;
     this.opis = '';
@@ -7,6 +8,9 @@ function Maino(data) {
     this.price = 0;
     this.vartist = 0;
     this.vikon = 0;
+    this.oglad_date = '';
+    this.oglad_sutok = '';
+    this.oglad_prisut = '';
 
     if (data) {
         this.init(data);
@@ -16,12 +20,16 @@ function Maino(data) {
 Maino.prototype.init = function(data) {
     this.id         = data.id;
     this.reestr_id  = data.reestr_id;
+    this.nomber     = data.nomber;
     this.vid_id     = data.vid_id;
     this.opis       = data.opis;
     this.count      = data.count;
     this.price      = data.price;
     this.vartist    = data.vartist;
     this.vikon      = data.vikon;
+    this.oglad_date = data.oglad_date;
+    this.oglad_sutok = data.oglad_sutok;
+    this.oglad_prisut = data.oglad_prisut;
 };
 
 

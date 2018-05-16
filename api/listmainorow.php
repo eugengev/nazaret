@@ -52,6 +52,7 @@ foreach($rows as $record){
 	$list = array(
 		"id"        => $record['id'],
 		"reestr_id" => $record['reestr_id'],
+		"nomber"    => $record['nomber'],
 		"vid_id"    => $record['vid_id'],
 		"opis"      => $record['opis'],
 		"count"     => $record['count'],

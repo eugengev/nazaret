@@ -1,6 +1,7 @@
 
 <script id="ReestrFormView-List" type="text/x-dot-template">
-	<div class="text-right"><a href="#" class="btn btn-success js-add-new-order"><i class="fa fa-plus"></i> Нова робота</a></div>
+	<div class="text-right"><a href="#" class="btn btn-success js-add-new-order"><i class="fa fa-plus"></i> НовеОпис майна
+            замовлення</a></div>
 	<br>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered table-sm">
@@ -46,11 +47,11 @@
 <script id="ReestrFormView-AddFirst" type="text/x-dot-template">
 	<div class="card">
 		<div class="card-body">
-			<h1 class='text-center'>Новий договор</h1>
+			<h1 class='text-center'>новэ замовлення</h1>
 			<form id='js-add-form-info-first'>
 				<div class='row'>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Фірма виконавець</span>
 							</div>
@@ -61,7 +62,7 @@
 						</div>
 					</div>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Номер Договору</span>
 							</div>
@@ -69,7 +70,7 @@
 						</div>
 					</div>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Старый Номер Договору</span>
 							</div>
@@ -79,7 +80,7 @@
 				</div>
 				<div class='row'>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Дата Договору</span>
 							</div>
@@ -88,7 +89,7 @@
 						</div>
 					</div>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Дата оцінки</span>
 							</div>
@@ -99,7 +100,7 @@
 				</div>
 				<div class='row'>
 					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Замовник</span>
 							</div>
@@ -109,43 +110,32 @@
 							</div>
 						</div>
 					</div>
-					<div class='col'>
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Місто</span>
-							</div>
-							<input type="text" class="form-control js-auto-city" name="city" >
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_city" data-name="city" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Мета</span>
+                            </div>
+                            <input type="text" class="form-control js-auto-meta"  name="meta" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_meta" data-name="meta" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				<div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Місто</span>
+                            </div>
+                            <input type="text" class="form-control js-auto-city" name="city" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_city" data-name="city" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
 					<div class='col'>
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Мета</span>
-							</div>
-							<input type="text" class="form-control js-auto-meta"  name="meta" >
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_meta" data-name="meta" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
-					<div class='col'>
-						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Банк</span>
-							</div>
-							<input type="text" class="form-control js-auto-bank"  name="bank" >
-							<div class="input-group-append">
-								<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_bank" data-name="bank" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-							</div>
-						</div>
-					</div>
-					<div class='col'>
-						<div class="input-group mb-3">
+						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text">Менеджер</span>
 							</div>
@@ -155,6 +145,47 @@
 							</div>
 						</div>
 					</div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Банк</span>
+                            </div>
+                            <input type="text" class="form-control js-auto-bank"  name="bank" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_bank" data-name="bank" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Від Угоди</span>
+                            </div>
+                            <input type="text" class="form-control js-auto-vidygodi"  name="vidygodi" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_vidygodi" data-name="vidygodi" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Номер Угоди</span>
+                            </div>
+                            <input type="text" class="form-control"  name="nomerygodi" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Дата Угоди</span>
+                            </div>
+                            <input type="text" class="form-control js-date" data-id="#dateygodi" >
+                            <input type="hidden" name="dateygodi" id="dateygodi" >
+                        </div>
+                    </div>
 				</div>
 			</form>
 		</div>
@@ -187,39 +218,23 @@
 					<form class='js-add-form-info'>
 						<div class='row'>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Номер Договору</span>
 									</div>
-									<input type="text" class="form-control" name='nomber' value="{{=it.nomber}}" >
+									<input type="text" class="form-control" readonly name='nomber' value="{{=it.nomber}}" >
 								</div>
 							</div>
 							<div class='col'>
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<span class="input-group-text">Дата Договору</span>
-									</div>
-									<input type="text" class="form-control" name="date" value="{{=it.date}}" >
-								</div>
-							</div>
-							<div class='col'>
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<span class="input-group-text">Дата оцінки</span>
-									</div>
-									<input type="text" class="form-control" data-id="#datework"  value="{{=it.datework}}" >
-								</div>
-							</div>
-							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Старый Номер Договору</span>
 									</div>
-									<input type="text" class="form-control" name="old_nomber" value="{{=it.old_nomber}}" >
+									<input type="text" class="form-control" readonly name="old_nomber" value="{{=it.old_nomber}}" >
 								</div>
 							</div>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">ID Договору</span>
 									</div>
@@ -227,57 +242,104 @@
 								</div>
 							</div>
 						</div>
+                        <div class="row">
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Дата Договору</span>
+                                    </div>
+                                    <input type="text" class="form-control" readonly name="date" value="{{=it.date}}" >
+                                </div>
+                            </div>
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Дата оцінки</span>
+                                    </div>
+                                    <input type="text" class="form-control" readonly data-id="#datework"  value="{{=it.datework}}" >
+                                </div>
+                            </div>
+                        </div>
 						<div class='row'>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Замовник</span>
 									</div>
-									<input type="text" class="form-control js-auto-client" name="client" value="{{=it.client}}" >
+									<input type="text" class="form-control js-auto-client" readonly name="client" value="{{=it.client}}" >
 								</div>
 							</div>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Фірма виконавець</span>
 									</div>
-									<input type="text" class="form-control js-auto-firma" name="firma" value="{{=it.firma}}" >
+									<input type="text" class="form-control js-auto-firma" readonly name="firma" value="{{=it.firma}}" >
 								</div>
 							</div>
 						</div>
 						<div class='row'>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Місто</span>
 									</div>
-									<input type="text" class="form-control js-auto-city" name="city" value="{{=it.city}}" >
+									<input type="text" class="form-control js-auto-city" readonly name="city" value="{{=it.city}}" >
 								</div>
 							</div>
-							<div class='col'>
-								<div class="input-group mb-3">
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Менеджер</span>
+                                    </div>
+                                    <input type="text" class="form-control js-auto-manager" readonly name="maneger" value="{{=it.manager}}" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='col'>
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text">Мета</span>
 									</div>
-									<input type="text" class="form-control js-auto-meta"  name="meta" value="{{=it.meta}}" >
+									<input type="text" class="form-control js-auto-meta" readonly name="meta" value="{{=it.meta}}" >
 								</div>
 							</div>
 							<div class='col'>
-								<div class="input-group mb-3">
+								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
 										<span class="input-group-text"> Банк</span>
 									</div>
-									<input type="text" class="form-control js-auto-bank"  name="bank" value="{{=it.bank}}" >
+									<input type="text" class="form-control js-auto-bank" readonly  name="bank" value="{{=it.bank}}" >
 								</div>
 							</div>
-							<div class='col'>
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<span class="input-group-text">Менеджер</span>
-									</div>
-									<input type="text" class="form-control js-auto-manager"  name="maneger" value="{{=it.manager}}" >
-								</div>
-							</div>
+                        </div>
+                        <div class='row'>
+
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> Від угоди</span>
+                                    </div>
+                                    <input type="text" class="form-control" readonly  name="vidygodi" value="{{=it.vidygodi}}" >
+                                </div>
+                            </div>
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> Номер угоди</span>
+                                    </div>
+                                    <input type="text" class="form-control" readonly  name="nomerygodi" value="{{=it.nomerygodi}}" >
+                                </div>
+                            </div>
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> Дата угоди</span>
+                                    </div>
+                                    <input type="text" class="form-control" readonly  name="dateygodi" value="{{=it.dateygodi}}" >
+                                </div>
+                            </div>
 						</div>
 						<div class='row'>
 							<div class='col'>
@@ -309,37 +371,49 @@
 			<div class="card">
 				<div class="card-body">
 					<div class="">
-
-						<div class="row justify-content-start">
-							<div class="col-lg-3">
+						<div class="row mb-4">
+							<div class="col">
 								<h2>Заяви</h2>
 								<a href="print.php?id={{=it.id}}&work=print&template=zajava" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-print"></i>Друк</a>&nbsp;<button type="button" class="btn btn-primary btn-sm js-send-to-email"  data-link="print.php?id={{=it.id}}&work=print&template=zajava&email=1"><i class="fa fa-print"></i> Надіслати на email</button>
 							</div>
-							<div class="col-lg-3">
+                        </div>
+                        <div class="row mb-4">
+							<div class="col">
 								<h2>Рахунок</h2>
 								<a href="print.php?id={{=it.id}}&work=print&template=schet" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Друк</a>&nbsp;<button type="button" class="btn btn-primary btn-sm js-send-to-email"  data-link="print.php?id={{=it.id}}&work=print&template=schet&email=1"><i class="fa fa-print"></i> Надіслати на email</button>
 							</div>
-							<div class="col-lg-3">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
 								<h2>Договір</h2>
 								<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Друк</button>&nbsp;<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Надіслати на email</button>
 							</div>
-							<div class="col-lg-3">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
 								<h2>Акт</h2>
-								<div class="input-group input-group-sm">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
-									</div>
-									<input type="text" class="form-control" placeholder="Номер Акта" aria-label="Username" aria-describedby="basic-addon1" id="nomer-act" value="{{=it.nomer_act}}">
-								</div>
-								<div class="input-group input-group-sm">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-									</div>
-									<input type="text" class="form-control js-date"  data-id="#date-act" placeholder="Дата Акта" aria-label="Username" aria-describedby="basic-addon1" value="{{=it.date_act}}">
-									<input type="hidden" class="" id="date-act" >
-								</div>
-								<button type="button" class="btn btn-sm btn-primary  js-act-nomer-save"><i class="fa fa-save"></i> Зберегти</button>
-								<br>
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-sort-numeric-asc" aria-hidden="true"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Номер Акта" aria-label="Username" aria-describedby="basic-addon1" id="nomer-act" value="{{=it.nomer_act}}">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-group input-group-sm">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control js-date"  data-id="#date-act" placeholder="Дата Акта" aria-label="Username" aria-describedby="basic-addon1" value="{{=it.date_act}}">
+                                            <input type="hidden" class="" id="date-act" >
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-sm btn-primary  js-act-nomer-save"><i class="fa fa-save"></i> Зберегти</button>
+                                    </div>
+                                </div>
 								<a href="print.php?id={{=it.id}}&work=print&template=act" target="_blank" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Друк</a>&nbsp;<button type="button" class="btn btn-primary btn-sm  js-send-to-email" data-link="print.php?id={{=it.id}}&work=print&template=act&email=1"><i class="fa fa-print"></i> Надіслати на email</button>
 							</div>
 						</div>
@@ -354,6 +428,7 @@
 		<thead>
 		<tr class="text-center">
 			<th>#</th>
+            <th>Номер</th>
 			<th>Вид майна</th>
 			<th>Опис майна</th>
 			<th>Кількість</th>
@@ -378,6 +453,7 @@
 <script id="ReestrFormView-TableMainoOneRow" type="text/x-dot-template">
 	<tr class="js-maino-row" data-idrow="{{=it.idd}}">
 		<td>{{=it.idd}}<input type="hidden" name="id" value="{{=it.idd}}"><input type="hidden" name="reestr_id" value="{{=it.idr}}"></td>
+        <td><input type="text" class="form-control form-control-sm text-center"  readonly size="2"></td>
 		<td>
 			<select size="1" class="form-control form-control-sm" name="vid_id" >
 				<option value="0" selected> - - - - </option>
@@ -412,6 +488,7 @@
 	{{~it.rowws :value:itm}}
 	<tr class="js-maino-row" data-idrow="{{=value.id}}">
 		<td>{{=itm+1}}<input type="hidden" name="id" value="{{=value.id}}"><input type="hidden" name="reestr_id" value="{{=value.reestr_id}}"></td>
+        <td><input type="text" class="form-control form-control-sm text-center" name="nomber" value="{{=value.nomber}}" readonly size="10"></td>
 		<td>
 			<select size="1" class="form-control form-control-sm" name="vid_id" >
 				<option value="0" selected> - - - - </option>
@@ -473,7 +550,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}t" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
 									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}t" id="inputGroupFile-{{=value.id}}t" data-type="t" data-block=".js-to-show-{{=value.id}}t">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
@@ -487,11 +564,11 @@
 							{{? vallue.maino == value.id && vallue.type == 't' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
-									<button type="button" class="close" aria-label="Close">
-										<span aria-hidden="true">&times;</span>
+									<button type="button" class="close js-to-delete-file" aria-label="Close" data-idfile="{{=vallue.id}}">
+										<span aria-hidden="true"  data-idfile="{{=vallue.id}}">&times;</span>
 									</button>
 								</td>
 							</tr>
@@ -505,7 +582,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}b" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
 									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}b" id="inputGroupFile-{{=value.id}}b" data-type="b" data-block=".js-to-show-{{=value.id}}b">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
@@ -519,7 +596,7 @@
 							{{? vallue.maino == value.id && vallue.type == 'b' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
 									<button type="button" class="close" aria-label="Close">
@@ -536,7 +613,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}a" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
 									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}a" id="inputGroupFile-{{=value.id}}a" data-type="a" data-block=".js-to-show-{{=value.id}}a">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
@@ -550,7 +627,7 @@
 							{{? vallue.maino == value.id && vallue.type == 'a' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
 									<button type="button" class="close" aria-label="Close">
@@ -568,7 +645,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}f" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
 									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}f" id="inputGroupFile-{{=value.id}}f" data-type="f" data-block=".js-to-show-{{=value.id}}f">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
@@ -582,7 +659,7 @@
 							{{? vallue.maino == value.id && vallue.type == 'f' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
 									<button type="button" class="close" aria-label="Close">
@@ -600,7 +677,7 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}y" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
 									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}y" id="inputGroupFile-{{=value.id}}y" data-type="y" data-block=".js-to-show-{{=value.id}}y">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
@@ -614,7 +691,7 @@
 							{{? vallue.maino == value.id && vallue.type == 'y' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
 									<button type="button" class="close" aria-label="Close">
@@ -632,9 +709,9 @@
 				<div class="row">
 					<div class="col-lg-2">
 						<form id="inputFormGroupFile-{{=value.id}}z" enctype="multipart/form-data">
-							<div class="input-group mb-3 input-group-sm">
+							<div class="input-group input-group-sm mb-3 input-group-sm">
 								<div class="custom-file">
-									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}z" id="inputGroupFile-{{=value.id}}z    " data-type="z" data-block=".js-to-show-{{=value.id}}z">
+									<input type="file" multiple class="custom-file-input js-file-input" name="files[]" data-idmaino="{{=value.id}}" data-reestrid="{{=value.reestr_id}}" data-form="inputFormGroupFile-{{=value.id}}z" id="inputGroupFile-{{=value.id}}z" data-type="z" data-block=".js-to-show-{{=value.id}}z">
 									<label class="custom-file-label" for="inputGroupFile-{{=value.id}}">Выбрать файл</label>
 								</div>
 							</div>
@@ -646,7 +723,7 @@
 							{{? vallue.maino == value.id && vallue.type == 'z' }}
 							<tr>
 								<td>
-									<a href="{{=vallue.file}}">{{=vallue.name}}</a>
+									<a target="_blank" href="{{=vallue.file}}">{{=vallue.name}}</a>
 								</td>
 								<td class="w-25">
 									<button type="button" class="close" aria-label="Close">
@@ -668,7 +745,7 @@
 	{{~it.items :value:itm}}
 	<tr>
 		<td>
-			<a href="{{=value.file}}">{{=value.name}}</a>
+			<a target="_blank" href="{{=value.file}}">{{=value.name}}</a>
 		</td>
 		<td class="w-25">
 			<button type="button" class="close" aria-label="Close">
