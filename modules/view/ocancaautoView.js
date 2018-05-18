@@ -192,7 +192,11 @@ nzr.view = nzr.view || {};
             this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
             this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
 
-            tinymce.init({ selector:'textarea' });
+            tinymce.init({
+                selector: "textarea",
+                plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
+                toolbar: "a11ycheck, code"
+            });
         },
 
         onRefreshAnalog: function() {
@@ -275,7 +279,11 @@ nzr.view = nzr.view || {};
             console.log(ocencaAutoOne);
             $(nzr).trigger('OcencaAutoFormView.updOcencaInfo', ocencaAutoOne);
 
-            tinymce.init({ selector:'textarea' });
+            tinymce.init({
+                selector: "textarea",
+                plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
+                toolbar: "a11ycheck, code"
+            });
         },
 
         showOcencaAutoOneUpd: function(event, data) {

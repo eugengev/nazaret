@@ -2,88 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auto_ocenca/create_file.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auto_ocenca/ogliad.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/ocenca/save_ocenka.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/reestr/delete_file.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nazaret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nazaret.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/calc_analog.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/calc_analog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/load_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/load_file.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_analog.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_analog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_ocenka_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_ocenka_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listmainorow.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listmainorow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listreestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listreestrsavefirst.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestrsavefirst.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listsprmainorow.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listsprmainorow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/saverowsmaino.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/saverowsmaino.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/mainoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/mainoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/ocencaautoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/ocencaautoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/ocenkaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/ocenkaController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/maino.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/maino.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/ocencaauto.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/ocencaauto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/ocenka.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/ocenka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/reestr.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/reestr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/mainoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/mainoView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/ocancaautoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocancaautoView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/ocencaauto.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocencaauto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/ocenka.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocenka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/reestr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-MediumItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-Regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-SemiBold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-SemiBoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-Thin.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Exo2.0-ThinItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/2/Roboto-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/3/Exo2.0-Black.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/40/3/Exo2.0-BlackItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Roboto-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/Screenshot_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/_VK.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/excel/example.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/excel/example1.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/excel/example1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/pdf/act-40-.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/pdf/schet-111-.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/pdf/schet-40-.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/pdf/zajava-40-.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_10.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_11.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_12.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_13.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_14.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_3.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_4.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/screen/auto/screen_auto_1_9.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
@@ -159,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ocancaautoView.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ocancaautoView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="260" column="52" selection-start-line="260" selection-start-column="52" selection-end-line="260" selection-end-column="52" />
+            <state relative-caret-position="675">
+              <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
             </state>
           </provider>
         </entry>
@@ -180,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>avgsum3</find>
       <find>js-calc-auto-plus</find>
       <find>updOcencaDz</find>
       <find>Серединне</find>
@@ -210,6 +129,7 @@
       <find>vladel_adres</find>
       <find>modal</find>
       <find>onSubmitForm</find>
+      <find>tinymce</find>
     </findStrings>
     <replaceStrings>
       <replace>fap</replace>
@@ -299,8 +219,8 @@
         <option value="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" />
         <option value="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" />
         <option value="$PROJECT_DIR$/template/ocencaauto.php" />
-        <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
         <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
       </list>
     </option>
   </component>
@@ -531,12 +451,12 @@
       <workItem from="1525334566432" duration="1368000" />
       <workItem from="1526210473640" duration="29451000" />
       <workItem from="1526290617285" duration="6320000" />
-      <workItem from="1526455176290" duration="3514000" />
+      <workItem from="1526455176290" duration="5940000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463222000" />
+    <option name="totallyTimeSpent" value="465648000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,17 +851,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="260" column="52" selection-start-line="260" selection-start-column="52" selection-end-line="260" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="127" selection-start-line="3" selection-start-column="127" selection-end-line="3" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="306" lean-forward="true" selection-start-line="306" selection-end-line="306" />
         </state>
       </provider>
     </entry>
