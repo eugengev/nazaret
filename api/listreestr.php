@@ -4,6 +4,7 @@ header('Content-Type: application/json;charset=utf-8');
 include_once $_SERVER['DOCUMENT_ROOT'].'/conf.php';
 require("mysql.php");
 
+
 $db = new Database($db_host, $db_login, $db_passwd, $db_name);
 $db->connect();
 
@@ -52,8 +53,8 @@ foreach($rows as $record){
 	$list = array(
 		"id"         => $record['id'],
 		"nomber"     => $record['nomber'],
-		"date"       => $record['date'],
-		"datework"   => $record['datework'],
+		"date"       => datf($record['date']),
+		"datework"   => datf($record['datework']),
 		"old_nomber" => $record['prev_id'],
 		"client"     => $record['client'],
 		"firma"      => $record['firma'],
@@ -62,10 +63,10 @@ foreach($rows as $record){
 		"meta"       => $record['meta'],
 		"manager"    => $record['manager'],
 		"nomer_act"  => $record['nomer_act'],
-		"date_act"   => $record['date_act'],
+		"date_act"   => datf($record['date_act']),
 		"vidygodi"   => $record['vidygodi'],
 		"nomerygodi" => $record['nomerygodi'],
-		"dateygodi"  => $record['dateygodi'],
+		"dateygodi"  => datf($record['dateygodi']),
 		"countpage"  => $rowp['page'],
 	);
 

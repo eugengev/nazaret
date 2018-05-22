@@ -43,12 +43,21 @@
 		<tr class="text-center">
 			<th>№</th>
 			<th>Название</th>
+            <th style="width: 120px">Ред./Удал</th>
 		</thead>
 		<tbody>
 		{{~it.items :value:itm}}
-			<tr class="js-Spr-Items-click" data-id="{{=value.id}}" data-value="{{=value.name}}">
+			<tr>
 				<td class="text-center">{{=itm+1}}.</td>
-				<td>{{=value.name}}</td>
+				<td  class="js-Spr-Items-click" data-id="{{=value.id}}" data-value="{{=value.name}}">
+                    <span>{{=value.name}}</span>
+                    <input type="hidden" class="form-control form-control-sm w-100" name="edit" value="{{=value.name}}">
+                </td>
+                <td class="text-center">
+                    <a href="#" class="btn btn-success btn-sm js-save-spr-item" style="display: none" data-id="{{=value.id}}" data-value="{{=value.name}}"><i class="fa fa-save"></i></a>
+                    <a href="#" class="btn btn-success btn-sm js-edit-spr-item"><i class="fa fa-pencil-square-o"></i></a>
+                    <a href="#" class="btn btn-danger  btn-sm js-delete-spr-item" data-id="{{=value.id}}" data-value="{{=value.name}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </td>
 			</tr>
 		{{~}}
 		</tbody>

@@ -78,7 +78,7 @@ nzr.controller = nzr.controller || {};
             console.log(data);
             var sprList = new SpravochList(data);
             // $(nzr).trigger('SpravochFormController.onShowResultSearhc', sprList);
-            $(nzr).trigger('ReestrFormController.sprModal', sprList);
+            $(nzr).trigger('SpravochFormView.sprModal', sprList);
         },
         _requestAddError: function (data) {
         },

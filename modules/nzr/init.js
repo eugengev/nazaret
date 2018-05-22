@@ -37,6 +37,17 @@ $(document).ready(function() {
     //  И теперь контроллеры!
     var userController = new nzr.controller.UserFormController(userForm, usersListForm);
 
+
+    var podpisantForm = new Podpisant();
+    var podpisantsListForm = new PodpisantsList();
+
+    // Создаем все главные вьюхи
+    var podpisantView = new nzr.view.PodpisantFormView(podpisantForm, podpisantsListForm);
+
+    //  И теперь контроллеры!
+    var podpisantController = new nzr.controller.PodpisantFormController(podpisantForm, podpisantsListForm);
+
+
     var firmaForm = new Firma();
     var firmaListForm = new FirmaList();
     var adressForm = new Adress();

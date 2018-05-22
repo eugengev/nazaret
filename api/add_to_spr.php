@@ -8,7 +8,7 @@ if (isset($_POST['table'])) {
 	$db = new Database( $db_host, $db_login, $db_passwd, $db_name );
 	$db->connect();
 
-	if (isset($_POST['val_new'])) {
+	if (isset($_POST['val_new']) && !isset($_POST['type'])) {
 		$userinfo = array(
 			'name' => $_POST['val_new'],
 		);
@@ -18,6 +18,27 @@ if (isset($_POST['table'])) {
 
 	$sql  = "SELECT * FROM `".$_POST['table']."` WHERE `name` LIKE '%".$_POST['val_new']."%'";
 	$rows = $db->fetch_all_array( $sql );
+
+
+	if (isset($_POST['val_new']) && isset($_POST['type']) && $_POST['type']=='editspr') {
+		$userinfo = array(
+			'name' => $_POST['val_new'],
+		);
+
+		$id = $db->query_update( $_POST['table'], $userinfo, 'id='.$_POST['id'] );
+
+		$sql  = "SELECT * FROM `".$_POST['table']."`";
+		$rows = $db->fetch_all_array( $sql );
+	}
+
+
+	if (isset($_POST['val_new']) && isset($_POST['type']) && $_POST['type']=='delspr') {
+		$id = $db->query("DELETE FROM `".$_POST['table']."` WHERE id=".$_POST['id'] );
+
+		$sql  = "SELECT * FROM `".$_POST['table']."`";
+		$rows = $db->fetch_all_array( $sql );
+	}
+
 	$db->close();
 
 	$data = [];

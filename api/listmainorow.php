@@ -42,6 +42,24 @@ foreach($rows as $record){
 $dataall['viconav'] = $data;
 
 
+
+$sql = "SELECT id_user,fio FROM `podpisant`";
+$rows = $db->fetch_all_array($sql);
+
+$data = [];
+
+foreach($rows as $record){
+	$list = array(
+		"id" => $record['id_user'],
+		"name" => $record['fio'],
+	);
+
+	$data[] = $list;
+}
+
+$dataall['podpisant'] = $data;
+
+
 $sql = "SELECT * FROM `maino` WHERE `reestr_id` = ".$_POST['reestrid'];
 $rows = $db->fetch_all_array($sql);
 $db->close();

@@ -1,7 +1,6 @@
 
 <script id="ReestrFormView-List" type="text/x-dot-template">
-	<div class="text-right"><a href="#" class="btn btn-success js-add-new-order"><i class="fa fa-plus"></i> НовеОпис майна
-            замовлення</a></div>
+	<div class="text-right"><a href="#" class="btn btn-success js-add-new-order"><i class="fa fa-plus"></i> Нове замовлення</a></div>
 	<br>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered table-sm">
@@ -9,12 +8,11 @@
 			<tr class="text-center">
 				<th>№ Договора</th>
 				<th>ДАТА</th>
-				<th>Банк/Мета</th>
+				<th>Банк</th>
 				<th>Город</th>
-				<th>Майно/Адреса</th>
+				<th>Мета</th>
 				<th>Виконавець</th>
-				<th>Вартість</th>
-				<th>Оплата</th>
+				<th>Дата оценки</th>
 				<th>Дія</th>
 			</tr>
 			</thead>
@@ -25,11 +23,14 @@
 				<td>{{=value.date}}</td>
 				<td>{{=value.bank}}</td>
 				<td>{{=value.city}}</td>
-				<td>{{=value.date}}</td>
-				<td>{{=value.date}}</td>
-				<td>{{=value.date}}</td>
-				<td>{{=value.date}}</td>
-				<td class='text-center'><a href="#" class="btn btn-success btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;<a href="#" class="btn btn-danger btn-sm js-delete-reestr-item" data-id="{{=value.id}}"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+				<td>{{=value.meta}}</td>
+				<td>{{=value.firma}}</td>
+				<td>{{=value.datework}}</td>
+				<td class='text-center'>
+                    <a href="#" class="btn btn-success btn-sm js-viewedit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;
+                    <a href="#" class="btn btn-primary btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-plus"></i></a>&nbsp;
+                    <a href="#" class="btn btn-danger btn-sm js-delete-reestr-item" data-id="{{=value.id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </td>
 			</tr>
 			{{~}}
 			</tbody>
@@ -47,9 +48,9 @@
 <script id="ReestrFormView-AddFirst" type="text/x-dot-template">
 	<div class="card">
 		<div class="card-body">
-			<h1 class='text-center'>новэ замовлення</h1>
+			<h1 class='text-center'>нове замовлення</h1>
 			<form id='js-add-form-info-first'>
-				<div class='row'>
+                <div class='row'>
 					<div class='col'>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
@@ -61,6 +62,8 @@
 							</div>
 						</div>
 					</div>
+                </div>
+                <div class='row'>
 					<div class='col'>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
@@ -110,18 +113,8 @@
 							</div>
 						</div>
 					</div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Мета</span>
-                            </div>
-                            <input type="text" class="form-control js-auto-meta"  name="meta" >
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_meta" data-name="meta" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-				</div>
+                </div>
+
 				<div class='row'>
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
@@ -150,6 +143,17 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
+                                <span class="input-group-text">Мета</span>
+                            </div>
+                            <input type="text" class="form-control js-auto-meta"  name="meta" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_meta" data-name="meta" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text">Банк</span>
                             </div>
                             <input type="text" class="form-control js-auto-bank"  name="bank" >
@@ -158,6 +162,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class='row'>
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -216,6 +222,16 @@
 			<div class="card">
 				<div class="card-body">
 					<form class='js-add-form-info'>
+                        <div class="row">
+                            <div class='col'>
+                                <div class="input-group input-group-sm mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Фірма виконавець</span>
+                                    </div>
+                                    <input type="text" class="form-control js-auto-firma" readonly name="firma" value="{{=it.firma}}" >
+                                </div>
+                            </div>
+                        </div>
 						<div class='row'>
 							<div class='col'>
 								<div class="input-group input-group-sm mb-3">
@@ -315,7 +331,6 @@
 							</div>
                         </div>
                         <div class='row'>
-
                             <div class='col'>
                                 <div class="input-group input-group-sm mb-3">
                                     <div class="input-group-prepend">
@@ -423,6 +438,172 @@
 		</div>
 	</div>
 </script>
+
+<script id="ReestrFormView-ViewEdit" type="text/x-dot-template">
+    <div class="card">
+        <div class="card-body">
+            <form id='js-edit-form-info'>
+                <div class="row">
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Фірма виконавець</span>
+                            </div>
+                            <input type="text" class="form-control" name="firma" value="{{=it.firma}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_firma" data-name="firma" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Номер Договору</span>
+                            </div>
+                            <input type="text" class="form-control" readonly name='nomber' value="{{=it.nomber}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Старый Номер Договору</span>
+                            </div>
+                            <input type="text" class="form-control" readonly name="old_nomber" value="{{=it.old_nomber}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">ID Договору</span>
+                            </div>
+                            <input type="text" class="form-control" readonly name="id" id="reestrid" value="{{=it.id}}" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Дата Договору</span>
+                            </div>
+                            <input type="text" class="form-control js-date" name="date" value="{{=it.date}}" >
+                            <input type="hidden" name="date" id="date">
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Дата оцінки</span>
+                            </div>
+                            <input type="text" class="form-control js-date" data-id="#datework"  value="{{=it.datework}}" >
+                            <input type="hidden" name="datework" id="datework" >
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Замовник</span>
+                            </div>
+                            <input type="text" class="form-control" name="client" value="{{=it.client}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_client" data-name="client" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Місто</span>
+                            </div>
+                            <input type="text" class="form-control" name="city" value="{{=it.city}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_city" data-name="city" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Менеджер</span>
+                            </div>
+                            <input type="text" class="form-control" name="maneger" value="{{=it.manager}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_manager" data-name="manager" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Мета</span>
+                            </div>
+                            <input type="text" class="form-control" name="meta" value="{{=it.meta}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_meta" data-name="meta" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> Банк</span>
+                            </div>
+                            <input type="text" class="form-control"  name="bank" value="{{=it.bank}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_bank" data-name="bank" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> Від угоди</span>
+                            </div>
+                            <input type="text" class="form-control" name="vidygodi" value="{{=it.vidygodi}}" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_vidygodi" data-name="vidygodi" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> Номер угоди</span>
+                            </div>
+                            <input type="text" class="form-control"   name="nomerygodi" value="{{=it.nomerygodi}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"> Дата угоди</span>
+                            </div>
+                            <input type="text" class="form-control"  name="dateygodi" value="{{=it.dateygodi}}" >
+                            <input type="hidden" name="dateygodi" id="dateygodi" >
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row justify-content-end text-center">
+                        <div class='col text-right'><a href="#" class="btn btn-success js-reestr-view-edit-save">Зберігти зміни</a>&nbsp;<a href="#" class="btn btn-danger js-reestr-cancel">Закрити</a></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</script>
+
 <script id="ReestrFormView-TableMaino" type="text/x-dot-template">
 	<table class="table table-hover table-bordered table-sm">
 		<thead>
@@ -436,6 +617,7 @@
 			<th>Загальна вартість</th>
 			<th>Сума прайс</th>
 			<th>Виконавець</th>
+            <th>Подписант</th>
 		</tr>
 		</thead>
 		<tbody class="js-maino-table-row">
@@ -482,6 +664,15 @@
 				{{~}}
 			</select>
 		</td>
+        <td>
+            <select size="1" class="form-control form-control-sm" name="podpisant" >
+                <option value="0" selected> - - - - </option>
+                {{~it.podpisant :value:itm}}
+                <option value="{{=value.id}}" >{{=value.name}}</option>
+                {{~}}
+            </select>
+        </td>
+
 	</tr>
 </script>
 <script id="ReestrFormView-TableMainoListRow" type="text/x-dot-template">
@@ -517,6 +708,15 @@
 				{{~}}
 			</select>
 		</td>
+        <td>
+            <select size="1" class="form-control form-control-sm" name="podpisant" >
+                <option value="0" selected> - - - - </option>
+                {{~it.podpisant :vallue:itmm}}
+                <option value="{{=vallue.id}}"  {{? vallue.id == value.podpisant }} selected {{?}} >{{=vallue.name}}</option>
+                {{~}}
+            </select>
+        </td>
+
 	</tr>
 	{{~}}
 </script>

@@ -33,7 +33,7 @@ nzr.view = nzr.view || {};
             $(nzr).on('ReestrFormController.listBankSuccess', _.bind(this.onListBankAuto, this));
             $(nzr).on('ReestrFormController.listManagerSuccess', _.bind(this.onListManagerAuto, this));
             $(nzr).on('ReestrFormController.addForm', _.bind(this.onReestrForm, this));
-            $(nzr).on('ReestrFormController.sprModal', _.bind(this.onModalSprOpen, this));
+            $(nzr).on('ReestrFormController.editForm', _.bind(this.onReestrViewForm, this));
             $(nzr).on('ReestrFormController.nomerDog', _.bind(this.changeNomerDog, this));
             // $(nzr).on('ReestrFormController.onTrClickSpr', _.bind(this.onTrClickSpr, this));
 
@@ -55,6 +55,11 @@ nzr.view = nzr.view || {};
         onClickEdit: function(event) {
             $('#loader').show();
             $(nzr).trigger('ReestrFormView.EditReestr', event.currentTarget.dataset.id);
+        },
+
+        onClickViewEdit: function(event) {
+            $('#loader').show();
+            $(nzr).trigger('ReestrFormView.ViewEditReestr', event.currentTarget.dataset.id);
         },
 
         onClickDelete: function(event) {
@@ -81,6 +86,9 @@ nzr.view = nzr.view || {};
 
             this.buttonsEditOrder = this.container.find('.js-edit-reestr-item');
             this.buttonsEditOrder.on('click', _.bind(this.onClickEdit, this));
+
+            this.buttonsViewEditOrder = this.container.find('.js-viewedit-reestr-item');
+            this.buttonsViewEditOrder.on('click', _.bind(this.onClickViewEdit, this));
 
             this.buttonsDeleteOrder = this.container.find('.js-delete-reestr-item');
             this.buttonsDeleteOrder.on('click', _.bind(this.onClickDelete, this));
@@ -181,25 +189,7 @@ nzr.view = nzr.view || {};
             }
         },
 
-        onModalSprOpen: function(event, sprList){
-            this.modelList = sprList;
-            var tempReestrFormFirst = this.renderTemplate('ReestrFormView-TableSpr', this.modelList), self = this;
-            this.modalSpr.find('.js-modal-body').html(tempReestrFormFirst);
-            var trClick = this.modalSpr.find('.js-Spr-Items-click');
-            trClick.on('click', _.bind(this.onTrClickSpr, this));
-            $('#sprModalCenter').modal('show')
-        },
 
-        onTrClickSpr: function (event) {
-            var id = event.currentTarget.dataset.id,
-                name = event.currentTarget.dataset.value,
-                nameImput = this.modalSpr.data('name');
-            var input = this.container.find('input[name="'+nameImput+'"]');
-            input.val(name);
-            input.data('id',id);
-            input.change();
-            $('#sprModalCenter').modal('hide')
-        },
 
         onReestrForm: function(event, modelOne){
             this.model = modelOne;
@@ -241,6 +231,69 @@ nzr.view = nzr.view || {};
 
                 }
             });
+        },
+
+        onReestrViewForm: function(event, modelOne){
+            this.model = modelOne;
+            var tempReestrFormFirst = this.renderTemplate('ReestrFormView-ViewEdit', this.model), self = this;
+
+            this.container.html(tempReestrFormFirst);
+
+            this.buttonsCancelOrder = this.container.find('.js-reestr-cancel');
+            this.buttonsCancelOrder.on('click', _.bind(this.onClickMenu, this));
+
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+            
+            this.container.find('.js-date').datepicker({
+                dateFormat: 'dd.mm.yy',
+                onSelect: function (selectedDate) {
+                    console.log(selectedDate);
+                    console.log($(this).data('id'));
+                    var datea = selectedDate.split('.');
+                    $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
+                    console.log($($(this).data('id')).val());
+                }
+            });
+
+            this.formEdit = this.container.find('#js-edit-form-info');
+            this.formEdit.validate({
+                rules: {
+                    datework: {
+                        required: true
+                    },
+                    date: {
+                        required: true
+                    },
+                    client: {
+                        required: true
+                    },
+                    firma: {
+                        required: true
+                    },
+                    city: {
+                        required: true
+                    },
+                    meta: {
+                        required: true
+                    },
+                    bank: {
+                        required: true
+                    },
+                    manager: {
+                        required: true
+                    }
+                },
+                submitHandler: function(form) {
+                    console.log('eee');
+                    self.onSaveForm();
+                }
+            });
+
+            this.buttonsFirstForm = this.container.find('.js-reestr-view-edit-save');
+            this.buttonsFirstForm.click(function(){
+                self.formEdit.submit();
+            });            
         },
 
         onSendEmail: function (event) {
@@ -372,8 +425,20 @@ nzr.view = nzr.view || {};
             $(nzr).trigger('ReestrFormView.saveFirstForm',reestOne);
         },
 
-        onEditOrganizForm: function () {
 
+        onSaveForm: function () {
+            var reestOne = new Reestr();
+            this.formFirst = this.container.find('#js-edit-form-info');
+            this.formFirst.find('input').each(function(){
+                var nameInput = $(this).attr('name');
+                if ($(this).data('id')) {
+                    reestOne[nameInput] = $(this).data('id');
+                } else {
+                    reestOne[nameInput] = $(this).val();
+                }
+            });
+            console.log(reestOne);
+            // $(nzr).trigger('ReestrFormView.saveFirstForm',reestOne);
         }
 
     });

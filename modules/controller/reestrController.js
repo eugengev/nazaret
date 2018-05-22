@@ -40,6 +40,7 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('ReestrFormView.listFirma',  _.bind(this.getSprFirstList, this));
             $(nzr).on('ReestrFormView.saveFirstForm',  _.bind(this.saveFirstForm, this));
             $(nzr).on('ReestrFormView.EditReestr',  _.bind(this.getReestrOne, this));
+            $(nzr).on('ReestrFormView.ViewEditReestr',  _.bind(this.getViewReestrOne, this));
             $(nzr).on('ReestrFormView.DeleteReestr',  _.bind(this.deleteReestrOne, this));
             $(nzr).on('ReestrFormView.getListSpr',  _.bind(this.getSpravList, this));
             $(nzr).on('ReestrFormView.getListNomFirm',  _.bind(this.getListNomFirm, this));
@@ -175,7 +176,7 @@ nzr.controller = nzr.controller || {};
         _requestSpravSuccess: function (data) {
             var firmaList = new ClientList(data);
             console.log(firmaList);
-            $(nzr).trigger('ReestrFormController.sprModal', firmaList);
+            $(nzr).trigger('SpravochFormView.sprModal', firmaList);
         },
         _requestSpravError: function (data) {
         },
@@ -464,6 +465,37 @@ nzr.controller = nzr.controller || {};
             console.log('_requestErrorOne');
         },
         _requestCompleteOne: function (data) {
+            $('#loader').hide();
+        },
+
+        getViewReestrOne: function(event, id){
+            if (this._ajaxEditSave) {
+                this._ajaxEditSave.abort();
+                this._ajaxEditSave = null;
+            }
+
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                data: {'id':id},
+                type: "POST",
+                url: this._listReestrApi,
+                success: function(data){
+                    console.log(data);
+                    self._requestViewSuccessOne(data);
+                },
+                error: _.bind(this._requestViewErrorOne, this),
+                complete: _.bind(this._requestViewCompleteOne, this)
+            });
+        },
+        _requestViewSuccessOne: function (data) {
+            var reestrOne = new ReestrList(data);
+            $(nzr).trigger('ReestrFormController.editForm', reestrOne.items[0]);
+        },
+        _requestViewErrorOne: function (data) {
+            console.log(data);
+            console.log('_requestErrorOne');
+        },
+        _requestViewCompleteOne: function (data) {
             $('#loader').hide();
         },
 

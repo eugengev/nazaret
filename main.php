@@ -18,6 +18,7 @@
                 <li><a href="#exampledropdownDropdown1" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Налаштування</a>
                     <ul id="exampledropdownDropdown1" class="collapse list-unstyled ">
                         <li><a href="#" id="js-user-list">Користувачи</a></li>
+                        <li><a href="#" id="js-podpisant-list">Подписанты</a></li>
                         <li><a href="#" id="js-firma-list">Фірми віконввці</a></li>
                         <li><a href="#" id="js-client-list">Замовники</a></li>
                     </ul>
