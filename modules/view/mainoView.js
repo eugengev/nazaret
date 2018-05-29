@@ -130,7 +130,8 @@ nzr.view = nzr.view || {};
 
         onCountPrice: function (event) {
             var trRow = $(event.target).parents('.js-maino-row'),
-                allSumm = 0;
+                allSumm = 0,
+                allSummPrice = 0,
                 count = parseInt(trRow.find('.js-maino-one-count').val()),
                 price = parseInt(trRow.find('.js-maino-one-price').val()),
                 pricev = parseInt(trRow.find('.js-maino-price').data('price'));
@@ -142,9 +143,12 @@ nzr.view = nzr.view || {};
                 allSumm = allSumm + parseInt($(this).val());
             });
 
-            console.log(allSumm);
+            this.tableMaino.find('.js-maino-price').each(function(){
+                allSummPrice = allSummPrice + parseInt($(this).val());
+            });
 
             this.container.find('.js-maino-all-summ').val(allSumm);
+            this.container.find('.js-maino-all-summ-price').val(allSummPrice);
         },
 
         onAllCountPrice: function (event) {
@@ -156,15 +160,18 @@ nzr.view = nzr.view || {};
                 trRow.find('.js-maino-one-summ').val(count*price);
             });
 
-            var allSumm = 0;
+            var allSumm = 0,allSummPrice = 0 ;
 
             this.tableMaino.find('.js-maino-one-summ').each(function(){
                 allSumm = allSumm + parseInt($(this).val());
             });
-
+            this.tableMaino.find('.js-maino-price').each(function(){
+                allSummPrice = allSummPrice + parseInt($(this).val());
+            });
             console.log(allSumm);
 
             this.container.find('.js-maino-all-summ').val(allSumm);
+            this.container.find('.js-maino-all-summ-price').val(allSummPrice);
         },
 
         onModalSprClick: function(event){
@@ -181,7 +188,8 @@ nzr.view = nzr.view || {};
         onModalSprOpen: function(event, priceList){
             this.modelPriceList = priceList;
             var tempReestrFormFirst = this.renderTemplate('ReestrFormView-TableSprPrice', this.modelPriceList ), self = this;
-            this.modalSpr.find('.modal-body').html(tempReestrFormFirst);
+            console.log(this.modelPriceList,tempReestrFormFirst);
+            this.modalSpr.find('.js-modal-body').html(tempReestrFormFirst);
             var trClick = this.modalSpr.find('.js-Spr-Items-click');
             trClick.on('click', _.bind(this.onTrClickSpr, this));
             $('#sprModalCenter').modal('show')

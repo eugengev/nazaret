@@ -871,7 +871,6 @@
                                             <th style="width: 80px">Валюта</th>
 											<th>Вартість пропозиції</th>
 											<th>Вартість пропозиції в грн</th>
-                                            <th>без ПДВ</th>
 											<th>Коригування на торг</th>
 											<th>Коригування на рік випуску</th>
 											<th>Коригування на тех. стан</th>
@@ -951,6 +950,7 @@
             <input type="hidden" name="ocenca_auto_id" value="{{=value.ocenca_auto_id}}" >
             <input type="hidden" name="url" value="{{=value.url}}" >
             <input type="hidden" name="link_pic" value="{{=value.link_pic}}" >
+            <input type="hidden" name="pdv" value="{{=value.pdv}}" >
             <a href="{{=value.url}}" class="short_link" target="_blank">{{=value.url}}</a>
             <a href="{{=value.link_pic}}" target="_blank">скрин</a>
         </td>
@@ -973,9 +973,6 @@
         </td>
         <td class="text-right">
             <input type="number" class="form-control text-right form-control-sm" value="{{=value.price_uah}}" name="price_uah" readonly>
-        </td>
-        <td>
-            <input type="checkbox" class="form-control form-control-sm" value="1" name="pdv" {{? value.pdv == '1'}} checked {{?}} />
         </td>
         <td class="text-right">
             <input type="number" class="form-control text-right form-control-sm" value="{{=value.kor_torg}}" name="kor_torg">
@@ -1137,18 +1134,6 @@
                 </div>
             </div>
         </div>
-        <div class='col-md-2'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Год выпуска</span>
-                </div>
-                <select name="year" class="form-control">
-                    {{ for(var prop in it.yeara) { }}
-                    <option {{? it.year == prop}} selected {{?}} value="{{=prop}}">{{=prop}}</option>
-                    {{ } }}
-                </select>
-            </div>
-        </div>
     </div>
     <div class="row">
         <div class='col'>
@@ -1172,9 +1157,21 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
+                    <span class="input-group-text">Год выпуска</span>
+                </div>
+                <select name="year" class="form-control js-year-chose">
+                    {{ for(var prop in it.yeara) { }}
+                    <option {{? it.year == prop}} selected {{?}} value="{{=prop}}">{{=prop}}</option>
+                    {{ } }}
+                </select>
+            </div>
+        </div>
+        <div class='col'>
+            <div class="input-group input-group-sm mb-2">
+                <div class="input-group-prepend">
                     <span class="input-group-text">количество полніх лет Єксплуатации</span>
                 </div>
-                <input type="text" class="form-control" name="fullyear"  value="{{=it.fullyear}}"  >
+                <input type="text" class="form-control js-fullyear" name="fullyear"  value="{{=it.fullyear}}"  >
             </div>
         </div>
         <div class='col'>
@@ -1182,7 +1179,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">Количество месяцев Єксплуапаци</span>
                 </div>
-                <input type="text" class="form-control" name="fullmonth"  value="{{=it.fullmonth}}"  >
+                <input type="text" class="form-control js-fullmonth" name="fullmonth"  value="{{=it.fullmonth}}"  >
             </div>
         </div>
     </div>

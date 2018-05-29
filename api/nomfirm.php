@@ -10,25 +10,29 @@ if (isset($_POST['nomfirm'])) {
 
 	$sql  = "SELECT * FROM `s_firma` WHERE id=".$_POST['nomfirm'];
 	$rows = $db->fetch_all_array( $sql );
-	$db->close();
 
 	$data = [];
+
+
+
+
 
 	$nomer = 0;
 
 	foreach ( $rows as $record ) {
 		if ($record['autonomer'] == 1) {
-			$nomer = $record['firstchar'].((int)$record['lastnomer']+1);
+			$sql  = "SELECT cifr_nomer FROM `reestr` WHERE firma_id=".$record['id']." AND status != 'd' ORDER BY ID DESC LIMIT 1";
+			$rowss = $db->query_first( $sql );
+
+			$nomer = $record['firstchar'].((int)$rowss['cifr_nomer']+1);
 		}
-//		$list = array(
-//			"id"   => $record['id'],
-//			"name" => $record['name'],
-//		);
-//
-//		$data[] = $list;
 	}
 	$data['nomer'] = $nomer;
+	$data['cifr_nomer'] = (int)$rowss['cifr_nomer']+1;
+
+	$db->close();
 }
+
 die(json_encode($data, 256));
 
 ?>

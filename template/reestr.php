@@ -28,7 +28,7 @@
 				<td>{{=value.datework}}</td>
 				<td class='text-center'>
                     <a href="#" class="btn btn-success btn-sm js-viewedit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-pencil-square-o"></i></a>&nbsp;
-                    <a href="#" class="btn btn-primary btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-plus"></i></a>&nbsp;
+                    <a href="#" class="btn btn-primary btn-sm js-edit-reestr-item" data-id="{{=value.id}}"><i class="fa fa-align-justify"></i></a>&nbsp;
                     <a href="#" class="btn btn-danger btn-sm js-delete-reestr-item" data-id="{{=value.id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </td>
 			</tr>
@@ -70,6 +70,7 @@
 								<span class="input-group-text">Номер Договору</span>
 							</div>
 							<input type="text" class="form-control" name='nomber' >
+                            <input type="hidden" name='cifr_nomer' >
 						</div>
 					</div>
 					<div class='col'>
@@ -111,6 +112,9 @@
 							<div class="input-group-append">
 								<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_client" data-name="client" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
 							</div>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary js-client-add" type="button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
 						</div>
 					</div>
                 </div>
@@ -386,6 +390,24 @@
 			<div class="card">
 				<div class="card-body">
 					<div class="">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <h2>Выбор счера</h2>
+                                <table class="table table-hover table-bordered table-sm">
+                                    <thead>
+                                    <tr class="text-center">
+                                        <th>&nbsp;</th>
+                                        <th>Назва банку</th>
+                                        <th>МФО банку</th>
+                                        <th>Розразунковий рахунок</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="js-reest-show-bank">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 						<div class="row mb-4">
 							<div class="col">
 								<h2>Заяви</h2>
@@ -449,10 +471,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Фірма виконавець</span>
                             </div>
-                            <input type="text" class="form-control" name="firma" value="{{=it.firma}}" >
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_firma" data-name="firma" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                            </div>
+                            <input type="text" class="form-control" readonly name="firma" value="{{=it.firma}}" >
                         </div>
                     </div>
                 </div>
@@ -463,6 +482,7 @@
                                 <span class="input-group-text">Номер Договору</span>
                             </div>
                             <input type="text" class="form-control" readonly name='nomber' value="{{=it.nomber}}" >
+                            <input type="hidden" name='cifr_nomer' value="{{=it.cifr_nomer}}" >
                         </div>
                     </div>
                     <div class='col'>
@@ -488,7 +508,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Дата Договору</span>
                             </div>
-                            <input type="text" class="form-control js-date" name="date" value="{{=it.date}}" >
+                            <input type="text" class="form-control js-date" data-id="#date" value="{{=it.date}}" >
                             <input type="hidden" name="date" id="date">
                         </div>
                     </div>
@@ -588,7 +608,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> Дата угоди</span>
                             </div>
-                            <input type="text" class="form-control"  name="dateygodi" value="{{=it.dateygodi}}" >
+                            <input type="text" class="form-control js-date" data-id="#dateygodi" value="{{=it.dateygodi}}" >
                             <input type="hidden" name="dateygodi" id="dateygodi" >
                         </div>
                     </div>
@@ -625,8 +645,9 @@
 		</tbody>
 		<tfoot>
 		<tr>
-			<td colspan="5" align="right">Сумма</td>
-			<td><input type="text" class="form-control  form-control-sm js-maino-all-summ  text-right" readonly size="1" value="0"></td>
+			<td colspan="6" align="right">Сумма</td>
+			<td><input type="text" class="form-control  form-control-sm js-maino-all-summ text-right" readonly size="1" value="0"></td>
+            <td><input type="text" class="form-control  form-control-sm js-maino-all-summ-price text-left" readonly size="1" value="0"></td>
 			<td colspan="2"></td>
 		</tr>
 		</tfoot>
@@ -650,7 +671,7 @@
 		<td><input type="text" class="form-control form-control-sm text-right js-maino-one-summ" readonly placeholder="0"></td>
 		<td>
 			<div class="input-group input-group-sm">
-				<input type="text" class="form-control form-control-sm js-maino-price" data-id="0" data-name="0" data-price="0" readonly name="vartist" />
+				<input type="text" class="form-control form-control-sm js-maino-price" data-id="0" data-name="0" data-price="0" name="vartist" />
 				<div class="input-group-append">
 					<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_price" data-name="maino-price" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
 				</div>
@@ -694,7 +715,7 @@
 		<td><input type="text" class="form-control form-control-sm text-right js-maino-one-summ" readonly placeholder="0" ></td>
 		<td>
 			<div class="input-group input-group-sm">
-				<input type="text" class="form-control form-control-sm js-maino-price" data-id="0" data-name="0" data-price="0" readonly value="{{=value.vartist}}"  name="vartist" />
+				<input type="text" class="form-control form-control-sm js-maino-price" data-id="0" data-name="0" data-price="0" value="{{=value.vartist}}"  name="vartist" />
 				<div class="input-group-append">
 					<button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_price" data-name="maino-price" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
 				</div>

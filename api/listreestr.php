@@ -56,6 +56,7 @@ foreach($rows as $record){
 		"date"       => datf($record['date']),
 		"datework"   => datf($record['datework']),
 		"old_nomber" => $record['prev_id'],
+		"cifr_nomer" => $record['cifr_nomer'],
 		"client"     => $record['client'],
 		"firma"      => $record['firma'],
 		"city"       => $record['city'],

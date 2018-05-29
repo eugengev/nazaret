@@ -27,6 +27,7 @@ foreach($rowanal as $record){
 		"curency"      => $record['curency'],
 		"price"        => $record['price'],
 		"price_bez"    => $record['price_bez'],
+		"price_uah"    => $record['price_uah'],
 		"pdv"          => $record['pdv'],
 		"kor_torg"     => $record['kor_torg'],
 		"kor_year"     => $record['kor_year'],

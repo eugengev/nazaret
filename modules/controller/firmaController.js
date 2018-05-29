@@ -16,10 +16,13 @@ nzr.controller = nzr.controller || {};
         _ajaxDelete: null,
         _ajaxUpdateBank: null,
         _getFirmaListApi: '/api/get_firma_list.php',
+        _getFirmaListByNameApi: '/api/get_firma_by_name.php',
         _saveFirmaApi: '/api/save_firma.php',
         _addBankApi: '/api/add_bank.php',
+        _addWriterApi: '/api/firma/add_writer.php',
         _saveAdressApi: '/api/save_adress.php',
         _saveBankApi: '/api/save_bank.php',
+        _saveWriterApi: '/api/firma/save_writer.php',
         _deleteFirmaApi: '/api/delete_firma.php',
 
         init: function() {
@@ -34,7 +37,11 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('FirmaFormView.updateFirmaForm',  _.bind(this.updateFirmaInfo, this));
             $(nzr).on('FirmaFormView.updateAdress',  _.bind(this.updateAdress, this));
             $(nzr).on('FirmaFormView.addBank',  _.bind(this.addBankFirm, this));
+            $(nzr).on('FirmaFormView.addWriter',  _.bind(this.addWriterFirm, this));
             $(nzr).on('FirmaFormView.updateBank',  _.bind(this.updateBank, this));
+            $(nzr).on('FirmaFormView.updateWriter',  _.bind(this.updateWriter, this));
+
+            $(nzr).on('ReestrFormView.showBankListReestr',  _.bind(this.showBankListReestr, this));
         },
 
         getFirmaList: function(){
@@ -57,7 +64,8 @@ nzr.controller = nzr.controller || {};
             var firmaList = new FirmaList(data['firma']);
             $(nzr).trigger('FirmaFormController.getFirmaList', firmaList);
         },
-        _requestgetFirmaListError: function () {
+        _requestgetFirmaListError: function (data) {
+            console.log(data);
             console.log('_requestgetFirmaListError');
         },
         _requestgetFirmaListComplete: function () {
@@ -176,7 +184,9 @@ nzr.controller = nzr.controller || {};
                 adress1   = new Adress(data['adress1']),
                 adress2   = new Adress(data['adress2']),
                 banki     = new BankList(data['bank']);
-            $(nzr).trigger('FirmaFormController.EditFirmaList', {'f':firmaList, 'a1': adress1, 'a2': adress2, 'b': banki});
+                writer    = new WriterList(data['writer']);
+                console.log(data['writer']);
+            $(nzr).trigger('FirmaFormController.EditFirmaList', {'f':firmaList, 'a1': adress1, 'a2': adress2, 'b': banki, 'w': writer});
         },
         _requestEditFirmaListError: function () {
             console.log('_requestEditFirmaListError');
@@ -257,7 +267,9 @@ nzr.controller = nzr.controller || {};
                 pynkt:    adressInfo.pynkt,
                 t_street: adressInfo.t_street,
                 street:   adressInfo.street,
-                dom:      adressInfo.dom
+                dom:      adressInfo.dom,
+                kv:      adressInfo.kv,
+                np:      adressInfo.np,
             };
 
             var self = this;
@@ -314,6 +326,36 @@ nzr.controller = nzr.controller || {};
             $('#loader').hide();
         },
 
+        addWriterFirm: function(event, data){
+            if (this._ajaxRequest) {
+                this._ajaxRequest.abort();
+                this._ajaxRequest = null;
+            }
+
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                type: "POST",
+                data: data,
+                url: this._addWriterApi,
+                success: function(data){
+                    self._requestAddWriterFirmSuccess(data);
+                },
+                error: _.bind(this._requestAddWriterFirmError, this),
+                complete: _.bind(this._requestAddWriterFirmComplete, this)
+            });
+        },
+        _requestAddWriterFirmSuccess: function (data) {
+            var writerlist = new WriterList(data);
+            $(nzr).trigger('FirmaFormController.writerList', writerlist);
+        },
+        _requestAddWriterFirmError: function () {
+            console.log('_requestEditFirmaListError');
+        },
+        _requestAddWriterFirmComplete: function () {
+            console.log('_requestEditFirmaListComplete');
+            $('#loader').hide();
+        },
+
         updateBank: function(event, bankInfo){
             if (this._ajaxUpdateBank) {
                 this._ajaxUpdateBank.abort();
@@ -350,6 +392,81 @@ nzr.controller = nzr.controller || {};
             console.log('_requestUpdateFirmaInfoError');
         },
         _requestUpdateBankComplete: function (data) {
+            console.log('_requestUpdareFirmaInfoComplete');
+            $('#loader').hide();
+        },
+
+
+        showBankListReestr: function(event, firmaName){
+            if (this._ajaxRequest) {
+                this._ajaxRequest.abort();
+                this._ajaxRequest = null;
+            }
+
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                type: "POST",
+                data: {firmaname: firmaName},
+                url: this._getFirmaListByNameApi,
+                success: function(data){
+                    self._requestshowBankListReestrSuccess(data);
+                },
+                error: _.bind(this._requestshowBankListReestrError, this),
+                complete: _.bind(this._requestshowBankListReestrComplete, this)
+            });
+        },
+        _requestshowBankListReestrSuccess: function (data) {
+            var firmaList = new FirmaList(data['firma']),
+                adress1   = new Adress(data['adress1']),
+                adress2   = new Adress(data['adress2']),
+                banki     = new BankList(data['bank']);
+            $(nzr).trigger('FirmaFormController.showBankList', {'f':firmaList, 'a1': adress1, 'a2': adress2, 'b': banki});
+        },
+        _requestshowBankListReestrError: function () {
+            console.log('_requestEditFirmaListError');
+        },
+        _requestshowBankListReestrComplete: function () {
+            console.log('_requestEditFirmaListComplete');
+            $('#loader').hide();
+        },
+
+        updateWriter: function(event, writerInfo){
+            if (this._ajaxUpdateBank) {
+                this._ajaxUpdateBank.abort();
+                this._ajaxUpdateBank = null;
+            }
+
+            var dataWriter = {
+                staus:      'updateWriter',
+                id:         writerInfo.id,
+                fio:        writerInfo.fio,
+                dolg:       writerInfo.dolg,
+                sert_date:  writerInfo.sert_date,
+                sert_nomer: writerInfo.sert_nomer,
+                firma_id:   writerInfo.firma_id
+            };
+
+            var self = this;
+            this._ajaxUpdateBank = $.ajax({
+                type: "POST",
+                data: dataWriter,
+                url: this._saveWriterApi,
+                success: function(data){
+                    self._requestUpdateWriterSuccess(data);
+                },
+                error: _.bind(this._requestUpdateWriterError, this),
+                complete: _.bind(this._requestUpdateWriterComplete, this)
+            });
+        },
+        _requestUpdateWriterSuccess: function (data) {
+            // var banklist = new BankList(data);
+            // $(nzr).trigger('FirmaFormController.bankList', banklist);
+        },
+        _requestUpdateWriterError: function (data) {
+            console.log(data);
+            console.log('_requestUpdateFirmaInfoError');
+        },
+        _requestUpdateWriterComplete: function (data) {
             console.log('_requestUpdareFirmaInfoComplete');
             $('#loader').hide();
         },

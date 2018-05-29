@@ -265,7 +265,6 @@ nzr.controller = nzr.controller || {};
             this._ajaxSprRequest = $.ajax({
                 url: this._listSprMainoPriceApi,
                 success: function(data){
-                    console.log(data);
                     self._requestListSprPriceSuccess(data);
                 },
                 error: _.bind(this._requestListSprPriceError, this),
@@ -273,7 +272,6 @@ nzr.controller = nzr.controller || {};
             });
         },
         _requestListSprPriceSuccess: function (data) {
-            console.log(data);
             var priceList = new SpravPriceList(data);
             $(nzr).trigger('MainoControlerView.sprModal', priceList);
         },

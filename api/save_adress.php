@@ -19,6 +19,8 @@ if (isset($_POST['staus']) && $_POST['staus'] == 'updateAdress') {
 		"t_street" => $_POST['t_street'],
 		"street"   => $_POST['street'],
 		"dom"      => $_POST['dom'],
+		"kv"      => $_POST['kv'],
+		"np"      => $_POST['np'],
 	);
 
 	$id    = $db->query_update( 's_adress', $userinfo, '`id` = '.$_POST['id'] );

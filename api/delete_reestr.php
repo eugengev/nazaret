@@ -46,6 +46,7 @@ foreach($rows as $record){
 		"date"       => $record['date'],
 		"datework"   => $record['datework'],
 		"old_nomber" => $record['prev_id'],
+		"cifr_nomer" => $record['cifr_nomer'],
 		"client"     => $record['client'],
 		"firma"      => $record['firma'],
 		"city"       => $record['city'],

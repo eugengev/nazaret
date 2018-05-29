@@ -197,6 +197,10 @@ nzr.view = nzr.view || {};
                 plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
                 toolbar: "a11ycheck, code"
             });
+
+            this.btYearChose = this.container.find('.js-year-chose');
+            this.btYearChose.on('change', _.bind(this.onYearChose, this))
+
         },
 
         onRefreshAnalog: function() {
@@ -284,6 +288,8 @@ nzr.view = nzr.view || {};
                 plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
                 toolbar: "a11ycheck, code"
             });
+
+
         },
 
         showOcencaAutoOneUpd: function(event, data) {
@@ -309,8 +315,24 @@ nzr.view = nzr.view || {};
             this.formSubmit.on('click', _.bind(this.onSubmitForm, this));
 
             this.container.find('.js-date').datepicker({
-                dateFormat: 'dd.mm.yy',
+                dateFormat: 'dd.mm.yy'
             });
+            this.btYearChose = this.container.find('.js-year-chose');
+            this.btYearChose.on('change', _.bind(this.onYearChose, this))
+
+        },
+
+        onYearChose: function(){
+            console.log('onYearChose');
+            var year = this.btYearChose.val(),
+                Xmas = new Date(),
+                tekYear = Xmas.getFullYear(),
+                razYear = tekYear - year,
+                raMonth = (razYear * 12)-7;
+            console.log(Xmas);
+            console.log(year,tekYear,razYear,raMonth);
+            this.container.find('.js-fullyear').val(razYear);
+            this.container.find('.js-fullmonth').val(raMonth);
         },
 
         showOcencaAnalogAuto: function(event, data) {

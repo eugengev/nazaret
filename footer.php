@@ -37,10 +37,6 @@
 <script src="/modules/controller/userController.js" ></script>
 <script src="/modules/view/userView.js" ></script>
 
-<script src="/modules/model/podpisant.js" ></script>
-<script src="/modules/controller/podpisantController.js" ></script>
-<script src="/modules/view/podpisantView.js" ></script>
-
 <script src="/modules/model/firma.js" ></script>
 <script src="/modules/controller/firmaController.js" ></script>
 <script src="/modules/view/firmaView.js" ></script>

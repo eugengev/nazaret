@@ -27,6 +27,7 @@ nzr.view = nzr.view || {};
             $(nzr).on('FirmaFormController.getFirmaList', _.bind(this.getFirmaList, this));
             $(nzr).on('FirmaFormController.EditFirmaList', _.bind(this.editFormFirma, this));
             $(nzr).on('FirmaFormController.bankList', _.bind(this.bankListFirm, this));
+            $(nzr).on('FirmaFormController.writerList', _.bind(this.writerListFirm, this));
 
         },
 
@@ -131,14 +132,18 @@ nzr.view = nzr.view || {};
             var firma = data['f'],
                 adress1 = data['a1'],
                 adress2 = data['a2'],
-                banki = data['b'];
-            console.log(firma, adress1, adress2, banki);
+                banki = data['b'],
+                writer = data['w'];
+            console.log(firma, adress1, adress2, banki,writer);
             var template = this.renderTemplate('FirmaViewForm-Edit', {"items": firma.items, "adf": adress1, "ad2": adress2}),
                 self = this;
             this.container.html(template);
 
             var templateBank = this.renderTemplate('FirmaViewBanksList', {"items": banki.items});
             this.container.find('.js-bank-table-row').html(templateBank);
+
+            var templateWriter = this.renderTemplate('FirmaViewWriterList', {"items": writer.items});
+            this.container.find('.js-writer-table-row').html(templateWriter);
 
             this.buttonCancel = this.container.find('.js-edit-firma-cancel');
             this.buttonCancel.on('click', _.bind(this.onClickFirmasList, this));
@@ -154,8 +159,14 @@ nzr.view = nzr.view || {};
             this.buttonsAddBank = this.container.find('.js-add-bank');
             this.buttonsAddBank.on('click', _.bind(this.onAddBank, this));
 
+            this.buttonsAddWriter = this.container.find('.js-add-writer');
+            this.buttonsAddWriter.on('click', _.bind(this.onAddWriter, this));
+
             this.buttonsSaveBank = this.container.find('.js-save-bank-firma');
             this.buttonsSaveBank.on('click', _.bind(this.onSaveBank, this));
+
+            this.buttonsSaveWriter = this.container.find('.js-save-writer-firma');
+            this.buttonsSaveWriter.on('click', _.bind(this.onSaveWriter, this));
 
             this.container.find('.js-date').datepicker({
                 dateFormat: 'dd.mm.yy',
@@ -271,6 +282,16 @@ nzr.view = nzr.view || {};
             $(nzr).trigger('FirmaFormView.addBank',data);
         },
 
+
+        onAddWriter: function() {
+            var data = {
+                'idf': this.container.find('input[name=idf]').val(),
+                'type': 'f'
+            };
+            $(nzr).trigger('FirmaFormView.addWriter',data);
+        },
+
+
         bankListFirm: function(event, data) {
             var template = this.renderTemplate('FirmaViewBanksList', {"items": data.items}),
                 self = this;
@@ -278,6 +299,15 @@ nzr.view = nzr.view || {};
 
             this.buttonsSaveBank = this.container.find('.js-save-bank-firma');
             this.buttonsSaveBank.on('click', _.bind(this.onSaveBank, this));
+        },
+
+        writerListFirm: function(event, data) {
+            var template = this.renderTemplate('FirmaViewWriterList', {"items": data.items}),
+                self = this;
+            this.container.find('.js-writer-table-row').html(template);
+
+            this.buttonsSaveWriter = this.container.find('.js-save-writer-firma');
+            this.buttonsSaveWriter.on('click', _.bind(this.onSaveWriter, this));
         },
 
         onSaveBank: function() {
@@ -298,6 +328,26 @@ nzr.view = nzr.view || {};
             console.log(bank);
 
             $(nzr).trigger('FirmaFormView.updateBank',bank);
+        },
+
+        onSaveWriter: function() {
+            $('#loader').show();
+
+            var trForm = $(event.target).parents('tr'),
+                writer = new Writer();
+
+            trForm.find('input').each(function(){
+                var nameInput = $(this).attr('name'),
+                    dname = $(this).data('name');
+                if (dname != null) {
+                    nameInput = $(this).data('name');
+                }
+                writer[nameInput] = $(this).val();
+            });
+
+            console.log(writer);
+
+            $(nzr).trigger('FirmaFormView.updateWriter',writer);
         }
 
     });

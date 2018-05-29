@@ -168,12 +168,22 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
+                                <span class="input-group-text">ЄДРПоУ</span>
+                            </div>
+                            <input type="text" class="form-control"  name="okpo" value="{{=value.okpo}}" >
+                        </div>
+                    </div>
+                    <div class='col'>
+                        <div class="input-group input-group-sm mb-3">
+                            <div class="input-group-prepend">
                                 <span class="input-group-text">Коротка назва</span>
                             </div>
                             <input type="text" class="form-control" name="name" value="{{=value.name}}" >
                             <input type="hidden" name="idf" value="{{=value.id}}">
                         </div>
                     </div>
+                </div>
+                <div class='row'>
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -258,8 +268,22 @@
                                 <tbody>
                                     <tr data-addid="{{=it.adf.id}}">
                                         <td><input type="text" class="form-control form-control-sm" name="zip" value="{{=it.adf.zip}}" ><input type="hidden" name="id" value="{{=it.adf.id}}"></td>
-                                        <td><input type="text" class="form-control form-control-sm" name="oblast" value="{{=it.adf.oblast}}" ></td>
-                                        <td><input type="text" class="form-control form-control-sm" name="raion" value="{{=it.adf.raion}}" ></td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control form-control-sm" name="oblast_f"  data-name="oblast"  value="{{=it.adf.oblast}}" >
+                                                <div class="input-group-append">
+                                                    <button class="btn js-modal-sprv" data-spr="s_oblast" data-name="oblast_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control form-control-sm" name="raion_f"  data-name="raion"  value="{{=it.adf.raion}}" >
+                                                <div class="input-group-append">
+                                                    <button class="btn js-modal-sprv" data-spr="s_raion" data-name="raion_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>
                                             <div class="input-group input-group-sm">
                                                 <input type="text" class="form-control" name="t_pynkt_f" data-name="t_pynkt" value="{{=it.adf.t_pynkt}}" >
@@ -268,7 +292,14 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td><input type="text" class="form-control form-control-sm" name="pynkt" value="{{=it.adf.pynkt}}" ></td>
+                                        <td>
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control" name="pynkt_f" data-name="pynkt" value="{{=it.adf.pynkt}}" >
+                                                <div class="input-group-append">
+                                                    <button class="btn js-modal-sprv" data-spr="s_a_city" data-name="pynkt_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>
                                             <div class="input-group input-group-sm">
                                                 <input type="text" class="form-control" name="t_street_f"  data-name="t_street" value="{{=it.adf.t_street}}" >
@@ -309,8 +340,22 @@
                                 <tbody>
                                 <tr data-addid="{{=it.ad2.id}}">
                                     <td><input type="text" class="form-control form-control-sm" name="zip" value="{{=it.ad2.zip}}" ><input type="hidden" name="id" value="{{=it.ad2.id}}"></td>
-                                    <td><input type="text" class="form-control form-control-sm" name="oblast" value="{{=it.ad2.oblast}}" ></td>
-                                    <td><input type="text" class="form-control form-control-sm" name="raion" value="{{=it.ad2.raion}}" ></td>
+                                    <td>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control form-control-sm" name="oblast_s"  data-name="oblast"  value="{{=it.ad2.oblast}}" >
+                                            <div class="input-group-append">
+                                                <button class="btn js-modal-sprv" data-spr="s_oblast" data-name="oblast_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control form-control-sm" name="raion_s"  data-name="raion"  value="{{=it.ad2.raion}}" >
+                                            <div class="input-group-append">
+                                                <button class="btn js-modal-sprv" data-spr="s_raion" data-name="raion_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control" name="t_pynkt_s" data-name="t_pynkt" value="{{=it.ad2.t_pynkt}}" >
@@ -319,7 +364,14 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td><input type="text" class="form-control form-control-sm" name="pynkt" value="{{=it.ad2.pynkt}}" ></td>
+                                    <td>
+                                        <div class="input-group input-group-sm">
+                                            <input type="text" class="form-control" name="pynkt_s" data-name="pynkt" value="{{=it.ad2.pynkt}}" >
+                                            <div class="input-group-append">
+                                                <button class="btn js-modal-sprv" data-spr="s_a_city" data-name="pynkt_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control" name="t_street_s"  data-name="t_street" value="{{=it.ad2.t_street}}" >
@@ -347,21 +399,11 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">ЄДРПоУ</span>
-                            </div>
-                            <input type="text" class="form-control"  name="okpo" value="{{=value.okpo}}" >
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
                                 <span class="input-group-text">Номер свідоцтва:</span>
                             </div>
                             <input type="text" class="form-control" name="svidot_nomer" value="{{=value.svidot_nomer}}" >
                         </div>
                     </div>
-                </div>
-                <div class='row'>
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
@@ -399,14 +441,32 @@
                         </table>
                     </div>
                 </div>
+                <div class='row'>
+                    <div class='col'>
+                        <h2 class="text-center">Пидписанті <button type="button" class="btn  btn-sm btn-success pull-right js-add-writer"><i class="fa fa-plus"></i></button></h2>
+                        <table class="table table-hover table-bordered table-sm">
+                            <thead>
+                            <tr class="text-center">
+                                <th>#</th>
+                                <th>П.І.Б</th>
+                                <th>Должность</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody class="js-writer-table-row">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </form>
             {{~}}
         </div>
     </div>
     <div class="container-fluid">
         <div class="row justify-content-end text-center">
-            <div class='col-12 col-sm-3 col-md-2 col-lg-1'><a href="#" class="btn btn-success js-edit-firma-form">Сохранит</a></div>
-            <div class='col-12 col-sm-3 col-md-2 col-lg-1'><a href="#" class="btn btn-danger js-edit-firma-cancel">Отменить</a></div>
+            <div class='col'><a href="#" class="btn btn-sm w-100 btn-success js-edit-firma-form">Сохранит</a></div>
+            <div class='col'><a href="#" class="btn btn-sm w-100 btn-danger js-edit-firma-cancel">Отменить</a></div>
         </div>
     </div>
 </script>
@@ -419,6 +479,31 @@
         <td><input type="text" class="form-control form-control-sm" name="mfo" value="{{=value.mfo}}"></td>
         <td><input type="text" class="form-control form-control-sm" name="ras" value="{{=value.ras}}"></td>
         <td><a href="#" class="btn btn-success js-save-bank-firma"><i class="fa fa-save"></i></a></td>
+    </tr>
+    {{~}}
+</script>
+
+<script id="FirmaViewWriterList" type="text/x-dot-template">
+    {{~it.items :value:itm}}
+    <tr class="text-center">
+        <td class="text-center">{{=itm+1}}.
+            <input type="hidden" name="id" value="{{=value.id}}">
+            <input type="hidden" name="firma_id" value="{{=value.firma_id}}">
+        </td>
+        <td><input type="text" class="form-control form-control-sm" name="fio" value="{{=value.fio}}"></td>
+        <td><input type="text" class="form-control form-control-sm" name="dolg" value="{{=value.dolg}}"></td>
+        <td><a href="#" class="btn btn-success js-save-writer-firma"><i class="fa fa-save"></i></a></td>
+    </tr>
+    {{~}}
+</script>
+
+<script id="FirmaViewBanksListReestr" type="text/x-dot-template">
+    {{~it.items :value:itm}}
+    <tr class="text-center">
+        <td><input type="radio" name="r1"><input type="hidden" name="id" value="{{=value.id}}"><input type="hidden" name="type" value="{{=value.type}}"><input type="hidden" name="parent_id" value="{{=value.parent_id}}"></td>
+        <td>{{=value.bank}}</td>
+        <td>{{=value.mfo}}</td>
+        <td>{{=value.ras}}</td>
     </tr>
     {{~}}
 </script>

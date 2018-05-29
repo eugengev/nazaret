@@ -59,7 +59,7 @@ ob_start();
 				$allSumm = 0;
 				foreach ($rows as $row) {
 					$count++;
-					$allSumm = $row['price']*$row['count'];
+					$allSumm += $row['price']*$row['count'];
 					?>
 					<tr>
 						<td class="tc"><?=$count?></td>
@@ -102,6 +102,8 @@ ob_start();
 <?php
 $html = ob_get_contents();
 ob_end_clean ();
+
+
 
 $dompdf = new DOMPDF();
 $dompdf->load_html($html);

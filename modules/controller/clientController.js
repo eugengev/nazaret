@@ -16,6 +16,7 @@ nzr.controller = nzr.controller || {};
         _listSpravApi: '/api/listspr.php',
         _getClientListApi: '/api/get_client_list.php',
         _saveClientApi: '/api/save_client.php',
+        _saveClientReestrApi: '/api/save_client_reestr.php',
         _updateClientApi: '/api/save_client.php',
         _deleteClientApi: '/api/delete_client.php',
 
@@ -26,6 +27,7 @@ nzr.controller = nzr.controller || {};
             // setTimeout(_.bind(this.getClientInfo, this), 0);
             $(nzr).on('ClientFormView.getClientList',  _.bind(this.getClientList, this));
             $(nzr).on('ClientFormView.saveClientForm',  _.bind(this.saveClientInfo, this));
+            $(nzr).on('ClientFormView.saveClientFormFromReestr',  _.bind(this.saveClientReestrInfo, this));
             $(nzr).on('ClientFormView.updateClientForm',  _.bind(this.updateClientInfo, this));
             $(nzr).on('ClientFormView.deleteClientInfo',  _.bind(this.deleteClientInfo, this));
             $(nzr).on('ClientFormView.getListSpr',  _.bind(this.getSpravList, this));
@@ -69,22 +71,38 @@ nzr.controller = nzr.controller || {};
             this.Client = ClientInfo;
 
             var dataClient = {
-                staus:       'addClient',
-                name:      this.Client.name,
-                phone: this.Client.phone,
-                email: this.Client.email,
-                inn: this.Client.inn,
-                pasport:      this.Client.pasport,
-                pravforma:       this.Client.pravforma,
-                dir_fio:      this.Client.dir_fio,
-                buh_fio:      this.Client.buh_fio,
-                dover:     this.Client.dover,
-                adres1:     this.Client.adres1,
-                adres2:     this.Client.adres2,
-                phone1:    this.Client.phone1,
-                ras:       this.Client.ras,
-                bank:      this.Client.bank,
-                mfo:       this.Client.mfo
+                staus:         'addClient',
+                name:          this.Client.name,
+                type:          this.Client.type,
+                phone:         this.Client.phone,
+                email:         this.Client.email,
+                inn:           this.Client.inn,
+                pasport:       this.Client.pasport,
+                pasp_nom:      this.Client.pasp_nom,
+                pasp_ser:      this.Client.pasp_ser,
+                pasp_data:     this.Client.pasp_data,
+                pasp_vidan:    this.Client.pasp_vidan,
+                svid_date:     this.Client.svid_date,
+                svid_nomer:    this.Client.svid_nomer,
+                pravforma:     this.Client.pravforma,
+                dir_role:      this.Client.dir_role,
+                dir_fio:       this.Client.dir_fio,
+                buh_fio:       this.Client.buh_fio,
+                dover:         this.Client.dover,
+                osoba_fio:     this.Client.osoba_fio,
+                osoba_email:   this.Client.osoba_email,
+                osoba_telefon: this.Client.osoba_telefon,
+                osoba_posada:  this.Client.osoba_posada,
+                adres1:        this.Client.adres1,
+                adres2:        this.Client.adres2,
+                phone1:        this.Client.phone1,
+                ras:           this.Client.ras,
+                bank:          this.Client.bank,
+                mfo:           this.Client.mfo,
+                buh_email:     this.Client.buh_email,
+                buh_phone:     this.Client.buh_phone,
+                buh_phone1:    this.Client.buh_phone1,
+                delivertype:   this.Client.delivertype
             };
 
             var self = this;
@@ -121,24 +139,39 @@ nzr.controller = nzr.controller || {};
             this.Client = ClientInfo;
 
             var dataClient = {
-                staus:    'updateClient',
-                id:        this.Client.id,
-                name:      this.Client.name,
-                phone:     this.Client.phone,
-                email:     this.Client.email,
-                inn:       this.Client.inn,
-                pasport:   this.Client.pasport,
-                pravforma: this.Client.pravforma,
-                dir_role:  this.Client.dir_role,
-                dir_fio:   this.Client.dir_fio,
-                buh_fio:   this.Client.buh_fio,
-                dover:     this.Client.dover,
-                adres1:    this.Client.adres1,
-                adres2:    this.Client.adres2,
-                phone1:    this.Client.phone1,
-                ras:       this.Client.ras,
-                bank:      this.Client.bank,
-                mfo:       this.Client.mfo
+                staus:         'updateClient',
+                id:            this.Client.id,
+                name:          this.Client.name,
+                type:          this.Client.type,
+                phone:         this.Client.phone,
+                email:         this.Client.email,
+                inn:           this.Client.inn,
+                pasport:       this.Client.pasport,
+                pasp_nom:      this.Client.pasp_nom,
+                pasp_ser:      this.Client.pasp_ser,
+                pasp_data:     this.Client.pasp_data,
+                pasp_vidan:    this.Client.pasp_vidan,
+                svid_date:     this.Client.svid_date,
+                svid_nomer:    this.Client.svid_nomer,
+                pravforma:     this.Client.pravforma,
+                dir_role:      this.Client.dir_role,
+                dir_fio:       this.Client.dir_fio,
+                buh_fio:       this.Client.buh_fio,
+                dover:         this.Client.dover,
+                osoba_fio:     this.Client.osoba_fio,
+                osoba_email:   this.Client.osoba_email,
+                osoba_telefon: this.Client.osoba_telefon,
+                osoba_posada:  this.Client.osoba_posada,
+                adres1:        this.Client.adres1,
+                adres2:        this.Client.adres2,
+                phone1:        this.Client.phone1,
+                ras:           this.Client.ras,
+                bank:          this.Client.bank,
+                mfo:           this.Client.mfo,
+                buh_email:     this.Client.buh_email,
+                buh_phone:     this.Client.buh_phone,
+                buh_phone1:    this.Client.buh_phone1,
+                delivertype:   this.Client.delivertype
             };
 
             var self = this;
@@ -262,6 +295,75 @@ nzr.controller = nzr.controller || {};
         _requestSpravComplete: function (data) {
             $('#loader').hide();
         },
+
+        saveClientReestrInfo: function(event, ClientInfo){
+            if (this._ajaxAddNew) {
+                this._ajaxAddNew.abort();
+                this._ajaxAddNew = null;
+            }
+
+            this.Client = ClientInfo;
+
+            var dataClient = {
+                staus:         'addClient',
+                name:          this.Client.name,
+                type:          this.Client.type,
+                phone:         this.Client.phone,
+                email:         this.Client.email,
+                inn:           this.Client.inn,
+                pasport:       this.Client.pasport,
+                pasp_nom:      this.Client.pasp_nom,
+                pasp_ser:      this.Client.pasp_ser,
+                pasp_data:     this.Client.pasp_data,
+                pasp_vidan:    this.Client.pasp_vidan,
+                svid_date:     this.Client.svid_date,
+                svid_nomer:    this.Client.svid_nomer,
+                pravforma:     this.Client.pravforma,
+                dir_role:      this.Client.dir_role,
+                dir_fio:       this.Client.dir_fio,
+                buh_fio:       this.Client.buh_fio,
+                dover:         this.Client.dover,
+                osoba_fio:     this.Client.osoba_fio,
+                osoba_email:   this.Client.osoba_email,
+                osoba_telefon: this.Client.osoba_telefon,
+                osoba_posada:  this.Client.osoba_posada,
+                adres1:        this.Client.adres1,
+                adres2:        this.Client.adres2,
+                phone1:        this.Client.phone1,
+                ras:           this.Client.ras,
+                bank:          this.Client.bank,
+                mfo:           this.Client.mfo,
+                buh_email:     this.Client.buh_email,
+                buh_phone:     this.Client.buh_phone,
+                buh_phone1:    this.Client.buh_phone1,
+                delivertype:   this.Client.delivertype
+            };
+
+            var self = this;
+            this._ajaxAddNew = $.ajax({
+                type: "POST",
+                data: dataClient,
+                url: this._saveClientReestrApi,
+                success: function(data){
+                    self._requestSaveClientReestrInfoSuccess(data);
+                },
+                error: _.bind(this._requestSaveClientReestrInfoError, this),
+                complete: _.bind(this._requestSaveClientReestrInfoComplete, this)
+            });
+        },
+        _requestSaveClientReestrInfoSuccess: function (data) {
+            var clientList = new ClientList(data);
+            $(nzr).trigger('ClientFormController.onClientSaveShow', clientList);
+        },
+        _requestSaveClientReestrInfoError: function (data) {
+            console.log(data);
+            console.log('_requestgetClientInfoError');
+        },
+        _requestSaveClientReestrInfoComplete: function (data) {
+            console.log('_requestgetClientInfoComplete');
+            $('#loader').hide();
+        },
+
 
     });
 

@@ -39,6 +39,7 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('ReestrFormView.listClient', _.bind(this.getSprFirstList, this));
             $(nzr).on('ReestrFormView.listFirma',  _.bind(this.getSprFirstList, this));
             $(nzr).on('ReestrFormView.saveFirstForm',  _.bind(this.saveFirstForm, this));
+            $(nzr).on('ReestrFormView.saveEditForm',  _.bind(this.saveEditForm, this));
             $(nzr).on('ReestrFormView.EditReestr',  _.bind(this.getReestrOne, this));
             $(nzr).on('ReestrFormView.ViewEditReestr',  _.bind(this.getViewReestrOne, this));
             $(nzr).on('ReestrFormView.DeleteReestr',  _.bind(this.deleteReestrOne, this));
@@ -142,7 +143,7 @@ nzr.controller = nzr.controller || {};
             console.log(data['nomer']);
             var nomer = data['nomer'];
             if (nomer != '0') {
-                $(nzr).trigger('ReestrFormController.nomerDog', nomer);
+                $(nzr).trigger('ReestrFormController.nomerDog', data);
             }
             // $(nzr).trigger('ReestrFormController.requestListSuccess', reestrList);
         },
@@ -208,6 +209,7 @@ nzr.controller = nzr.controller || {};
         _requestError: function (data) {
         },
         _requestComplete: function (data) {
+            $('#loader').hide();
         },
 
         getReestrPage: function(event, page){
@@ -435,6 +437,66 @@ nzr.controller = nzr.controller || {};
 
         _saveFirstFormComplete: function() {
             $('#loader').hide();
+        },
+
+
+        saveEditForm: function (event, model) {
+            $('#loader').show();
+            this.reestr = model;
+            console.log('begin save');
+            console.log(this.reestr);
+
+            if (this._ajaxAddNew) {
+                this._ajaxAddNew.abort();
+                this._ajaxAddNew = null;
+            }
+
+            var dataAddnew = {
+                status:     'editform',
+                id:         this.reestr.id,
+                nomber:     this.reestr.nomber,
+                date:       this.reestr.date,
+                datework:   this.reestr.datework,
+                old_nomber: this.reestr.old_nomber,
+                client:     this.reestr.client,
+                firma:      this.reestr.firma,
+                city:       this.reestr.city,
+                bank:       this.reestr.bank,
+                meta:       this.reestr.meta,
+                manager:    this.reestr.manager,
+                vidygodi:    this.reestr.vidygodi,
+                nomerygodi:    this.reestr.nomerygodi,
+                dateygodi:    this.reestr.dateygodi
+            };
+
+            console.log(dataAddnew);
+
+            var self = this;
+            this._ajaxAddNew = $.ajax({
+                url: this._listReestrSaveFirst,
+                type: "POST",
+                data: dataAddnew,
+                success: function(data){
+                    console.log(data);
+                    self._saveEditFormSuccess(data);
+                },
+                error: _.bind(this._saveEditFormError, this),
+                complete: _.bind(this._saveEditFormComplete, this)
+            });
+
+        },
+
+        _saveEditFormSuccess: function(data) {
+            // $(nzr).trigger('ReestrFormView.listReestr');
+        },
+
+        _saveEditFormError: function(data) {
+            console.log('begin error', data);
+        },
+
+        _saveEditFormComplete: function() {
+            $(nzr).trigger('ReestrFormView.listReestr');
+            // $('#loader').hide();
         },
 
         getReestrOne: function(event, id){

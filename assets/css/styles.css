@@ -50,3 +50,7 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.mce-notification {
+    display: none;
+}

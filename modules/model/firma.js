@@ -79,6 +79,8 @@ function Adress(data) {
     this.t_street = '';
     this.street = '';
     this.dom = '';
+    this.kv = '';
+    this.np = '';
 
     if (data) {
         this.init(data);
@@ -95,6 +97,8 @@ Adress.prototype.init = function(data) {
     this.t_street = data.t_street;
     this.street   = data.street;
     this.dom      = data.dom;
+    this.kv      = data.kv;
+    this.np      = data.np;
 };
 
 function AdressList(data) {
@@ -149,6 +153,47 @@ BankList.prototype.init = function(data) {
     if (data.length) {
         for (var i = 0; i < data.length; i++){
             var item = new Bank(data[i]);
+            this.items[i] = item;
+        }
+    }
+};
+
+
+function Writer(data) {
+    this.id   = 0;
+    this.fio = '';
+    this.dolg = '';
+    this.sert_date = '';
+    this.sert_nomer = '';
+    this.firma_id = '';
+
+
+    if (data) {
+        this.init(data);
+    }
+};
+
+Writer.prototype.init = function(data) {
+    this.id           = data.id;
+    this.fio          = data.fio;
+    this.dolg         = data.dolg;
+    this.sert_date    = data.sert_date;
+    this.sert_nomer   = data.sert_nomer;
+    this.firma_id     = data.firma_id;
+};
+
+function WriterList(data) {
+    this.items = [];
+    if (data) {
+        this.init(data);
+    }
+};
+
+WriterList.prototype.init = function(data) {
+    this.items = [];
+    if (data.length) {
+        for (var i = 0; i < data.length; i++){
+            var item = new Writer(data[i]);
             this.items[i] = item;
         }
     }

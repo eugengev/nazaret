@@ -3,6 +3,7 @@ function Reestr(data) {
     this.nomber = '';
     this.date = '2010-01-01';
     this.datework = '2010-01-01';
+    this.cifr_nomer = 0;
     this.old_nomber = '';
     this.client = 0;
     this.firma = '';
@@ -28,6 +29,7 @@ Reestr.prototype.init = function(data) {
     this.date       = data.date;
     this.datework   = data.datework;
     this.old_nomber = data.old_nomber;
+    this.cifr_nomer = data.cifr_nomer;
     this.client     = data.client;
     this.firma      = data.firma;
     this.city       = data.city;
