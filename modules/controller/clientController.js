@@ -27,7 +27,8 @@ nzr.controller = nzr.controller || {};
             // setTimeout(_.bind(this.getClientInfo, this), 0);
             $(nzr).on('ClientFormView.getClientList',  _.bind(this.getClientList, this));
             $(nzr).on('ClientFormView.saveClientForm',  _.bind(this.saveClientInfo, this));
-            $(nzr).on('ClientFormView.saveClientFormFromReestr',  _.bind(this.saveClientReestrInfo, this));
+            $(nzr).on('ClientFormView.addClientFormReestr',  _.bind(this.addClientReestrInfo, this));
+            $(nzr).on('ClientFormView.saveClientFormReestr',  _.bind(this.saveClientReestrInfo, this));
             $(nzr).on('ClientFormView.updateClientForm',  _.bind(this.updateClientInfo, this));
             $(nzr).on('ClientFormView.deleteClientInfo',  _.bind(this.deleteClientInfo, this));
             $(nzr).on('ClientFormView.getListSpr',  _.bind(this.getSpravList, this));
@@ -305,7 +306,7 @@ nzr.controller = nzr.controller || {};
             this.Client = ClientInfo;
 
             var dataClient = {
-                staus:         'addClient',
+                staus:         'updClient',
                 name:          this.Client.name,
                 type:          this.Client.type,
                 phone:         this.Client.phone,
@@ -364,6 +365,46 @@ nzr.controller = nzr.controller || {};
             $('#loader').hide();
         },
 
+
+        addClientReestrInfo: function(event){
+            if (this._ajaxAddNew) {
+                this._ajaxAddNew.abort();
+                this._ajaxAddNew = null;
+            }
+
+            var dataClient = {
+                staus:         'addClient'
+            };
+
+            var self = this;
+            this._ajaxAddNew = $.ajax({
+                type: "POST",
+                data: dataClient,
+                url: this._saveClientReestrApi,
+                success: function(data){
+                    self._requestaddClientReestrInfoSuccess(data);
+                },
+                error: _.bind(this._requestaddClientReestrInfoError, this),
+                complete: _.bind(this._requestaddClientReestrInfoComplete, this)
+            });
+        },
+        _requestaddClientReestrInfoSuccess: function (data) {
+            var clientone = new ClientList(data['client']),
+                adress1   = new Adress(data['adress1']),
+                adress2   = new Adress(data['adress2']),
+                adress3   = new Adress(data['adress3']),
+                adress4   = new Adress(data['adress4']);
+            $(nzr).trigger('ClientFormController.addFormClientFromReestr', {'c':clientone, 'a1': adress1 , 'a2' : adress2, 'a3': adress3 , 'a4' : adress4 });
+        },
+        _requestaddClientReestrInfoError: function (data) {
+            console.log(data);
+            console.log('_requestaddClientReestrInfoError');
+        },
+        _requestaddClientReestrInfoComplete: function (data) {
+            console.log(data);
+            console.log('_requestaddClientReestrInfoComplete');
+            $('#loader').hide();
+        },
 
     });
 

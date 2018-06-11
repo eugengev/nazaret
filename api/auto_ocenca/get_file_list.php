@@ -11,7 +11,12 @@ $db->connect();
 $data = [];
 
 if (isset($_POST['type']) && $_POST['type'] == 'changefile') {
-	$sql = "UPDATE `maino_file` SET chosen=0 WHERE id=".$_POST['idfile'];
+	if ($_POST['change']) {
+		$change = 1;
+	} else {
+		$change = 0;
+	}
+	$sql = "UPDATE `maino_file` SET chosen=".$change." WHERE id=".$_POST['idfile'];
 	$rows = $db->query($sql);
 }
 

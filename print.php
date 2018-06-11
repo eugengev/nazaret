@@ -9,6 +9,12 @@
 				$template = $_REQUEST['template'];
 				$zajva = $_REQUEST['schet'];
 				$id = $_REQUEST['id'];
+				if (isset($_REQUEST['email'])) {
+					$email = true;
+				} else {
+					$email = false;
+				}
+
 				global $zajva;
 				switch ($template) {
 					case 'schet':

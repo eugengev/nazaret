@@ -723,7 +723,7 @@
 		</td>
 		<td>
 			<select size="1" class="form-control form-control-sm" name="vikon" >
-				<option value="0" selected> - - - - </option>
+				<option value="0" > - - - - </option>
 				{{~it.viconav :vallue:itmm}}
 				<option value="{{=vallue.id}}"  {{? vallue.id == value.vikon }} selected {{?}} >{{=vallue.name}}</option>
 				{{~}}
@@ -731,13 +731,12 @@
 		</td>
         <td>
             <select size="1" class="form-control form-control-sm" name="podpisant" >
-                <option value="0" selected> - - - - </option>
+                <option value="0" > - - - - </option>
                 {{~it.podpisant :vallue:itmm}}
                 <option value="{{=vallue.id}}"  {{? vallue.id == value.podpisant }} selected {{?}} >{{=vallue.name}}</option>
                 {{~}}
             </select>
         </td>
-
 	</tr>
 	{{~}}
 </script>

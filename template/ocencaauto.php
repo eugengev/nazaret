@@ -1,16 +1,10 @@
 <script id="OcencaAutoForm" type="text/x-dot-template">
     <ul class="nav nav-pills mb-2" id="pills-ocencaauto_full" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" id="pils-1-tab" data-toggle="pill" href="#pils-1" role="tab" aria-controls="pils-1" aria-selected="true"><i class="fa fa-cloud"></i> Загальні відомости</a>
+            <a class="nav-link active" id="pils-1-tab" data-toggle="pill" href="#pils-1" role="tab" aria-controls="pils-1" aria-selected="true"><i class="fa fa-cloud"></i> Загальні відомості</a>
         </li>
         <li class="nav-item">
             <a class="nav-link js-ocenca-show-oglad" id="pils-2-tab" data-toggle="pill" href="#pils-2" role="tab" aria-controls="pils-2" aria-selected="false"><i class="fa fa-bars"></i> Огляд</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link js-ocenca-show-files" id="pils-3-tab" data-toggle="pill" href="#pils-3" role="tab" aria-controls="pils-3" aria-selected="false"><i class="fa fa-cloud"></i> Вибор Файлі справи</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link js-ocenca-show-literal" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> Литература</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="pils-5-tab" data-toggle="pill" href="#pils-5" role="tab" aria-controls="pils-5" aria-selected="false"><i class="fa fa-cloud"></i> Формування справи</a>
@@ -23,7 +17,7 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-2">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">Номер Оценки</span>
+                                <span class="input-group-text">Номер Оцінки</span>
                             </div>
                             <input type="hidden" id='idocenka' value="{{=it.ocenca.id}}" >
                             <input type="text" class="form-control" readonly name='nomber' value="{{=it.ocenca.nomer}}" >
@@ -40,7 +34,7 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-2">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">Старый Номер Договору</span>
+                                <span class="input-group-text">Старий Номер Договору</span>
                             </div>
                             <input type="text" class="form-control" readonly name="old_nomber" value="{{=it.reestr.old_nomber}}" >
                         </div>
@@ -200,7 +194,7 @@
                 <div class='col'>
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Осмотр транспортного средства производилось</span>
+                            <span class="input-group-text">Огляд транспортного засобу вироблялося</span>
                         </div>
                         <input type="text" class="form-control js-date" data-id="#dateo" name="oglad_date" >
                         <input type="hidden" name="date" id="dateo" name="oglad_date">
@@ -211,7 +205,7 @@
                 <div class='col'>
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">времмя суток при</span>
+                            <span class="input-group-text">час доби при</span>
                         </div>
                         <input type="text" class="form-control" name="oglad_sutok" >
                     </div>
@@ -221,7 +215,7 @@
                 <div class="col">
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">в присутствии</span>
+                            <span class="input-group-text">в присутності</span>
                         </div>
                         <input type="text" class="form-control" name="oglad_prisut" >
                     </div>
@@ -233,35 +227,47 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade show" id="pils-3" role="tabpanel" aria-labelledby="pils-3-tab">
-            <div class="row">
-                <div class="col">
-                    <table class="table table-hover table-bordered table-sm">
-                        <thead>
-                        <tr class="text-center" style="font-size: 0.8em">
-                            <th>#</th>
-                            <th>отметка</th>
-                            <th>миниатюра</th>
-                            <th>имя файла</th>
-                            <th>тип файла</th>
-                        </tr>
-                        </thead>
-                        <tbody class="js-ocenca-file-list">
-                        </tbody>
-                    </table>
+        <div class="tab-pane fade show" id="pils-5" role="tabpanel" aria-labelledby="pils-5-tab">
+            <div><a href="/api/auto_ocenca/doc_create.php?id={{=it.ocenca.id}}" target="_blank" class="btn btn-sm btn-primary js-ocenca-create-file" type="button">Формування справи</a></div>
+            <br>
+            <br>
+            <ul class="nav nav-pills mb-2" id="pills-ocencaauto_full_1" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link js-ocenca-show-files" id="pils-3-tab" data-toggle="pill" href="#pils-3" role="tab" aria-controls="pils-3" aria-selected="false"><i class="fa fa-cloud"></i> Вибір файлі справи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-ocenca-show-literal" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> література</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show" id="pils-3" role="tabpanel" aria-labelledby="pils-3-tab">
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-hover table-bordered table-sm">
+                                <thead>
+                                <tr class="text-center" style="font-size: 0.8em">
+                                    <th>#</th>
+                                    <th>відмітка</th>
+                                    <th>мініатюра</th>
+                                    <th>ім'я файлу</th>
+                                    <th>тип файлу</th>
+                                </tr>
+                                </thead>
+                                <tbody class="js-ocenca-file-list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="pils-4" role="tabpanel" aria-labelledby="pils-4-tab">
+                    <div class="row">
+                        <div class="col"><h2>Використовувана література</h2></div>
+                    </div>
+                    <div class="js-ocenca-liter-list">
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="tab-pane fade show" id="pils-4" role="tabpanel" aria-labelledby="pils-4-tab">
-            <div class="row">
-                <div class="col"><h2>Используемая литература</h2></div>
-            </div>
-            <div class="js-ocenca-liter-list">
-
-            </div>
-        </div>
-        <div class="tab-pane fade show" id="pils-5" role="tabpanel" aria-labelledby="pils-5-tab">
-            <button class="btn btn-sm btn-primary js-ocenca-create-file" type="button">Формування справи</button>
         </div>
     </div>
 
@@ -272,7 +278,7 @@
 				<div class="modal-body">
 					<ul class="nav nav-pills mb-2" id="pills-ocencaauto" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true"><i class="fa fa-cloud"></i> Введення даних</a>
+							<a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true"><i class="fa fa-cloud"></i> Введення Даних</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false"><i class="fa fa-cloud"></i> Вибір аналогів</a>
@@ -785,70 +791,72 @@
                             </div>
                         </div>
                         <div class="tab-pane fade show  js-calc-auto-gk" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Коєфіціет ринку регіону</span>
+                            <form id="gk-form">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Rоефіцієнт ринку регіону</span>
+                                            </div>
+                                            <select class="form-control" name="koefic" >
+                                                <option value="0.97">0.97</option>
+                                                <option selected value="1">1.00</option>
+                                                <option value="1.03">1.03</option>
+                                            </select>
                                         </div>
-                                        <select class="form-control" name="koefic" >
-                                            <option value="0.97">0.97</option>
-                                            <option selected value="1">1.00</option>
-                                            <option value="1.03">1.03</option>
-                                        </select>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Пробіг нормативний</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Пробіг нормативний</span>
+                                            </div>
+                                            <input type="number" name="probeg_norm" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
-                                        <input type="number" name="probeg_norm" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Пробіг фактичний</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Пробіг фактичний</span>
+                                            </div>
+                                            <input type="number" name="probeg_fact" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
-                                        <input type="number" name="probeg_fact" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Фактичний середньогоддовий пробіг</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Фактичний середньогоддовий пробіг</span>
+                                            </div>
+                                            <input type="number"  name="probeg_fact_sred" readonly class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
-                                        <input type="number"  name="probeg_fact_sred" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Середньогодовий перепробег (недопробег)</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Середньогодовий перепробег (недопробег)</span>
+                                            </div>
+                                            <input type="number"  name="probeg_nedop" readonly class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
-                                        <input type="number"  name="probeg_nedop" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="input-group input-group-sm mb-1">
-                                        <div class="input-group-prepend w-50">
-                                            <span class="input-group-text w-100">Значення Гк</span>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group input-group-sm mb-1">
+                                            <div class="input-group-prepend w-50">
+                                                <span class="input-group-text w-100">Значення Гк</span>
+                                            </div>
+                                            <input type="number" class="form-control text-right"  name="gk" >
                                         </div>
-                                        <input type="number" class="form-control text-right"  name="gk" >
                                     </div>
                                 </div>
-                            </div>
+                            </form>
 						</div>
                         <div class="tab-pane fade show" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
                             <div class="row mb-2">
@@ -952,7 +960,7 @@
             <input type="hidden" name="link_pic" value="{{=value.link_pic}}" >
             <input type="hidden" name="pdv" value="{{=value.pdv}}" >
             <a href="{{=value.url}}" class="short_link" target="_blank">{{=value.url}}</a>
-            <a href="{{=value.link_pic}}" target="_blank">скрин</a>
+            <a href="{{=value.link_pic}}" target="_blank">скрін</a>
         </td>
         <td>
             <input type="text" class="form-control form-control-sm" value="{{=value.name}}" name="name">
@@ -1000,7 +1008,7 @@
         <div class='col-md-4'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Наименування</span>
+                    <span class="input-group-text">Наіменування</span>
                 </div>
                 <input type="text" class="form-control" name="name" value="{{=it.name}}">
             </div>
@@ -1008,7 +1016,7 @@
         <div class='col-md-3'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Категория КТС</span>
+                    <span class="input-group-text">Категорія КТЗ</span>
                 </div>
                 <input type="text" class="form-control" name="kts" value="{{=it.kts}}">
                 <div class="input-group-append">
@@ -1019,20 +1027,20 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Производство КТС</span>
+                    <span class="input-group-text">Виробництво КТЗ</span>
                 </div>
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <input type="radio" aria-label="Checkbox for following text input" name="proiz" value="otech" {{? it.proiz == 'otech'}} checked {{?}} >
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Отечествений КТС">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Вітчизняна КТЗ">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <input type="radio" aria-label="Checkbox for following text input" name="proiz" value="zarub" {{? it.proiz == 'zarub'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Зарубежный КТС">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Зарубіжний КТЗ">
             </div>
         </div>
     </div>
@@ -1040,7 +1048,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Марка транспортного средства</span>
+                    <span class="input-group-text">Марка транспортного засобу</span>
                 </div>
                 <input type="text" class="form-control" name="marka" value="{{=it.marka}}" >
                 <div class="input-group-append">
@@ -1051,7 +1059,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Модель транспортного средства</span>
+                    <span class="input-group-text">Модель транспортного засобу</span>
                 </div>
                 <input type="text" class="form-control" name="model" value="{{=it.model}}" >
                 <div class="input-group-append">
@@ -1062,7 +1070,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Тип Кузова</span>
+                    <span class="input-group-text">Тип Кузову</span>
                 </div>
                 <input type="text" class="form-control" name="kyzov" value="{{=it.kyzov}}" >
                 <div class="input-group-append">
@@ -1083,7 +1091,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Заводской номер</span>
+                    <span class="input-group-text">Заводський номер</span>
                 </div>
                 <input type="text" class="form-control" name="zavod_nomer" value="{{=it.zavod_nomer}}" >
             </div>
@@ -1091,7 +1099,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Инвентарний номер</span>
+                    <span class="input-group-text">Інвентарний номер</span>
                 </div>
                 <input type="text" class="form-control" name="invent_nomer" value="{{=it.invent_nomer}}" >
             </div>
@@ -1101,7 +1109,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Тип Двиготеля</span>
+                    <span class="input-group-text">Тип двигуна</span>
                 </div>
                 <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -1117,16 +1125,16 @@
                 <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Бензин">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="dizelbenzinelectro" value="Электро" {{? it.dizelbenzinelectro == 'Электро'}} checked {{?}}>
+                        <input type="radio" aria-label="Checkbox for following text input" name="dizelbenzinelectro" value="Электро" {{? it.dizelbenzinelectro == 'Електро'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Электро">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Електро">
             </div>
         </div>
         <div class='col-md-4'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Объем двигателя</span>
+                    <span class="input-group-text">Об'єм двигуна</span>
                 </div>
                 <input type="number" class="form-control" name="obem" value="{{=it.obem}}" >
                 <div class="input-group-append">
@@ -1139,7 +1147,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Дата выдачи свидетельства о регистрации/техпаспорт</span>
+                    <span class="input-group-text">Дата видачі свідоцтва про реєстрацію / техпаспорт</span>
                 </div>
                 <input type="text" class="form-control js-date" data-id="#datesvidet"  name="datesvidet" value="{{=it.datesvidet}}" >
             </div>
@@ -1147,7 +1155,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Принятая дата производства КТС</span>
+                    <span class="input-group-text">Прийнята дата виробництва КТЗ</span>
                 </div>
                 <input type="text" class="form-control js-date" data-id="#datektsproiz" name="datektsproiz"  value="{{=it.datektsproiz}}"  >
             </div>
@@ -1157,7 +1165,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Год выпуска</span>
+                    <span class="input-group-text">Рік випуску</span>
                 </div>
                 <select name="year" class="form-control js-year-chose">
                     {{ for(var prop in it.yeara) { }}
@@ -1169,7 +1177,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">количество полніх лет Єксплуатации</span>
+                    <span class="input-group-text">кількість повних років Єксплуатаціі</span>
                 </div>
                 <input type="text" class="form-control js-fullyear" name="fullyear"  value="{{=it.fullyear}}"  >
             </div>
@@ -1177,7 +1185,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Количество месяцев Єксплуапаци</span>
+                    <span class="input-group-text">Кількість місяців Єксплуапаці</span>
                 </div>
                 <input type="text" class="form-control js-fullmonth" name="fullmonth"  value="{{=it.fullmonth}}"  >
             </div>
@@ -1188,16 +1196,16 @@
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="reg_nom_tran" value="Регистрационый Номер"  {{? it.reg_nom_tran == 'Регистрационый Номер'}} checked {{?}}>
+                        <input type="radio" aria-label="Checkbox for following text input" name="reg_nom_tran" value="Реєстраційний номер"  {{? it.reg_nom_tran == 'Реєстраційний номер'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Регистрационый Номер">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Реєстраційний номер">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="reg_nom_tran" value="Транзитный номер" {{? it.reg_nom_tran == 'Транзитный номер'}} checked {{?}}>
+                        <input type="radio" aria-label="Checkbox for following text input" name="reg_nom_tran" value="Транзитний номер" {{? it.reg_nom_tran == 'Транзитний номер'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Транзитный номер">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Транзитний номер">
                 <input type="text" class="form-control"  name="reg_nom_tran_val"  value="{{=it.reg_nom_tran_val}}"  >
             </div>
         </div>
@@ -1207,16 +1215,16 @@
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="svid_reg_tran" value="Свидетильство о регистрации"  {{? it.svid_reg_tran == 'Свидетильство о регистрации'}} checked {{?}}>
+                        <input type="radio" aria-label="Checkbox for following text input" name="svid_reg_tran" value="Свідоцтво про реєстрацію"  {{? it.svid_reg_tran == 'Свідоцтво про реєстрацію'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Свидетильство о регистрации">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Свідоцтво про реєстрацію">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="svid_reg_tran" value="Тезнический паспорт" {{? it.svid_reg_tran == 'Тезнический паспорт'}} checked {{?}}>
+                        <input type="radio" aria-label="Checkbox for following text input" name="svid_reg_tran" value="Технічний паспорт" {{? it.svid_reg_tran == 'Технічний паспорт'}} checked {{?}}>
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Тезнический паспорт">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Технічний паспорт">
                 <input type="text" class="form-control" name="svid_reg_tran_val"  value="{{=it.svid_reg_tran_val}}"   >
             </div>
         </div>
@@ -1226,10 +1234,10 @@
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
-                        <input type="radio" aria-label="Checkbox for following text input" name="vin_nom_kyz" value="Индификационій номер (VIN)"  {{? it.vin_nom_kyz == 'Индификационій номер (VIN)'}} checked {{?}} >
+                        <input type="radio" aria-label="Checkbox for following text input" name="vin_nom_kyz" value="Індіфікаціоній номер (VIN)"  {{? it.vin_nom_kyz == 'Індіфікаціоній номер (VIN)'}} checked {{?}} >
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Индификационій номер (VIN)">
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Індіфікаціоній номер (VIN)">
                 <div class="input-group-prepend">
                     <div class="input-group-text">
                         <input type="radio" aria-label="Checkbox for following text input" name="vin_nom_kyz" value="Номер кузова" {{? it.vin_nom_kyz == 'Номер кузова'}} checked {{?}}>
@@ -1244,7 +1252,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">№ двигателя</span>
+                    <span class="input-group-text">№ двигуна</span>
                 </div>
                 <input type="text" class="form-control" name="nom_dvig"  value="{{=it.nom_dvig}}"  >
             </div>
@@ -1252,7 +1260,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">№ шасси</span>
+                    <span class="input-group-text">№ шасі</span>
                 </div>
                 <input type="text" class="form-control" name="nom_shasi"  value="{{=it.nom_shasi}}"  >
             </div>
@@ -1262,7 +1270,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">№ рамы</span>
+                    <span class="input-group-text">№ рами</span>
                 </div>
                 <input type="text" class="form-control" name="nom_rami" value="{{=it.nom_rami}}"  >
             </div>
@@ -1270,7 +1278,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Цвет КТС</span>
+                    <span class="input-group-text">колір КТЗ</span>
                 </div>
                 <input type="text" class="form-control" name="color"  value="{{=it.color}}" >
                 <div class="input-group-append">
@@ -1287,13 +1295,13 @@
                         <input type="checkbox" aria-label="Checkbox for following text input" name="vlad_tot" value="yes"  {{? it.vlad_tot == 'yes'}} checked {{?}} />
                     </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Владелец той самй" >
+                <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Власник тієї самй" >
             </div>
         </div>
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Владалец КТС</span>
+                    <span class="input-group-text">власник КТЗ</span>
                 </div>
                 <input type="text" class="form-control" name="vladel_kts"  value="{{=it.vladel_kts}}"  >
             </div>
@@ -1301,7 +1309,7 @@
         <div class='col'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Адрес Владельца</span>
+                    <span class="input-group-text">Адреса Власника</span>
                 </div>
                 <input type="text" class="form-control" name="vladel_adres"  value="{{=it.vladel_adres}}"  >
             </div>
@@ -1311,9 +1319,9 @@
         <div class='col'>
             <div class="input-groupinput-group-sm mb-2">
                 <div class="input-group-prepend w-100">
-                    <span class="input-group-text w-100 text-center">Техничні характеристики</span>
+                    <span class="input-group-text w-100 text-center">Технічні характеристики</span>
                 </div>
-                <textarea name="teh_har"  class="form-control" cols="30" rows="10">{{=it.teh_har}}</textarea>
+                <textarea name="teh_har" id="teh_har" class="form-control" cols="30" rows="10">{{=it.teh_har}}</textarea>
             </div>
         </div>
     </div>

@@ -2,42 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/import_csv.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/search_adres.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/docx/ocenca_avto_19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/template_buh.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/create_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/create_file.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_analog.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_analog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/delete_reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/delete_reestr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/get_client_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_client_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/get_firma_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/get_firma_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listreestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listreestrsavefirst.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestrsavefirst.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/nomfirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/nomfirm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/save_adress.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/save_adress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/save_client.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/save_client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/listmainorow.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listmainorow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/mysql.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/mysql.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/save_client_reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/save_client_reestr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/saverowsmaino.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/saverowsmaino.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.php" beforeDir="false" afterPath="$PROJECT_DIR$/conf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dompdf/lib/fonts/log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/dompdf/lib/fonts/log.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/controller/clientController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/clientController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/firmaController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/firmaController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/controller/mainoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/mainoController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/podpisantController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/reestrController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/reestrController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/firma.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/firma.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/podpisant.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/reestr.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/reestr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nzr/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nzr/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/controller/ocencaautoController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/ocencaautoController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/model/maino.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/maino.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/model/ocencaauto.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/ocencaauto.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/clientView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/clientView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/firmaView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/firmaView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/mainoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/mainoView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/ocancaautoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocancaautoView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/podpisantView.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/reestrView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/reestrView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/view/spravochView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/spravochView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/print.php" beforeDir="false" afterPath="$PROJECT_DIR$/print.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/print/schet.php" beforeDir="false" afterPath="$PROJECT_DIR$/print/schet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/print/zajava.php" beforeDir="false" afterPath="$PROJECT_DIR$/print/zajava.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/client.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/firma.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/firma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/modal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/ocencaauto.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocencaauto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/podpisant.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/template/reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/reestr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/word_shablon/Sample__TemplateCloneRow.docx" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/word_shablon/Sample__TemplateCloneRow.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,70 +79,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="firma.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/template/firma.php">
+      <file leaf-file-name="zajava.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/print/zajava.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="468" column="64" selection-start-line="468" selection-start-column="64" selection-end-line="468" selection-end-column="64" />
+            <state relative-caret-position="13">
+              <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firmaView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/view/firmaView.js">
+      <file leaf-file-name="schet.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/print/schet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="349" column="54" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="54" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firmaController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/controller/firmaController.js">
+      <file leaf-file-name="print.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/print.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="439" column="41" selection-start-line="439" selection-start-column="29" selection-end-line="439" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_writer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/firma/save_writer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_writer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/firma/add_writer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_messages.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/get_messages.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="get_firma_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/get_firma_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
-              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firma.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/model/firma.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="167" column="17" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="17" />
+            <state relative-caret-position="238">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -143,46 +113,44 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>buh_fio</find>
-      <find>ReestrFormController.nomerDog</find>
-      <find>nomerDog</find>
-      <find>nomber</find>
-      <find>save</find>
-      <find>changeNomerDog</find>
-      <find>viewed</find>
-      <find>saveFirstForm</find>
-      <find>saveEditForm</find>
-      <find>editform</find>
-      <find>$rowp</find>
-      <find>onSaveForm</find>
-      <find>Год выпуска</find>
-      <find>OcencaAutoOne</find>
+      <find>Область</find>
+      <find>oblast_y</find>
+      <find>тип.улици</find>
+      <find>saveClientReestrInfo</find>
+      <find>ClientFormController</find>
+      <find>onClientSaveShow</find>
+      <find>Область</find>
+      <find>js-edit-client-cancel</find>
+      <find>onClientCancelShow</find>
+      <find>onModalSprOpen</find>
+      <find>Доставка</find>
+      <find>Доставкаjs-edit-client-form</find>
+      <find>addFormClientFromReestr</find>
+      <find>js-client-add</find>
+      <find>tinymce</find>
+      <find>CKEDITOR</find>
+      <find>teh_har</find>
+      <find>Пробіг</find>
+      <find>updOcencaDz</find>
+      <find>showOcencaAu</find>
+      <find>dz</find>
+      <find>dz_</find>
+      <find>Вибір файлі справи</find>
+      <find>js-chose-file-change</find>
+      <find>probeg_fact</find>
+      <find>koefic</find>
+      <find>GK</find>
+      <find>GK]</find>
       <find>onCalcFull</find>
-      <find>onYearChose</find>
-      <find>js-y</find>
-      <find>editFirmaList</find>
-      <find>_getFirmaListApi</find>
-      <find>js-save-bank-firma</find>
-      <find>onAddBank</find>
-      <find>bankListFirm</find>
-      <find>js-writer-add</find>
-      <find>onSaveWriter</find>
-      <find>EditFirmaList</find>
-      <find>editFormFirma</find>
-      <find>id_user</find>
-      <find>updateWriter</find>
-      <find>_saveWriterApi</find>
-      <find>Банки</find>
+      <find>$rez_sum_tab</find>
     </findStrings>
     <replaceStrings>
-      <replace>UserFormController</replace>
-      <replace>MessageFormView</replace>
-      <replace>UserFormView</replace>
       <replace>MessageFormController</replace>
       <replace>firmaListForm</replace>
       <replace>FirmaList</replace>
@@ -210,6 +178,9 @@
       <replace>js-yo</replace>
       <replace>btn btn-outline-secondary js-modal-sprv</replace>
       <replace>&quot;input-group input-group-sm mb-3&quot;</replace>
+      <replace>&lt;/strong&gt; -</replace>
+      <replace>Номер Оцінки</replace>
+      <replace>призвіще Керівника</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -218,57 +189,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/auto_ocenca/calc_analog.php" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/get_liter_list.php" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" />
-        <option value="$PROJECT_DIR$/modules/controller/ocencaautoController.js" />
+        <option value="$PROJECT_DIR$/template/reestr.php" />
+        <option value="$PROJECT_DIR$/modules/model/maino.js" />
+        <option value="$PROJECT_DIR$/api/saverowsmaino.php" />
+        <option value="$PROJECT_DIR$/api/listmainorow.php" />
+        <option value="$PROJECT_DIR$/modules/controller/mainoController.js" />
+        <option value="$PROJECT_DIR$/template/firma.php" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_1.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_3.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_2.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_4.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_5.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_6.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_7.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_8.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_9.html" />
+        <option value="$PROJECT_DIR$/api/import_csv.php" />
+        <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/api/search_adres.php" />
+        <option value="$PROJECT_DIR$/template/template_buh.php" />
+        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
+        <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
+        <option value="$PROJECT_DIR$/modules/controller/clientController.js" />
+        <option value="$PROJECT_DIR$/template/client.php" />
+        <option value="$PROJECT_DIR$/template/modal.php" />
+        <option value="$PROJECT_DIR$/api/get_client_list.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/modules/model/ocencaauto.js" />
         <option value="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" />
         <option value="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/template/modal.php" />
-        <option value="$PROJECT_DIR$/modules/controller/spravochController.js" />
-        <option value="$PROJECT_DIR$/api/add_to_spr.php" />
-        <option value="$PROJECT_DIR$/api/listmainorow.php" />
-        <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/modules/nzr/init.js" />
-        <option value="$PROJECT_DIR$/modules/controller/podpisantController.js" />
-        <option value="$PROJECT_DIR$/template/podpisant.php" />
-        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
-        <option value="$PROJECT_DIR$/api/get_firma_by_name.php" />
-        <option value="$PROJECT_DIR$/modules/controller/mainoController.js" />
-        <option value="$PROJECT_DIR$/modules/view/mainoView.js" />
-        <option value="$PROJECT_DIR$/print/schet.php" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/get_analog.php" />
-        <option value="$PROJECT_DIR$/api/save_adress.php" />
-        <option value="$PROJECT_DIR$/modules/view/clientView.js" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/create_file.php" />
-        <option value="$PROJECT_DIR$/modules/controller/clientController.js" />
-        <option value="$PROJECT_DIR$/api/get_client_list.php" />
-        <option value="$PROJECT_DIR$/api/save_client.php" />
-        <option value="$PROJECT_DIR$/api/save_client_reestr.php" />
-        <option value="$PROJECT_DIR$/modules/model/client.js" />
-        <option value="$PROJECT_DIR$/template/client.php" />
-        <option value="$PROJECT_DIR$/modules/model/reestr.js" />
-        <option value="$PROJECT_DIR$/api/listreestr.php" />
-        <option value="$PROJECT_DIR$/api/delete_reestr.php" />
-        <option value="$PROJECT_DIR$/api/nomfirm.php" />
-        <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
-        <option value="$PROJECT_DIR$/template/reestr.php" />
-        <option value="$PROJECT_DIR$/api/mysql.php" />
-        <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
-        <option value="$PROJECT_DIR$/api/listreestrsavefirst.php" />
+        <option value="$PROJECT_DIR$/modules/controller/ocencaautoController.js" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" />
         <option value="$PROJECT_DIR$/template/ocencaauto.php" />
-        <option value="$PROJECT_DIR$/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_10.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_11.html" />
+        <option value="$PROJECT_DIR$/modules/view/clientView.js" />
         <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
-        <option value="$PROJECT_DIR$/api/firma/get_firma_list.php" />
-        <option value="$PROJECT_DIR$/api/get_firma_list.php" />
-        <option value="$PROJECT_DIR$/modules/model/firma.js" />
-        <option value="$PROJECT_DIR$/api/firma/add_writer.php" />
-        <option value="$PROJECT_DIR$/modules/view/firmaView.js" />
-        <option value="$PROJECT_DIR$/modules/controller/firmaController.js" />
-        <option value="$PROJECT_DIR$/api/firma/save_writer.php" />
-        <option value="$PROJECT_DIR$/template/firma.php" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_12.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_15.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_17.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_13.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_14.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_16.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_18.html" />
+        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_19.html" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" />
+        <option value="$PROJECT_DIR$/print.php" />
+        <option value="$PROJECT_DIR$/print/zajava.php" />
+        <option value="$PROJECT_DIR$/print/schet.php" />
       </list>
     </option>
   </component>
@@ -311,11 +282,11 @@
       <path value="$PROJECT_DIR$/vendor/_PHPExcel/Classes" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="2558" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1040" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -348,24 +319,6 @@
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
               <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="firma" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ocenca" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="reestr" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -373,6 +326,12 @@
               <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
@@ -395,12 +354,6 @@
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
               <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="nzr" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -413,6 +366,12 @@
               <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="docx" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -420,6 +379,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="C:/_WORK/_develop_site/en-prive" />
@@ -513,12 +473,20 @@
       <workItem from="1527183879334" duration="2054000" />
       <workItem from="1527236671082" duration="1193000" />
       <workItem from="1527525474293" duration="7018000" />
-      <workItem from="1527590953250" duration="10519000" />
+      <workItem from="1527590953250" duration="14237000" />
+      <workItem from="1527664984845" duration="1788000" />
+      <workItem from="1527684572219" duration="70000" />
+      <workItem from="1527687052418" duration="2401000" />
+      <workItem from="1527758395183" duration="6846000" />
+      <workItem from="1528026804826" duration="25659000" />
+      <workItem from="1528306169010" duration="2214000" />
+      <workItem from="1528468325210" duration="1942000" />
+      <workItem from="1528637265402" duration="32897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523103000" />
+    <option name="totallyTimeSpent" value="600638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,10 +498,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21428572" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3286638" />
@@ -562,350 +530,381 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_info.php">
+    <entry file="file://$PROJECT_DIR$/template/firma.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+        <state relative-caret-position="598">
+          <caret line="468" column="30" lean-forward="true" selection-start-line="468" selection-start-column="30" selection-end-line="468" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info_one.php">
+    <entry file="file://$PROJECT_DIR$/api/getuserlist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="57" selection-start-line="57" selection-end-line="60" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/act.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1704" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/spravochController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/add_to_spr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/nzr/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="47" column="58" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="46" lean-forward="true" selection-start-column="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/listmainorow.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="45" column="42" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="61" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/podpisant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/api/save_client.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/podpisantController.js">
+    <entry file="file://$PROJECT_DIR$/api/search_adres.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_firma_by_name.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/mainoView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="794">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/mainoController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="275" column="55" selection-start-line="275" selection-start-column="28" selection-end-line="275" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_analog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_adress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/create_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_client_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="75" selection-start-line="72" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/clientView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="219" column="42" selection-start-line="219" selection-start-column="42" selection-end-line="219" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_client_reestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/clientController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="338" selection-start-line="338" selection-end-line="338" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/delete_reestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/listreestrsavefirst.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="162" column="35" selection-start-line="162" selection-start-column="35" selection-end-line="162" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="453" column="28" lean-forward="true" selection-start-line="453" selection-start-column="28" selection-end-line="453" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/nomfirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="557">
+          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
+        <state relative-caret-position="761">
+          <caret line="191" column="39" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_client.php">
+    <entry file="file://$PROJECT_DIR$/api/save_bank.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="680">
+          <caret line="40" selection-start-line="40" selection-end-line="40" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/saveuserinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/import_csv.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="52" selection-end-line="38" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/template_buh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/reestr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="484" column="47" selection-start-line="484" selection-start-column="47" selection-end-line="484" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/reestr.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <caret line="736" column="21" selection-start-line="736" selection-start-column="21" selection-end-line="736" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
+    <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="490" column="10" lean-forward="true" selection-start-line="490" selection-start-column="10" selection-end-line="490" selection-end-column="10" />
+        <state relative-caret-position="464">
+          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/listreestr.php">
+    <entry file="file://$PROJECT_DIR$/api/get_client_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="65" column="43" lean-forward="true" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+        <state relative-caret-position="442">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/ocenkaView.js">
+    <entry file="file://$PROJECT_DIR$/template/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="346" column="14" lean-forward="true" selection-start-line="346" selection-start-column="14" selection-end-line="346" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/clientController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="396" column="72" selection-start-line="396" selection-start-column="49" selection-end-line="396" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_analog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_analog.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/ogliad.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/load_file.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="330" column="27" selection-start-line="330" selection-start-column="27" selection-end-line="330" selection-end-column="27" />
+        <state relative-caret-position="-1942" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_liter_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="829">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/ocencaauto.js">
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="93" column="18" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="18" />
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="27" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_gk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/controller/ocencaautoController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="536" column="49" selection-start-line="536" selection-start-column="49" selection-end-line="536" selection-end-column="49" />
+        <state relative-caret-position="600">
+          <caret line="485" column="12" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info_one.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="719">
-          <caret line="1181" column="55" lean-forward="true" selection-start-line="1181" selection-start-column="55" selection-end-line="1181" selection-end-column="67" />
+        <state relative-caret-position="693">
+          <caret line="61" selection-start-line="61" selection-end-line="68" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/listfirma.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/firma/get_firma_list.php">
+    <entry file="file://$PROJECT_DIR$/modules/model/ocencaauto.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="75" selection-start-line="75" selection-end-line="77" selection-end-column="30" />
+        <state relative-caret-position="799">
+          <caret line="95" column="11" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_messages.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/firma.js">
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_file_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="167" column="17" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="17" />
+        <state relative-caret-position="306">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_firma_list.php">
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_10.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+        <state>
+          <caret selection-end-line="88" selection-end-column="7" />
+          <folding>
+            <element signature="e#11637#11681#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/firmaView.js">
+    <entry file="file://$PROJECT_DIR$/modules/view/clientView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="349" column="54" selection-start-line="349" selection-start-column="42" selection-end-line="349" selection-end-column="54" />
+        <state relative-caret-position="564">
+          <caret line="475" column="27" lean-forward="true" selection-start-line="475" selection-start-column="27" selection-end-line="475" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/firmaController.js">
+    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="439" column="41" selection-start-line="439" selection-start-column="29" selection-end-line="439" selection-end-column="41" />
+        <state relative-caret-position="294">
+          <caret line="187" column="115" selection-start-line="187" selection-start-column="115" selection-end-line="187" selection-end-column="115" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/firma/add_writer.php">
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_11.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="14" column="219" lean-forward="true" selection-start-line="14" selection-start-column="219" selection-end-line="14" selection-end-column="219" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/firma/save_writer.php">
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/firma.php">
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="468" column="64" selection-start-line="468" selection-start-column="64" selection-end-line="468" selection-end-column="64" />
+        <state relative-caret-position="510">
+          <caret line="29" selection-start-line="29" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="12" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="n#style#0;n#p#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_16.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="18" selection-start-line="18" selection-end-line="27" />
+          <folding>
+            <element signature="e#1624#1630#1" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_17.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_18.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="67" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/doc_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_19.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/zajava.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="117" column="18" selection-start-line="117" selection-start-column="18" selection-end-line="117" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print/schet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

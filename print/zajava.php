@@ -22,7 +22,10 @@ $reestr = $db->query_first($sql);
 $sql = "SELECT s_client.* FROM `s_client`, `reestr` WHERE reestr.id = ".$id." AND reestr.client_id = s_client.id";
 $client = $db->query_first($sql);
 
-$sql = "SELECT * FROM `maino` WHERE `reestr_id` = ".$id;
+$sql = "SELECT maino.opis, s_maino.name 
+          FROM `maino`
+          LEFT JOIN `s_maino` ON maino.vid_id = s_maino.id
+          WHERE `reestr_id` = ".$id;
 $rows = $db->fetch_all_array($sql);
 
 
@@ -90,7 +93,7 @@ $rows = $db->fetch_all_array($sql);
 		$count ++;
 		$allSumm = $row['price'] * $row['count'];
 		?>
-        <p><?= $count ?>) Оцінка майна <?= $row['opis'] ?></p>
+        <p><?= $count ?>) Оцінка майна <?= $row['name'] ?> <?= $row['opis'] ?> </p>
 		<?php
 	}
 	?>
@@ -112,7 +115,7 @@ $rows = $db->fetch_all_array($sql);
     <div class="bb"></div>
     <br>
     <br>
-    <p class="tr">Виписав(ла): ____________________</p>
+    <p class="tr"> ____________________</p>
 
     </body>
     </html>
@@ -125,7 +128,7 @@ $rows = $db->fetch_all_array($sql);
 	$dompdf->render();
 	$outputpdf = $dompdf->output();
 
-    if (!isset($_POST['email'])) {
+    if (!$email) {
         echo $outputpdf;
     } else {
         $filename = 'zajava-'.$id.'-.pdf';
@@ -143,7 +146,7 @@ $rows = $db->fetch_all_array($sql);
         $header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";
 
     // message & attachment
-        $subject = 'Заявка с сайта nevatk.ru';
+        $subject = 'Заявка с сайта Назарет';
         $nmessage = "--".$uid."\r\n";
         $nmessage .= "Content-type:text/plain; charset=iso-8859-1\r\n";
         $nmessage .= "Content-Transfer-Encoding: 7bit\r\n\r\n";

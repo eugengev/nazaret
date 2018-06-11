@@ -167,7 +167,8 @@ nzr.controller = nzr.controller || {};
                     count      : element.count,
                     price      : element.price,
                     vartist    : element.vartist,
-                    vikon      : element.vikon
+                    vikon      : element.vikon,
+                    podpisant      : element.podpisant
                 };
                 dats.push(dataAddnew);
             });

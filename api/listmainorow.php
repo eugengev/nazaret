@@ -43,14 +43,14 @@ $dataall['viconav'] = $data;
 
 
 
-$sql = "SELECT id_user,fio FROM `podpisant`";
+$sql = "SELECT id,fio FROM `writer`";
 $rows = $db->fetch_all_array($sql);
 
 $data = [];
 
 foreach($rows as $record){
 	$list = array(
-		"id" => $record['id_user'],
+		"id" => $record['id'],
 		"name" => $record['fio'],
 	);
 
@@ -77,6 +77,7 @@ foreach($rows as $record){
 		"price"     => $record['price'],
 		"vartist"   => $record['vartist'],
 		"vikon"     => $record['vikon'],
+		"podpisant" => $record['podpisant'],
 	);
 
 	$data[] = $list;

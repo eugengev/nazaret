@@ -1,5 +1,4 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
 //~ Старт сессии, файл должен быть сохранен без DOM информации
 session_start();
 

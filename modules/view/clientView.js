@@ -177,45 +177,14 @@ nzr.view = nzr.view || {};
             this.buttonSaveAddr = this.container.find('.js-save-addr-firma-form');
             this.buttonSaveAddr.on('click', _.bind(this.onSaveAdress, this));
 
-            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
-            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
-
-            this.buttonsVidZam = this.container.find('.js-vid-zamov');
-            this.buttonsVidZam.on('change', _.bind(this.onVidZamFormChange, this));
-
             this.onVidZamFormChange();
-
-            this.container.find('.js-date').datepicker({
-                dateFormat: 'dd.mm.yy',
-                onSelect: function (selectedDate) {
-                    var datea = selectedDate.split('.');
-                    $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
-                }
-            });
-
-            this.container.find('.js-date').each(function(){
-                var datea = $(this).val(),
-                    dateaі = datea.split('.');
-                $($(this).data('id')).val(dateaі[2]+'-'+dateaі[1]+'-'+dateaі[0]);
-            });
 
             this.buttonClientEditForm = this.container.find('.js-edit-client-form');
             this.buttonClientEditForm.click(function(){
                 self.formEditClient.submit();
             });
 
-            this.container.find('.js-osoba-dir').click(function () {
-                var fio = self.container.find('input[name=dir_fio]').val(),
-                    posada = self.container.find('input[name=dir_role]').val();
-                self.container.find('input[name=osoba_fio]').val(fio);
-                self.container.find('input[name=osoba_posada]').val(posada);
-            });
-
-            this.container.find('.js-osoba-buh').click(function () {
-                var fio = self.container.find('input[name=buh_fio]').val();
-                self.container.find('input[name=osoba_fio]').val(fio);
-                self.container.find('input[name=osoba_posada]').val('Бухгалтер');
-            });
+            this.onInitEditClient();
 
             this.formEditClient.validate({
                 rules: {
@@ -271,6 +240,157 @@ nzr.view = nzr.view || {};
 
         },
 
+        onInitEditClient: function() {
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+
+            this.buttonsVidZam = this.container.find('.js-vid-zamov');
+            this.buttonsVidZam.on('change', _.bind(this.onVidZamFormChange, this));
+
+            this.container.find('.js-osoba-dir').click(function () {
+                var fio = self.container.find('input[name=dir_fio]').val(),
+                    posada = self.container.find('input[name=dir_role]').val();
+                self.container.find('input[name=osoba_fio]').val(fio);
+                self.container.find('input[name=osoba_posada]').val(posada);
+            });
+
+            this.container.find('.js-osoba-buh').click(function () {
+                var fio = self.container.find('input[name=buh_fio]').val();
+                self.container.find('input[name=osoba_fio]').val(fio);
+                self.container.find('input[name=osoba_posada]').val('Бухгалтер');
+            });
+
+            this.container.find('.js-oblast').autocomplete({
+                source: "/api/search_adres.php?getoblastf",
+                minLength: 2,
+                dataType: "jsonp",
+                select: function( event, ui ) {
+                    console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            });
+
+            this.container.find('.js-date').datepicker({
+                dateFormat: 'dd.mm.yy',
+                onSelect: function (selectedDate) {
+                    var datea = selectedDate.split('.');
+                    $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
+                }
+            });
+
+            this.container.find('.js-date').each(function(){
+                var datea = $(this).val(),
+                    dateaі = datea.split('.');
+                $($(this).data('id')).val(dateaі[2]+'-'+dateaі[1]+'-'+dateaі[0]);
+            });
+
+            this.container.find('.js-raion').autocomplete({
+                source: function(request, response) {
+                    var oblf = $(this)[0].element.parents('.js-tr').find('.js-oblast').val();
+                    $.ajax({
+                        url : "/api/search_adres.php?getraionf&oblast=" + oblf + "&term="+request.term,
+                        type : "GET",
+                        dataType : "json",
+                        success : function(data) {
+                            response($.map(data, function(item) {
+                                return {
+                                    id    : item.id,
+                                    value : item.value,
+                                    label : item.label
+                                }
+                            }));
+                        }
+                    });
+                },
+                minLength: 2,
+                dataType: "jsonp",
+                select: function( event, ui ) {
+                    console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            });
+
+            this.container.find('.js-city').autocomplete({
+                source: function(request, response) {
+                    var oblf  = $(this)[0].element.parents('.js-tr').find('.js-oblast').val(),
+                        raion = $(this)[0].element.parents('.js-tr').find('.js-raion').val();
+                    $.ajax({
+                        url : "/api/search_adres.php?getmisto&oblast=" + oblf + "&raion=" + raion + "&term="+request.term,
+                        type : "GET",
+                        dataType : "json",
+                        success : function(data) {
+                            response($.map(data, function(item) {
+                                return {
+                                    id    : item.id,
+                                    value : item.value,
+                                    label : item.label
+                                }
+                            }));
+                        }
+                    });
+                },
+                minLength: 2,
+                dataType: "jsonp",
+                select: function( event, ui ) {
+                    console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            });
+
+            this.container.find('.js-street').autocomplete({
+                source: function(request, response) {
+                    var oblf  = $(this)[0].element.parents('.js-tr').find('.js-oblast').val(),
+                        raion = $(this)[0].element.parents('.js-tr').find('.js-raion').val(),
+                        misto = $(this)[0].element.parents('.js-tr').find('.js-city').val();
+
+                    $.ajax({
+                        url : "/api/search_adres.php?getstreet&oblast=" + oblf + "&raion=" + raion + "&misto=" + misto + "&term="+request.term,
+                        type : "GET",
+                        dataType : "json",
+                        success : function(data) {
+                            response($.map(data, function(item) {
+                                return {
+                                    id    : item.id,
+                                    value : item.value,
+                                    label : item.label
+                                }
+                            }));
+                        }
+                    });
+                },
+                minLength: 2,
+                dataType: "jsonp",
+                select: function( event, ui ) {
+                    console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            });
+
+            this.container.find('.js-dom').autocomplete({
+                source: function(request, response) {
+                    var oblf  = $(this)[0].element.parents('.js-tr').find('.js-oblast').val(),
+                        raion = $(this)[0].element.parents('.js-tr').find('.js-raion').val(),
+                        misto = $(this)[0].element.parents('.js-tr').find('.js-city').val(),
+                        street = $(this)[0].element.parents('.js-tr').find('.js-street').val();
+
+                    $.ajax({
+                        url : "/api/search_adres.php?getdom&oblast=" + oblf + "&raion=" + raion + "&misto=" + misto + "&street=" + street + "&term="+request.term,
+                        type : "GET",
+                        dataType : "json",
+                        success : function(data) {
+                            response($.map(data, function(item) {
+                                return {
+                                    id    : item.id,
+                                    value : item.value,
+                                    label : item.label
+                                }
+                            }));
+                        }
+                    });
+                },
+                dataType: "jsonp",
+                select: function( event, ui ) {
+                    console.log( "Selected: " + ui.item.value + " aka " + ui.item.id );
+                }
+            });
+        },
+
         onClickDeleteClients: function(event) {
             $('#loader').show();
             var clientId = $(event.target).data('clientid');
@@ -316,48 +436,39 @@ nzr.view = nzr.view || {};
             this.container.find('.js-'+chose).show();
         },
 
-        addFormClientFromReestr: function() {
-            var template = this.renderTemplate('ClientViewForm-Add'),
+        addFormClientFromReestr: function(event, data) {
+            var client = data['c'],
+                adress1 = data['a1'],
+                adress2 = data['a2'],
+                adress3 = data['a3'],
+                adress4 = data['a4'];
+            var template = this.renderTemplate('ClientViewForm-Edit', {"client": client.items[0], "adf": adress1, "ad2": adress2, "ady": adress3, "adn": adress4}),
                 self = this;
             this.container.html(template);
+            console.log('ddddffddddddddddddfffffff');
 
-            this.buttonAddClient = this.container.find('.js-save-client-cancel');
-            this.buttonAddClient.on('click', _.bind(this.onClickClientsList, this));
-
-            this.formAddClient = this.container.find('#js-add-client-form');
-
-            this.container.find('.js-date').datepicker({
-                dateFormat: 'dd.mm.yy',
-                onSelect: function (selectedDate) {
-                    var datea = selectedDate.split('.');
-                    $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
-                }
+            this.buttonCancelClient = this.container.find('.js-edit-client-cancel');
+            this.buttonCancelClient.click(function(){
+                $(nzr).trigger('ClientFormController.onClientCancelShow');
             });
 
-            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
-            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+            this.formEditClient = this.container.find('#js-edit-client-form');
 
-            this.buttonClientSaveForm = this.container.find('.js-save-client-form');
-            this.buttonClientSaveForm.click(function(){
-                self.formAddClient.submit();
-            });
-
-            this.buttonsVidZam = this.container.find('.js-vid-zamov');
-            this.buttonsVidZam.on('change', _.bind(this.onVidZamFormChange, this));
+            this.buttonSaveAddr = this.container.find('.js-save-addr-firma-form');
+            this.buttonSaveAddr.on('click', _.bind(this.onSaveAdress, this));
 
             this.onVidZamFormChange();
 
-            this.container.find('.js-osoba-dir').click(function () {
-                var fio = self.container.find('input[name=dir_fio]').val(),
-                    posada = self.container.find('input[name=dir_role]').val();
-                self.container.find('input[name=osoba_fio]').val(fio);
-                self.container.find('input[name=osoba_posada]').val(posada);
-            });
+            // this.buttonClientEditForm = this.container.find('.js-edit-client-form');
+            // this.buttonClientEditForm.click(function(){
+            //     self.formEditClient.submit();
+            // });
 
-            this.container.find('.js-osoba-buh').click(function () {
-                var fio = self.container.find('input[name=buh_fio]').val();
-                self.container.find('input[name=osoba_fio]').val(fio);
-                self.container.find('input[name=osoba_posada]').val('Бухгалтер');
+            this.formAddClient = this.container.find('#js-edit-client-form');
+
+            this.buttonClientSaveForm = this.container.find('.js-edit-client-form');
+            this.buttonClientSaveForm.click(function(){
+                self.formAddClient.submit();
             });
 
             this.formAddClient.validate({
@@ -365,39 +476,7 @@ nzr.view = nzr.view || {};
                     name: {
                         required: true
                     },
-                    pravforma: {
-                        required: true
-                    },
-                    dir_fio: {
-                        required: true
-                    },
-                    buh_fio: {
-                        required: true
-                    },
-                    dover: {
-                        required: true
-                    },
-                    email: {
-                        required: true
-                    },
-                    phone: {
-                        required: true
-                    },
-                    phone1: {
-                        required: true
-                    },
-                    inn: {
-                        required: true
-                    },
-                    ras: {
-                        required: true
-                    },
-                    mfo: {
-                        required: true
-                    },
-                    bank: {
-                        required: true
-                    }
+
                 },
                 submitHandler: function(form) {
                     $('#loader').show();
@@ -407,9 +486,13 @@ nzr.view = nzr.view || {};
                         client[nameInput] = $(this).val();
                     });
                     client['id'] = $('input[name=idc]').val();
-                    $(nzr).trigger('ClientFormView.saveClientFormFromReestr',client);
+                    console.log('dddd');
+                    $(nzr).trigger('ClientFormView.saveClientFormReestr',client);
                 }
             });
+
+            this.onInitEditClient();
+
 
         },
 

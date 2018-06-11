@@ -8,6 +8,7 @@ function Maino(data) {
     this.price = 0;
     this.vartist = 0;
     this.vikon = 0;
+    this.podpisant = 0;
     this.oglad_date = '';
     this.oglad_sutok = '';
     this.oglad_prisut = '';
@@ -27,6 +28,7 @@ Maino.prototype.init = function(data) {
     this.price      = data.price;
     this.vartist    = data.vartist;
     this.vikon      = data.vikon;
+    this.podpisant  = data.podpisant;
     this.oglad_date = data.oglad_date;
     this.oglad_sutok = data.oglad_sutok;
     this.oglad_prisut = data.oglad_prisut;

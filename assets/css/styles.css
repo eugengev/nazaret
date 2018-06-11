@@ -54,3 +54,14 @@
 .mce-notification {
     display: none;
 }
+
+.modal-content.client .modal-footer {
+    display: none;
+}
+.modal-content.client .modal-footer.client-add {
+    display: block;
+}
+
+#pills-3 .input-group-text {
+    overflow: hidden;
+}

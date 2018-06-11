@@ -30,7 +30,7 @@ if (isset($_POST['clientid'])) {
 	$sql = "SELECT * FROM `s_client` WHERE `id` = ".$_POST['clientid'];
 	
 } else {
-	$sql = "SELECT * FROM `s_client`";
+	$sql = "SELECT * FROM `s_client` WHERE name != '' ";
 }
 
 

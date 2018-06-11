@@ -232,7 +232,11 @@ function datf($di) {
 	return $date->format('d.m.Y'); // 31.07.2012
 }
 
+function datful($di) {
+
+	$source = $di;
+	$date = new DateTime($source);
+	return $date->format('d F Y р.'); // 31.07.2012
+}
 
 ?>
-
-

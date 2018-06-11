@@ -104,7 +104,7 @@ nzr.view = nzr.view || {};
         },
 
         addRowTableShow: function(event, data) {
-            var tempMainoRowForm = this.renderTemplate('ReestrFormView-TableMainoOneRow', {"typemaino": data.maino, "podpis": data.podpis, "viconav": data.viconav, "idd": data.idrow, "idr": $('#reestrid').val()});
+            var tempMainoRowForm = this.renderTemplate('ReestrFormView-TableMainoOneRow', {"typemaino": data.maino, "podpis": data.podpis, "viconav": data.viconav, "podpisant": data.podpisant, "idd": data.idrow, "idr": $('#reestrid').val()});
             this.tableMaino = this.container.find('.js-maino-table-row');
             this.tableMaino.append(tempMainoRowForm);
             var inputPrice = this.tableMaino.find('.js-maino-one-count, .js-maino-one-price, .js-maino-price');
@@ -115,7 +115,7 @@ nzr.view = nzr.view || {};
         },
 
         listRowTableShow: function(event, data) {
-            var tempMainoRowForm = this.renderTemplate('ReestrFormView-TableMainoListRow', {"typemaino": data.maino, "viconav": data.viconav, "rowws": data.mainorow});
+            var tempMainoRowForm = this.renderTemplate('ReestrFormView-TableMainoListRow', {"typemaino": data.maino, "viconav": data.viconav, "rowws": data.mainorow, "podpisant": data.podpisant});
             this.tableMaino = this.container.find('.js-maino-table-row');
             this.tableMaino.html(tempMainoRowForm);
             var inputPrice = this.tableMaino.find('.js-maino-one-count, .js-maino-one-price, .js-maino-price');

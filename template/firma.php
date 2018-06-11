@@ -449,7 +449,7 @@
                             <tr class="text-center">
                                 <th>#</th>
                                 <th>П.І.Б</th>
-                                <th>Должность</th>
+                                <th>Сертифікат</th>
                                 <th>&nbsp;</th>
                             </tr>
                             </thead>

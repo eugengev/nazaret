@@ -35,6 +35,14 @@ function OcencaAutoItem(data) {
     this.zavod_nomer        = '';
     this.invent_nomer       = '';
     this.teh_har            = '';
+    this.dz_json            = '';
+    this.dz                 = '';
+    this.koefic             = '';
+    this.probeg_norm        = '';
+    this.probeg_fact        = '';
+    this.probeg_fact_sred   = '';
+    this.probeg_nedop       = '';
+    this.gk                 = '';
 
     if (data) {
         this.init(data);
@@ -78,6 +86,15 @@ OcencaAutoItem.prototype.init = function(data) {
     this.zavod_nomer        = data.zavod_nomer;
     this.invent_nomer       = data.invent_nomer;
     this.teh_har            = data.teh_har;
+    this.dz_json            = data.dz_json;
+    this.dz                 = data.dz;
+    this.koefic             = data.koefic;
+    this.probeg_norm        = data.probeg_norm;
+    this.probeg_fact        = data.probeg_fact;
+    this.probeg_fact_sred   = data.probeg_fact_sred;
+    this.probeg_nedop       = data.probeg_nedop;
+    this.gk                 = data.gk;
+
 };
 
 

@@ -25,6 +25,9 @@ nzr.view = nzr.view || {};
             this.modalSpr = $('#sprModalCenter');
             this.autoNomDog = null;
 
+            this.buttonsModalClientAdd = this.modalSpr.find('.js-client-add');
+            this.buttonsModalClientAdd.on('click', _.bind(this.onClientAdd, this));
+
             this.menuOrganiz.on('click', _.bind(this.onClickMenu, this));
             $(nzr).on('ReestrFormController.requestListSuccess', _.bind(this.onListReestr, this));
             $(nzr).on('ReestrFormController.listClientSuccess', _.bind(this.onListClientAuto, this));
@@ -38,6 +41,8 @@ nzr.view = nzr.view || {};
             // $(nzr).on('ReestrFormController.onTrClickSpr', _.bind(this.onTrClickSpr, this));
             $(nzr).on('FirmaFormController.showBankList', _.bind(this.showBankList, this));
             $(nzr).on('ClientFormController.onClientSaveShow', _.bind(this.onClientSaveShow, this));
+            $(nzr).on('ClientFormController.onClientCancelShow', _.bind(this.onClientCancelShow, this));
+            $(nzr).on('ClientFormController.onClientAdd', _.bind(this.onClientAdd, this));
 
         },
 
@@ -462,13 +467,13 @@ nzr.view = nzr.view || {};
 
         },
 
-        onClientAdd: function() {
+        onClientAdd: function(event, data) {
             this.container.find('.js-date').datepicker("destroy");
             var htmlAll = this.container.html();
 
             this.container.data('addreestr', htmlAll);
 
-            $(nzr).trigger('ClientFormController.addFormClientFromReestr');
+            $(nzr).trigger('ClientFormView.addClientFormReestr');
         },
 
         onClientSaveShow: function(event, clients) {
@@ -486,6 +491,73 @@ nzr.view = nzr.view || {};
                     $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
                 }
             });
+            this.buttonsCancelOrder = this.container.find('.js-reestr-cancel');
+            this.buttonsCancelOrder.on('click', _.bind(this.onClickMenu, this));
+
+            this.autoNomDog = this.container.find('.js-auto-firma');
+            this.autoNomDog.on('change', _.bind(this.onChangeFirmForAutoNombr, this));
+
+            this.formFirst = this.container.find('#js-add-form-info-first');
+            this.formFirst.validate({
+                rules: {
+                    nomber: {
+                        required: true
+                    },
+                    datework: {
+                        required: true
+                    },
+                    date: {
+                        required: true
+                    },
+                    client: {
+                        required: true
+                    },
+                    firma: {
+                        required: true
+                    },
+                    city: {
+                        required: true
+                    },
+                    meta: {
+                        required: true
+                    },
+                    bank: {
+                        required: true
+                    },
+                    manager: {
+                        required: true
+                    }
+                },
+                submitHandler: function(form) {
+                    console.log('eee');
+                    self.onSaveForm();
+                }
+            });
+
+            this.buttonsFirstForm = this.container.find('.js-save-first-form');
+            this.buttonsFirstForm.click(function(){
+                self.formFirst.submit();
+            });
+
+            this.buttonsModalSpr = this.container.find('.js-modal-sprv');
+            this.buttonsModalSpr.on('click', _.bind(this.onModalSprClick, this));
+        },
+
+        onClientCancelShow: function(event) {
+            var htmlAll = this.container.data('addreestr'),
+                self = this;
+            this.container.html(htmlAll);
+
+            console.log('ffff');
+
+            this.container.find('.js-date').datepicker({
+                dateFormat: 'dd.mm.yy',
+                onSelect: function (selectedDate) {
+                    var datea = selectedDate.split('.');
+                    $($(this).data('id')).val(datea[2]+'-'+datea[1]+'-'+datea[0]);
+                }
+            });
+
             this.buttonsCancelOrder = this.container.find('.js-reestr-cancel');
             this.buttonsCancelOrder.on('click', _.bind(this.onClickMenu, this));
 

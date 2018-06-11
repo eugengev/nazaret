@@ -52,6 +52,24 @@ foreach($rows as $record){
 $dataall['viconav'] = $data;
 
 
+
+$sql = "SELECT id,fio FROM `writer`";
+$rows = $db->fetch_all_array($sql);
+
+$data = [];
+
+foreach($rows as $record){
+	$list = array(
+		"id" => $record['id'],
+		"name" => $record['fio'],
+	);
+
+	$data[] = $list;
+}
+
+$dataall['podpisant'] = $data;
+
+
 $sql = "SELECT * FROM `maino` WHERE `reestr_id` = ".$reestrid;
 $rows = $db->fetch_all_array($sql);
 $db->close();
@@ -69,6 +87,7 @@ foreach($rows as $record){
 		"price"     => $record['price'],
 		"vartist"   => $record['vartist'],
 		"vikon"     => $record['vikon'],
+		"podpisant" => $record['podpisant'],
 	);
 
 	$data[] = $list;

@@ -21,6 +21,7 @@ nzr.controller = nzr.controller || {};
         _getOcencaLiterApi: '/api/auto_ocenca/get_liter_list.php',
         _getOcencaInfoOneApi: '/api/auto_ocenca/get_info_one.php',
         _getOcencaUpdApi: '/api/auto_ocenca/upd_info.php',
+        _getOcencaUpdGKApi: '/api/auto_ocenca/upd_gk.php',
         _getAnalogInfoApi: '/api/auto_ocenca/get_analog.php',
         _getAddAnalogAutoApi: '/api/auto_ocenca/add_analog.php',
         _getAnalogUpdApi: '/api/auto_ocenca/upd_analog.php',
@@ -43,6 +44,7 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('OcencaAutoFormView.deleteOcencaRow', _.bind(this.deleteOcencaRow, this));
             $(nzr).on('OcencaAutoFormView.onLoadFiles', _.bind(this.onLoadFiles, this));
             $(nzr).on('OcencaAutoFormView.updOcencaDz', _.bind(this.updOcencaDz, this));
+            $(nzr).on('OcencaAutoFormView.updOcencaGK', _.bind(this.updOcencaGK, this));
             $(nzr).on('OcencaAutoFormView.getOcencaFiles', _.bind(this.getOcencaFiles, this));
             $(nzr).on('OcencaAutoFormView.getOcencaLiteral', _.bind(this.getOcencaLiteral, this));
             $(nzr).on('OcencaAutoFormView.onCreateFile', _.bind(this.onCreateFile, this));
@@ -454,6 +456,39 @@ nzr.controller = nzr.controller || {};
             console.log(data);
         },
         _request_updOcencaDZComplete: function () {
+            console.log('_request_getOcencaInfoComplete');
+            $('#loader').hide();
+        },
+
+        updOcencaGK: function(event, datta) {
+            if (this._ajaxUpdate) {
+                this._ajaxUpdate.abort();
+                this._ajaxUpdate = null;
+            }
+
+            console.log(datta);
+
+            var self = this;
+            this._ajaxUpdate = $.ajax({
+                type: 'POST',
+                data: datta,
+                url: this._getOcencaUpdGKApi,
+                success: function(data){
+                    self._request_updOcencaGKSuccess(data);
+                },
+                error: _.bind(this._request_updOcencaGKError, this),
+                complete: _.bind(this._request_updOcencaGKComplete, this)
+            });
+        },
+        _request_updOcencaGKSuccess: function (data) {
+            // console.log(data);
+            var ocenсaAuto = new OcencaAutoItem(data);
+            $(nzr).trigger('OcencaAutoFormView.showOcencaAutoOneGK', ocenсaAuto);
+        },
+        _request_updOcencaGKError: function (data) {
+            console.log('_request_getOcencaInfoError');
+        },
+        _request_updOcencaGKComplete: function () {
             console.log('_request_getOcencaInfoComplete');
             $('#loader').hide();
         },

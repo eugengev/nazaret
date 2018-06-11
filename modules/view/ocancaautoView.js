@@ -31,6 +31,7 @@ nzr.view = nzr.view || {};
             $(nzr).on('OcencaAutoFormView.showCalcOcencaAnalogAuto', _.bind(this.showCalcOcencaAnalogAuto, this));
             $(nzr).on('OcencaAutoFormView.showOcencaFiles', _.bind(this.showOcencaFiles, this));
             $(nzr).on('OcencaAutoFormView.showOcencaLiterals', _.bind(this.showOcencaLiterals, this));
+            $(nzr).on('OcencaAutoFormView.showOcencaAutoOneGK', _.bind(this.showOcencaAutoOneGK, this));
 
 
         },
@@ -150,6 +151,7 @@ nzr.view = nzr.view || {};
 
             data['yeara'] = yeara;
 
+            dataAuto = data;
             console.log(data);
             var template = this.renderTemplate('OcencaAutoOne', data);
             this.container.find('.js-analog-ocenca-auto-avg').text(data['sale_price']);
@@ -183,7 +185,7 @@ nzr.view = nzr.view || {};
             $(nzr).trigger('OcencaAutoFormView.getAnalogInfo', data);
 
 
-            this.inputCalcFull = this.container.find('.js-calc-auto-full-calc input');
+            this.inputCalcFull = this.container.find('.js-calc-auto-full-calc input, .js-calc-auto-full-calc select');
             this.inputCalcFull.on('change', _.bind(this.onCalcFull, this));
 
             this.inputCalcGk = this.container.find('.js-calc-auto-gk input');
@@ -192,14 +194,36 @@ nzr.view = nzr.view || {};
             this.btnDeleteAnalog = this.container.find('.js-delete-analog-auto');
             this.btnDeleteAnalog.on('click', _.bind(this.onDeleteAnalog, this));
 
-            tinymce.init({
-                selector: "textarea",
-                plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
-                toolbar: "a11ycheck, code"
-            });
+            // tinymce.init({
+            //     selector: "textarea",
+            //     plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
+            //     toolbar: "a11ycheck, code"
+            // });
+            this.teh_har = CKEDITOR.replace( 'teh_har' );
 
             this.btYearChose = this.container.find('.js-year-chose');
-            this.btYearChose.on('change', _.bind(this.onYearChose, this))
+            this.btYearChose.on('change', _.bind(this.onYearChose, this));
+
+            this.container.find('.js-calc-suto-itog').text(dataAuto.dz + ' %');
+            var dz_json = JSON.parse(dataAuto.dz_json);
+
+            for (var key in dz_json) {
+                var obj = dz_json[key];
+                for (var prop in obj) {
+                    console.log(prop + " = " + obj[prop]);
+                    if (prop == 'name') {
+                        this.container.find('input[name='+obj[prop]+']').prop('checked',true);
+                        this.container.find('input[name='+obj[prop]+']').change();
+                    }
+                }
+            }
+
+            this.container.find('.js-calc-auto-gk [name=koefic]').val(dataAuto['koefic']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_norm]').val(dataAuto['probeg_norm']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_fact]').val(dataAuto['probeg_fact']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(dataAuto['probeg_fact_sred']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_nedop]').val(dataAuto['probeg_nedop']);
+            this.container.find('.js-calc-auto-gk input[name=gk]').val(dataAuto['gk']);
 
         },
 
@@ -280,15 +304,16 @@ nzr.view = nzr.view || {};
                     ocencaAutoOne[name] = val;
                 }
             });
+            ocencaAutoOne['teh_har'] = this.teh_har.getData();
             console.log(ocencaAutoOne);
             $(nzr).trigger('OcencaAutoFormView.updOcencaInfo', ocencaAutoOne);
 
-            tinymce.init({
-                selector: "textarea",
-                plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
-                toolbar: "a11ycheck, code"
-            });
-
+            // tinymce.init({
+            //     selector: "textarea",
+            //     plugins: "a11ychecker, advcode, linkchecker, media mediaembed, powerpaste, tinymcespellchecker",
+            //     toolbar: "a11ycheck, code"
+            // });
+            this.teh_har = CKEDITOR.replace( 'teh_har' );
 
         },
 
@@ -319,6 +344,7 @@ nzr.view = nzr.view || {};
             });
             this.btYearChose = this.container.find('.js-year-chose');
             this.btYearChose.on('change', _.bind(this.onYearChose, this))
+            this.teh_har = CKEDITOR.replace( 'teh_har' );
 
         },
 
@@ -438,8 +464,6 @@ nzr.view = nzr.view || {};
                 this.container.find('.js-calc-suto-itog').addClass('alert-danger').removeClass('alert-success');
             }
 
-            console.log(dzArray);
-
             var field = {
                 'dz': procent,
                 'dza': dzArray,
@@ -451,16 +475,36 @@ nzr.view = nzr.view || {};
 
         onCalcFullGk: function () {
 
-            var koefic = parseFloat(this.container.find('.js-calc-auto-gk input[name=koefic]').val()),
+            var koefic = parseFloat(this.container.find('.js-calc-auto-gk [name=koefic]').val()),
                 probeg_norm = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_norm]').val()),
                 fullyear = parseFloat(this.container.find('input[name=fullyear]').val()),
                 probeg_fact = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_fact]').val()),
                 probeg_fact_sred = probeg_fact/fullyear,
                 probeg_nedop = probeg_fact_sred - probeg_norm;
 
-                this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(probeg_fact_sred);
-                this.container.find('.js-calc-auto-gk input[name=probeg_nedop]').val(probeg_nedop);
+            this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(probeg_fact_sred);
+            this.container.find('.js-calc-auto-gk input[name=probeg_nedop]').val(probeg_nedop);
 
+            var field = {
+                'koefic': koefic,
+                'probeg_norm': probeg_norm,
+                'id': this.container.find('#formOcencaAutoOne input[name=id]').val(),
+                'fullyear': fullyear,
+                'probeg_fact': probeg_fact,
+                'probeg_fact_sred': probeg_fact_sred,
+                'probeg_nedop': probeg_nedop,
+            };
+
+            $(nzr).trigger('OcencaAutoFormView.updOcencaGK', field);
+        },
+
+        showOcencaAutoOneGK: function(event, data) {
+            this.container.find('.js-calc-auto-gk [name=koefic]').val(data['koefic']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_norm]').val(data['probeg_norm']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_fact]').val(data['probeg_fact']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(data['probeg_fact_sred']);
+            this.container.find('.js-calc-auto-gk input[name=probeg_nedop]').val(data['probeg_nedop']);
+            this.container.find('.js-calc-auto-gk input[name=gk]').val(data['gk']);
         },
 
         onDeleteAnalog: function () {
@@ -491,7 +535,8 @@ nzr.view = nzr.view || {};
             var field = {
                 'id' : this.container.find('#idocenka').val(),
                 'idfile': $(event.currentTarget).data('id'),
-                'type': 'changefile'
+                'type': 'changefile',
+                'change': $(event.currentTarget).prop('checked')
             };
             $(nzr).trigger('OcencaAutoFormView.getOcencaFiles', field);
 

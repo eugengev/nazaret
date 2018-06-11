@@ -11,7 +11,10 @@ $firma = $db->query_first($sql);
 $sql = "SELECT s_client.* FROM `s_client`, `reestr` WHERE reestr.id = ".$id." AND reestr.client_id = s_client.id";
 $client = $db->query_first($sql);
 
-$sql = "SELECT * FROM `maino` WHERE `reestr_id` = ".$id;
+$sql = "SELECT maino.opis, s_maino.name 
+          FROM `maino`
+          LEFT JOIN `s_maino` ON maino.vid_id = s_maino.id
+          WHERE `reestr_id` = ".$id;
 $rows = $db->fetch_all_array($sql);
 
 $html = '';
@@ -63,7 +66,7 @@ ob_start();
 					?>
 					<tr>
 						<td class="tc"><?=$count?></td>
-						<td><?=$row['opis']?></td>
+						<td><?= $row['name'] ?> <?= $row['opis'] ?></td>
 						<td class="tc">шт.</td>
 						<td class="tc"><?=$row['count']?></td>
 						<td class="tr"><?=$row['price']?></td>

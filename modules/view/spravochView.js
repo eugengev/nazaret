@@ -47,11 +47,13 @@ nzr.view = nzr.view || {};
                 val_new: this.searchAddInput.val(),
                 val_ser: this.searchInput.val()
             };
+            $('.js-spr-search-add-input').val('');
             $(nzr).trigger('SpravochFormView.getAddSpr', data);
         },
 
         onModalSprOpen: function(event, sprList){
             this.modelList = sprList;
+            $('#sprModalCenter .modal-content').attr('class','modal-content');
             var tempReestrFormFirst = this.renderTemplate('ReestrFormView-TableSpr', this.modelList), self = this;
             this.modalSpr.find('.js-modal-body').html(tempReestrFormFirst);
             var trClick = this.modalSpr.find('.js-Spr-Items-click');
@@ -60,6 +62,7 @@ nzr.view = nzr.view || {};
             btEditSprClick.on('click', _.bind(this.onClickSprEdit, this));
             var btDeleteSprClick = this.modalSpr.find('.js-delete-spr-item');
             btDeleteSprClick.on('click', _.bind(this.onClickSprDel, this));
+            $('#sprModalCenter .modal-content').addClass($('#sprModalCenter').data('name'));
             $('#sprModalCenter').modal('show')
         },
 

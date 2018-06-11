@@ -69,6 +69,14 @@ foreach($rowa as $record){
 		"zavod_nomer"           => $record['zavod_nomer'],
 		"invent_nomer"          => $record['invent_nomer'],
 		"teh_har"               => $record['teh_har'],
+		"dz_json"               => $record['dz_json'],
+		"dz"                    => $record['dz'],
+		"koefic"                => $record['koefic'],
+		"probeg_norm"           => $record['probeg_norm'],
+		"probeg_fact"           => $record['probeg_fact'],
+		"probeg_fact_sred"      => $record['probeg_fact_sred'],
+		"probeg_nedop"          => $record['probeg_nedop'],
+		"gk"                    => $record['gk'],
 	);
 }
 $data[] = $items;

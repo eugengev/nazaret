@@ -152,7 +152,7 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">Призвище Керівника</span>
+                                <span class="input-group-text">призвіще Керівника</span>
                             </div>
                             <input type="text" class="form-control" name="dir_fio">
 
@@ -195,39 +195,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="row  js-yo js-vid-hide">
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Бухгалтер П.І.Б.</span>
+                <div class="js-yo js-vid-hide">
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Бухгалтер П.І.Б.</span>
+                                </div>
+                                <input type="text" class="form-control" name="buh_fio">
                             </div>
-                            <input type="text" class="form-control" name="buh_fio">
                         </div>
                     </div>
-                </div>
-                <div class='row'>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">e-mail</span>
+                    <div class='row'>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">e-mail</span>
+                                </div>
+                                <input type="email" class="form-control"  name="buh_email">
                             </div>
-                            <input type="email" class="form-control"  name="buh_email">
                         </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Телефон</span>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Телефон</span>
+                                </div>
+                                <input type="text" class="form-control"  name="buh_phone">
                             </div>
-                            <input type="text" class="form-control"  name="buh_phone">
                         </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Моб телефон</span>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Моб телефон</span>
+                                </div>
+                                <input type="text" class="form-control"  name="buh_phone1">
                             </div>
-                            <input type="text" class="form-control"  name="buh_phone1">
                         </div>
                     </div>
                 </div>
@@ -401,7 +403,7 @@
                         <div class='col'>
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Паспорт СЕРИЯ</span>
+                                    <span class="input-group-text">Паспорт СЕРІЯ</span>
                                 </div>
                                 <input type="text" class="form-control"  name="pasp_ser" value="{{=it.client.pasp_ser}}" >
                             </div>
@@ -419,7 +421,7 @@
                         <div class='col-md-4'>
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Дата Выдачи</span>
+                                    <span class="input-group-text">Дата видачі</span>
                                 </div>
                                 <input type="text" class="form-control js-date" data-id="#date1" value="{{=it.client.pasp_data}}" >
                                 <input type="hidden" id="date1" name="pasp_data" value="{{=it.client.pasp_data}}" >
@@ -428,7 +430,7 @@
                         <div class='col'>
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Ким Видан</span>
+                                    <span class="input-group-text">Ким виданий</span>
                                 </div>
                                 <input type="text" class="form-control"  name="pasp_vidan" value="{{=it.client.pasp_vidan}}" >
                             </div>
@@ -440,7 +442,7 @@
                         <div class='col'>
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Номер Свідотства</span>
+                                    <span class="input-group-text">номер Свідотства</span>
                                 </div>
                                 <input type="text" class="form-control"  name="svid_nomer" value="{{=it.client.svid_nomer}}" >
                             </div>
@@ -471,7 +473,7 @@
                     <div class='col'>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">Призвище Керівника</span>
+                                <span class="input-group-text">призвіще Керівника</span>
                             </div>
                             <input type="text" class="form-control" name="dir_fio" value="{{=it.client.dir_fio}}" >
 
@@ -514,42 +516,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="row  js-yo js-vid-hide">
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Бухгалтер П.І.Б.</span>
+                <div class=" js-yo js-vid-hide">
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Бухгалтер П.І.Б.</span>
+                                </div>
+                                <input type="text" class="form-control" name="buh_fio" value="{{=it.client.buh_fio}}" >
                             </div>
-                            <input type="text" class="form-control" name="buh_fio" value="{{=it.client.buh_fio}}" >
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">e-mail</span>
+                                </div>
+                                <input type="email" class="form-control"  name="buh_email" value="{{=it.client.buh_email}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Телефон</span>
+                                </div>
+                                <input type="text" class="form-control"  name="buh_phone" value="{{=it.client.buh_phone}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Моб. телефон</span>
+                                </div>
+                                <input type="text" class="form-control"  name=buh_"phone1" value="{{=it.client.buh_phone1}}" >
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class='row'>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">e-mail</span>
-                            </div>
-                            <input type="email" class="form-control"  name="buh_email" value="{{=it.client.buh_email}}" >
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Телефон</span>
-                            </div>
-                            <input type="text" class="form-control"  name="buh_phone" value="{{=it.client.buh_phone}}" >
-                        </div>
-                    </div>
-                    <div class='col'>
-                        <div class="input-group input-group-sm mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Моб телефон</span>
-                            </div>
-                            <input type="text" class="form-control"  name=buh_"phone1" value="{{=it.client.buh_phone1}}" >
-                        </div>
-                    </div>
-                </div>
+
                 <div class="js-yo js-vid-hide">
                     <div class="row">
                         <div class='col'>
@@ -596,147 +601,213 @@
                         </div>
                     </div>
                 </div>
-                <div class='row'>
+                <div class="row">
                     <div class='col'>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-bordered table-sm">
-                                <thead>
-                                <tr class="text-center">
-                                    <th colspan="9">Адреса фіз.</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th>Индекс</th>
-                                    <th>Область</th>
-                                    <th>Район</th>
-                                    <th>тип.населен</th>
-                                    <th>населеный пункт</th>
-                                    <th>тип.улици</th>
-                                    <th>улица</th>
-                                    <th>дом</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr data-addid="{{=it.adf.id}}">
-                                    <td><input type="text" class="form-control form-control-sm" name="zip" value="{{=it.adf.zip}}" ><input type="hidden" name="id" value="{{=it.adf.id}}"></td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control form-control-sm" name="oblast_f"  data-name="oblast"  value="{{=it.adf.oblast}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_oblast" data-name="oblast_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control form-control-sm" name="raion_f"  data-name="raion"  value="{{=it.adf.raion}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_raion" data-name="raion_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="t_pynkt_f" data-name="t_pynkt" value="{{=it.adf.t_pynkt}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_pynkt" data-name="t_pynkt_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="pynkt_f" data-name="pynkt" value="{{=it.adf.pynkt}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_a_city" data-name="pynkt_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="t_street_f"  data-name="t_street" value="{{=it.adf.t_street}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_street" data-name="t_street_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td><input type="text" class="form-control form-control-sm" name="street" value="{{=it.adf.street}}" ></td>
-                                    <td><input type="text" class="form-control form-control-sm" name="dom" value="{{=it.adf.dom}}" ></td>
-                                    <td><a href="#" class="btn btn-success js-save-addr-firma-form"><i class="fa fa-save"></i></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <h2 class='text-center'>адреси фізична.</h2>
+                    </div>
+                </div>
+                <div data-addid="{{=it.adf.id}}" class="js-tr">
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Индекс</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-zip" name="zip" value="{{=it.adf.zip}}" ><input type="hidden" name="id" value="{{=it.adf.id}}">
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Область</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-oblast" name="oblast_y"  data-name="oblast"  value="{{=it.adf.oblast}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Район</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-raion" name="raion_y"  data-name="raion"  value="{{=it.adf.raion}}" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">тип.населен</span>
+                                </div>
+                                <input type="text" class="form-control" name="t_pynkt_y" data-name="t_pynkt" value="{{=it.adf.t_pynkt}}" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_pynkt" data-name="t_pynkt_y" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">населеный пункт</span>
+                                </div>
+                                <input type="text" class="form-control js-city" name="pynkt_y" data-name="pynkt" value="{{=it.adf.pynkt}}" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col' style="display: none">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">тип.улици</span>
+                                </div>
+                                <input type="text" class="form-control" name="t_street_y"  data-name="t_street" value="{{=it.adf.t_street}}" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_street" data-name="t_street_y" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">улица</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-street" name="street" value="{{=it.adf.street}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">дом</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-dom" name="dom" value="{{=it.adf.dom}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">кв</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm" name="kv" value="{{=it.adf.kv}}" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Відділення новой пошти</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm" name="np" value="{{=it.adf.np}}" >
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn w-100 btn-sm btn-success js-save-addr-firma-form"><i class="fa fa-save"></i> Зберегти адресу доставки</a>
                         </div>
                     </div>
                 </div>
-                <div class='row js-yo js-vid-hide'>
+
+                <div class="row">
                     <div class='col'>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-bordered table-sm">
-                                <thead>
-                                <tr class="text-center">
-                                    <th colspan="9">Адреса юр.</th>
-                                </tr>
-                                <tr class="text-center">
-                                    <th>Индекс</th>
-                                    <th>Область</th>
-                                    <th>Район</th>
-                                    <th>тип.населен</th>
-                                    <th>населеный пункт</th>
-                                    <th>тип.улици</th>
-                                    <th>улица</th>
-                                    <th>дом</th>
-                                    <th>&nbsp;</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr data-addid="{{=it.ad2.id}}">
-                                    <td><input type="text" class="form-control form-control-sm" name="zip" value="{{=it.ad2.zip}}" ><input type="hidden" name="id" value="{{=it.ad2.id}}"></td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control form-control-sm" name="oblast_s"  data-name="oblast"  value="{{=it.ad2.oblast}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_oblast" data-name="oblast_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control form-control-sm" name="raion_s"  data-name="raion"  value="{{=it.ad2.raion}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_raion" data-name="raion_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="t_pynkt_s" data-name="t_pynkt" value="{{=it.ad2.t_pynkt}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_pynkt" data-name="t_pynkt_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="pynkt_s" data-name="pynkt" value="{{=it.ad2.pynkt}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_a_city" data-name="pynkt_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" class="form-control" name="t_street_s"  data-name="t_street" value="{{=it.ad2.t_street}}" >
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_street" data-name="t_street_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td><input type="text" class="form-control form-control-sm" name="street" value="{{=it.ad2.street}}" ></td>
-                                    <td><input type="text" class="form-control form-control-sm" name="dom" value="{{=it.ad2.dom}}" ></td>
-                                    <td><a href="#" class="btn btn-success js-save-addr-firma-form"><i class="fa fa-save"></i></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <h2 class='text-center'>Адреса юр.</h2>
+                    </div>
+                </div>
+                <div data-addid="{{=it.ad2.id}}" class="js-tr">
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Индекс</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm" name="zip" value="{{=it.ad2.zip}}" ><input type="hidden" name="id" value="{{=it.ad2.id}}">
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Область</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-oblast" name="oblast_s"  data-name="oblast"  value="{{=it.ad2.oblast}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Район</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-raion" name="raion_s"  data-name="raion"  value="{{=it.ad2.raion}}" >
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">тип.населен</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm " name="t_pynkt_s" data-name="t_pynkt" value="{{=it.ad2.t_pynkt}}" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_pynkt" data-name="t_pynkt_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">населеный пункт</span>
+                                </div>
+                                <input type="text" class="form-control js-city" name="pynkt_s" data-name="pynkt" value="{{=it.ad2.pynkt}}" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col' style="display: none">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">тип.улици</span>
+                                </div>
+                                <input type="text" class="form-control" name="t_street_s"  data-name="t_street" value="{{=it.ad2.t_street}}" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_street" data-name="t_street_s" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">улица</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-street" name="street" value="{{=it.ad2.street}}" >
+                            </div>
+                        </div>
+                        <div  class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">дом</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm js-dom" name="dom" value="{{=it.ad2.dom}}" >
+                            </div>
+                        </div>
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">кв</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm" name="kv" value="{{=it.ad2.kv}}" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Відділення новой пошти</span>
+                                </div>
+                                <input type="text" class="form-control form-control-sm" name="np" value="{{=it.ad2.np}}" >
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="btn w-100 btn-sm btn-success js-save-addr-firma-form"><i class="fa fa-save"></i> Зберегти адресу доставки</a>
                         </div>
                     </div>
                 </div>
@@ -811,10 +882,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Область</span>
                                 </div>
-                                <input type="text" class="form-control form-control-sm" name="oblast_y"  data-name="oblast"  value="{{=it.ady.oblast}}" >
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_oblast" data-name="oblast_y" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                </div>
+                                <input type="text" class="form-control form-control-sm js-oblast " name="oblast_y"  data-name="oblast"  value="{{=it.ady.oblast}}" >
                             </div>
                         </div>
                         <div class='col'>
@@ -822,10 +890,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Район</span>
                                 </div>
-                                <input type="text" class="form-control form-control-sm" name="raion_y"  data-name="raion"  value="{{=it.ady.raion}}" >
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_raion" data-name="raion_y" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                </div>
+                                <input type="text" class="form-control form-control-sm js-raion" name="raion_y"  data-name="raion"  value="{{=it.ady.raion}}" >
                             </div>
                         </div>
                     </div>
@@ -835,7 +900,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">тип.населен</span>
                                 </div>
-                                <input type="text" class="form-control" name="t_pynkt_f" data-name="t_pynkt" value="{{=it.ady.t_pynkt}}" >
+                                <input type="text" class="form-control " name="t_pynkt_f" data-name="t_pynkt" value="{{=it.ady.t_pynkt}}" >
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_pynkt" data-name="t_pynkt_f" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
                                 </div>
@@ -846,15 +911,12 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">населеный пункт</span>
                                 </div>
-                                <input type="text" class="form-control" name="pynkt_y" data-name="pynkt" value="{{=it.ady.pynkt}}" >
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary js-modal-sprv" data-spr="s_a_city" data-name="pynkt_y" type="button"><i class="fa fa-list" aria-hidden="true"></i></button>
-                                </div>
+                                <input type="text" class="form-control js-city" name="pynkt_y" data-name="pynkt" value="{{=it.ady.pynkt}}" >
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class='col'>
+                        <div class='col' style="display: none">
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">тип.улици</span>
@@ -870,7 +932,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">улица</span>
                                 </div>
-                                <input type="text" class="form-control form-control-sm" name="street" value="{{=it.ady.street}}" >
+                                <input type="text" class="form-control form-control-sm js-street" name="street" value="{{=it.ady.street}}" >
                             </div>
                         </div>
                         <div class='col'>
@@ -878,7 +940,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">дом</span>
                                 </div>
-                                <input type="text" class="form-control form-control-sm" name="dom" value="{{=it.ady.dom}}" >
+                                <input type="text" class="form-control form-control-sm js-dom" name="dom" value="{{=it.ady.dom}}" >
                             </div>
                         </div>
                         <div class='col'>
