@@ -500,7 +500,7 @@
 <script id="FirmaViewBanksListReestr" type="text/x-dot-template">
     {{~it.items :value:itm}}
     <tr class="text-center">
-        <td><input type="radio" name="r1"><input type="hidden" name="id" value="{{=value.id}}"><input type="hidden" name="type" value="{{=value.type}}"><input type="hidden" name="parent_id" value="{{=value.parent_id}}"></td>
+        <td><input type="radio" name="r1" class="js-chose-bank-reestr" value="{{=value.id}}"><input type="hidden" name="id" value="{{=value.id}}"><input type="hidden" name="type" value="{{=value.type}}"><input type="hidden" name="parent_id" value="{{=value.parent_id}}"></td>
         <td>{{=value.bank}}</td>
         <td>{{=value.mfo}}</td>
         <td>{{=value.ras}}</td>

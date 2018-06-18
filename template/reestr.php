@@ -392,7 +392,7 @@
 					<div class="">
                         <div class="row mb-4">
                             <div class="col">
-                                <h2>Выбор счера</h2>
+                                <h2>Вибор рахунку</h2>
                                 <table class="table table-hover table-bordered table-sm">
                                     <thead>
                                     <tr class="text-center">

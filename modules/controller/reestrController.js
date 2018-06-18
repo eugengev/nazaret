@@ -29,6 +29,7 @@ nzr.controller = nzr.controller || {};
         _listManagerApi: '/api/listmanager.php',
         _listSaveActDataNomer: '/api/save_act.php',
         _listReestrSaveFirst: '/api/listreestrsavefirst.php',
+        _listUpdateBankInfo: '/api/reestr/bank_info.php',
 
         init: function() {
             var self = this;
@@ -48,6 +49,31 @@ nzr.controller = nzr.controller || {};
             $(nzr).on('ReestrFormView.saveActDateNomer',  _.bind(this.saveActDateNomer, this));
             $(nzr).on('ReestrFormView.sendEmail',  _.bind(this.sendAjaxEmail, this));
             $(nzr).on('ReestrFormView.getReestrPage',  _.bind(this.getReestrPage, this));
+            $(nzr).on('ReestrFormView.upBankInfoReesrt',  _.bind(this.upBankInfoReesrt, this));
+        },
+
+        upBankInfoReesrt: function(event, data) {
+            if (this._ajaxRequest) {
+                this._ajaxRequest.abort();
+                this._ajaxRequest = null;
+            }
+            var self = this;
+            this._ajaxRequest = $.ajax({
+                type: "POST",
+                data: data,
+                url: this._listUpdateBankInfo,
+                success: function(data){
+                    self._requestSuccesupBankInfoReesrt(data);
+                },
+                error: _.bind(this._requestErrorupBankInfoReesrt, this),
+                complete: _.bind(this._requestCompleteupBankInfoReesrt, this)
+            });
+        },
+        _requestSuccesupBankInfoReesrt: function (data) {
+        },
+        _requestErrorupBankInfoReesrt: function (data) {
+        },
+        _requestCompleteupBankInfoReesrt: function (data) {
         },
 
         sendAjaxEmail: function(event, dataLink) {

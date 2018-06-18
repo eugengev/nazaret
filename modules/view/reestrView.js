@@ -465,6 +465,19 @@ nzr.view = nzr.view || {};
                 self = this;
             this.container.find('.js-reest-show-bank').html(template);
 
+            this.btBankChose = this.container.find('.js-chose-bank-reestr');
+            this.btBankChose.on('click', _.bind(this.onBankChose, this));
+        },
+
+        onBankChose: function(){
+            var idBank = $(event.currentTarget).val();
+                idReestr = this.container.find('#reestrid').val();
+            var field = {
+                'idBank' : idBank,
+                'idReestr' : idReestr
+            };
+            $(nzr).trigger('ReestrFormView.upBankInfoReesrt',field);
+
         },
 
         onClientAdd: function(event, data) {

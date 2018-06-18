@@ -5,17 +5,21 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/dompdf/dompdf_config.inc.php';
 $db = new Database($db_host, $db_login, $db_passwd, $db_name);
 $db->connect();
 
-$sql = "SELECT s_firma.*, reestr.id as idd, reestr.date FROM `s_firma`, `reestr` WHERE reestr.id = ".$id." AND reestr.firma_id = s_firma.id";
+$sql = "SELECT s_firma.*, reestr.id as idd, reestr.bank_info_id as bank_info_id, reestr.nomber as nomb, reestr.date FROM `s_firma`, `reestr` WHERE reestr.id = ".$id." AND reestr.firma_id = s_firma.id";
 $firma = $db->query_first($sql);
 
 $sql = "SELECT s_client.* FROM `s_client`, `reestr` WHERE reestr.id = ".$id." AND reestr.client_id = s_client.id";
 $client = $db->query_first($sql);
 
-$sql = "SELECT maino.opis, s_maino.name 
-          FROM `maino`
-          LEFT JOIN `s_maino` ON maino.vid_id = s_maino.id
-          WHERE `reestr_id` = ".$id;
+$sql = "SELECT maino.*, s_maino.name FROM `maino` LEFT JOIN `s_maino` ON maino.vid_id = s_maino.id WHERE `reestr_id` = ".$id;
 $rows = $db->fetch_all_array($sql);
+
+$sql = "SELECT * FROM `banki` WHERE id = ".$firma['bank_info_id'];
+$bank = $db->query_first($sql);
+
+$sql = "SELECT * FROM `s_adress` WHERE id = ".$firma['adres_yur'];
+$adress = $db->query_first($sql);
+
 
 $html = '';
 ob_start();
@@ -34,16 +38,16 @@ ob_start();
 		<body>
 		<p><strong>Постачальник <?=$firma['name'];?></strong></p>
 		<p>ЄДРПОУ <?=$firma['okpo'];?>, тел. <?=$firma['tel'];?></p>
-		<p>Р/р <?=$firma['ras'];?> <?=$firma['bank'];?></p>
-		<p>МФО <?=$firma['mfo'];?></p>
-		<p>Адреса <?=$firma['adress'];?></p>
+		<p>Р/р <?=$bank['ras'];?> <?=$bank['bank'];?></p>
+		<p>МФО <?=$bank['mfo'];?></p>
+		<p>Адреса <?=$adress['zip'];?> <?=$adress['oblast'];?> <?=$adress['raion'];?> <?=$adress['pynkt'];?> <?=$adress['street'];?> <?=$adress['dom'];?></p>
 		<br>
 		<p>Одержувач <?=$client['name'];?></p>
 		<p>тел. <?=$client['phone'];?><p>
-		<p>Замовлення Договір № <?=$firma['idd'];?> від <?=$firma['date'];?> р.<p>
+		<p>Замовлення Договір № <?=$firma['nomb'];?> від <?=datf($firma['date']);?> р.<p>
 		<br>
-		<p class="tc">Рахунок-фактура № <?=$firma['idd'];?></p>
-		<p class="tc">від <?=$firma['date'];?> р.</p>
+		<p class="tc">Рахунок-фактура № <?=$firma['nomb'];?></p>
+		<p class="tc">від <?=datf($firma['date']);?> р.</p>
 		<br>
 		<table>
 			<thead>
