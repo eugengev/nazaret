@@ -531,81 +531,79 @@
     </form>
 </script>
 <script id="BlockObekt" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="obekt_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="obekt_list[]"></textarea>
     </div>
 </script>
 <script id="BlockOcenchiki" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="ocenchiki_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="ocenchiki_list[]"></textarea>
     </div>
 </script>
 <script id="BlockVartist" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="vartist_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="vartist_list[]"></textarea>
     </div>
 </script>
 <script id="BlockRezenzetami" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="rezenzetami_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="rezenzetami_list[]"></textarea>
     </div>
-</script>
+/script>
 <script id="BlockOpisobekt" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend">
-            <span class="input-group-text text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-3">
+            <textarea class="form-control" name="opisobekt_list[name][]"></textarea>
+            <span class="input-group-text">название</span>
         </div>
-        <div class="input-group-prepend">
-            <span class="input-group-text text-center">название</span>
+        <div class="col-sm-7">
+            <textarea class="form-control" name="opisobekt_list[opis][]"></textarea>
+            <span class="input-group-text">описание</span>
         </div>
-        <textarea class="form-control" name="opisobekt_list[name][]"></textarea>
-        <div class="input-group-prepend">
-            <span class="input-group-text text-center">описание</span>
-        </div>
-        <textarea class="form-control" name="opisobekt_list[opis][]"></textarea>
     </div>
 </script>
 <script id="BlockDocum" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="docum_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="docum_list[]"></textarea>
     </div>
 </script>
 <script id="BlockVisnov3" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="visnov3_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="visnov3_list[]"></textarea>
     </div>
 </script>
 <script id="BlockVisnov4" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="visnov4_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="visnov4_list[]"></textarea>
     </div>
 </script>
 <script id="BlockVikoroce" type="text/x-dot-template">
-    <div class="input-group input-group-sm mb-2">
-        <div class="input-group-prepend w-25">
-            <span class="input-group-text w-100 text-center">{{=it.nomber}}</span>
+    <div class="form-group row">
+        <label class="col-sm-2 form-control-label">{{=it.nomber}}</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="vikoroce_list[]"></textarea>
         </div>
-        <textarea class="form-control" name="vikoroce_list[]"></textarea>
     </div>
 </script>

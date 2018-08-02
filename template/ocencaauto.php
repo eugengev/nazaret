@@ -206,7 +206,7 @@
                 <div class='col'>
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Огляд транспортного засобу вироблялося</span>
+                            <span class="input-group-text">Огляд транспортного засобу проводилося</span>
                         </div>
                         <input type="text" class="form-control js-date" data-id="#dateo" name="oglad_date" >
                         <input type="hidden" name="date" id="dateo" name="oglad_date">
@@ -217,7 +217,7 @@
                 <div class='col'>
                     <div class="input-group input-group-sm mb-2">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">час доби при</span>
+                            <span class="input-group-text">час доби</span>
                         </div>
                         <input type="text" class="form-control" name="oglad_sutok" >
                     </div>
@@ -294,10 +294,10 @@
                             <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false"><i class="fa fa-cloud"></i> ВТВ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок</a>
+                            <a class="nav-link" id="pills-6-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок Ліквідаційной вартості</a>
+                            <a class="nav-link" id="pills-7-tab" data-toggle="pill" href="#pills-7" role="tab" aria-controls="pills-7" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок Ліквідаційной вартості</a>
                         </li>
 
 					</ul>
@@ -955,6 +955,9 @@
                             </table>
                             <br>
 						</div>
+                        <div class="tab-pane fade show" id="pills-7" role="tabpanel" aria-labelledby="pills-7-tab">
+                            <h1>В разработке</h1>
+                        </div>
 					</div>
 				</div>
 				<div class="modal-footer">

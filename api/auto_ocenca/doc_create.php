@@ -49,6 +49,8 @@ if (isset($_GET['id'])) {
 
 	$img_list_analog = '<table><tr>';
 
+
+
 	foreach ( $ocenca as $value ) {
 		$rezSumm = floatval($value['sale_price'])*(1+(floatval($value['gk'])/100)+(floatval($value['dz'])/100));
 		$field = array(
@@ -301,10 +303,16 @@ if (isset($_GET['id'])) {
 	$html = '<h1>Error</h1>';
 }
 
+$footer = $section->createFooter();
+$footer->addPreserveText('звіт про незалежну оцінку '.$s_maino['name'].' '.$maino['opis'].' що належить '.$client['name'], array('bold'=>true),array('align'=>'center'));
+$footer->addPreserveText('{PAGE}', array(),array('align'=>'right'));
+
+
+
 \PhpOffice\PhpWord\Shared\Html::addHtml($section, $html, false, false);
 
 header('Content-Type: application/octet-stream');
-header('Content-Disposition: attachment;filename="ocenca_avto_'.$idocenca.'.docx"');
+header('Content-Disposition: attachment;filename="ocenca_avto_'.$maino['nomber'].'.docx"');
 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
 $objWriter->save('php://output');
 

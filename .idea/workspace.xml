@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/recenzij/doc_create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/recenzij/get_info.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/recenzij/saveinfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/listreestrsavefirst.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestrsavefirst.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/nomfirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/nomfirm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/controller/reestrController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/reestrController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/model/ocencaauto.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/ocencaauto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nzr/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nzr/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/ocancaautoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocancaautoView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/ocenkaView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocenkaView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/reestrView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/reestrView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/view/spravochView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/spravochView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rybolov_nazaret (1).sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/ocencaauto.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocencaauto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/ocenka.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocenka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/recenzij.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/recenzij.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/reestr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/word_shablon/Sample__TemplateCloneRow.docx" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/word_shablon/Sample__TemplateCloneRow.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,20 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reestrController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
+      <file leaf-file-name="recenzij.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/recenzij.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reestrView.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="181" column="53" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
+            <state relative-caret-position="200">
+              <caret line="574" selection-start-line="574" selection-end-line="574" />
             </state>
           </provider>
         </entry>
@@ -90,11 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>name=&quot;name&quot;</find>
-      <find>name=&quot;if</find>
-      <find>onModalSprClick</find>
-      <find>Підстава</find>
-      <find>getListSpr</find>
       <find>Дата</find>
       <find>ReestrFormView</find>
       <find>pidhodi</find>
@@ -120,6 +85,11 @@
       <find>listCitySuccess</find>
       <find>getCityList</find>
       <find>getSprFirstList</find>
+      <find>Вибор рахунку</find>
+      <find>Огляд транспортного засобу</find>
+      <find>розра</find>
+      <find>Розрахунок</find>
+      <find>pills-6</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;Client</replace>
@@ -175,7 +145,6 @@
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_16.html" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_18.html" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_19.html" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" />
         <option value="$PROJECT_DIR$/print.php" />
         <option value="$PROJECT_DIR$/print/zajava.php" />
         <option value="$PROJECT_DIR$/template/firma.php" />
@@ -187,11 +156,9 @@
         <option value="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" />
         <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
         <option value="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" />
-        <option value="$PROJECT_DIR$/template/ocencaauto.php" />
         <option value="$PROJECT_DIR$/assets/css/styles.css" />
         <option value="$PROJECT_DIR$/template/modal.php" />
         <option value="$PROJECT_DIR$/api/nomfirm.php" />
-        <option value="$PROJECT_DIR$/template/reestr.php" />
         <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
         <option value="$PROJECT_DIR$/api/listreestrsavefirst.php" />
         <option value="$PROJECT_DIR$/main.php" />
@@ -206,11 +173,14 @@
         <option value="$PROJECT_DIR$/modules/view/recenzijView.js" />
         <option value="$PROJECT_DIR$/api/recenzij/saveinfo.php" />
         <option value="$PROJECT_DIR$/template/docx/recenzij/recenzij_1.html" />
-        <option value="$PROJECT_DIR$/template/recenzij.php" />
         <option value="$PROJECT_DIR$/modules/model/recenzij.js" />
         <option value="$PROJECT_DIR$/api/recenzij/get_info.php" />
         <option value="$PROJECT_DIR$/api/recenzij/doc_create.php" />
         <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" />
+        <option value="$PROJECT_DIR$/template/reestr.php" />
+        <option value="$PROJECT_DIR$/template/ocencaauto.php" />
+        <option value="$PROJECT_DIR$/template/recenzij.php" />
       </list>
     </option>
   </component>
@@ -475,12 +445,13 @@
       <workItem from="1532268243850" duration="27460000" />
       <workItem from="1532504739446" duration="2173000" />
       <workItem from="1533194072909" duration="2421000" />
-      <workItem from="1533196546723" duration="1813000" />
+      <workItem from="1533196546723" duration="1891000" />
+      <workItem from="1533201542619" duration="2995000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="648465000" />
+    <option name="totallyTimeSpent" value="651538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,7 +466,7 @@
     <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2344992" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23648648" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3286638" />
@@ -560,13 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="67" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-end-line="21" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -775,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/reestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="62" selection-start-line="59" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -789,203 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/doc_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-811">
-          <caret line="169" column="25" lean-forward="true" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/recenzij/doc_create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="e#28#34#0" expanded="true" />
-            <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#40#46#0" expanded="true" />
-            <element signature="e#46#52#0" expanded="true" />
-            <element signature="e#52#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/recenzij.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="121" column="104" selection-start-line="121" selection-start-column="100" selection-end-line="121" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -993,20 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#142#148#1" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#275#281#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="248" column="21" selection-start-line="248" selection-start-column="21" selection-end-line="248" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1045,17 +795,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="191" column="56" lean-forward="true" selection-start-line="191" selection-start-column="56" selection-end-line="191" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
+        <state relative-caret-position="17">
           <caret line="39" column="48" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="181" column="53" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
+        <state relative-caret-position="777">
+          <caret line="960" selection-start-line="960" selection-end-line="960" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/reestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="394" column="40" selection-start-line="394" selection-start-column="40" selection-end-line="394" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/doc_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="306" column="121" selection-start-line="306" selection-start-column="121" selection-end-line="306" selection-end-column="121" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#!!top" expanded="true" />
+            <element signature="e#3#9#1" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="115" lean-forward="true" selection-start-line="16" selection-start-column="115" selection-end-line="16" selection-end-column="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/recenzij.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="574" selection-start-line="574" selection-end-line="574" />
         </state>
       </provider>
     </entry>

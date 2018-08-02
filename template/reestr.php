@@ -248,7 +248,7 @@
 							<div class='col'>
 								<div class="input-group input-group-sm mb-3">
 									<div class="input-group-prepend">
-										<span class="input-group-text">Старый Номер Договору</span>
+										<span class="input-group-text">Старий Номер Договору</span>
 									</div>
 									<input type="text" class="form-control" readonly name="old_nomber" value="{{=it.old_nomber}}" >
 								</div>
@@ -392,7 +392,7 @@
 					<div class="">
                         <div class="row mb-4">
                             <div class="col">
-                                <h2>Вибор рахунку</h2>
+                                <h2>Вибір рахунку</h2>
                                 <table class="table table-hover table-bordered table-sm">
                                     <thead>
                                     <tr class="text-center">
