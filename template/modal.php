@@ -36,8 +36,8 @@
 			</div>
             <div class="modal-footer client-add">
                 <div class="row">
-                    <div class="col"><button type="button" class="btn w-50 btn-success js-client-add" data-dismiss="modal">Додати нового кліента</button></div>
-                    <div class="col"><button type="button" class="btn w-50 btn-secondary" data-dismiss="modal">Отмена</button></div>
+                    <div class="col"><button type="button" class="btn w-100 btn-success js-client-add" data-dismiss="modal">Додати нового кліента</button></div>
+                    <div class="col"><button type="button" class="btn w-100 btn-secondary" data-dismiss="modal">Отмена</button></div>
                 </div>
             </div>
 		</div>

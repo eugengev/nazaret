@@ -1,6 +1,6 @@
 
 <script id="ReestrFormView-List" type="text/x-dot-template">
-	<div class="text-right"><a href="#" class="btn btn-success js-add-new-order"><i class="fa fa-plus"></i> Нове замовлення</a></div>
+	<div class="text-right"><a href="#" class="btn btn-success btn-sm js-add-new-order"><i class="fa fa-plus"></i> Новий договір</a></div>
 	<br>
 	<div class="table-responsive">
 		<table class="table table-hover table-bordered table-sm">
@@ -76,7 +76,7 @@
 					<div class='col'>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text">Старый Номер Договору</span>
+								<span class="input-group-text">Старbй yомер Договору</span>
 							</div>
 							<input type="text" class="form-control" name="old_nomber" >
 						</div>

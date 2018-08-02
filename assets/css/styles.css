@@ -55,6 +55,10 @@
     display: none;
 }
 
+.modal-footer.client-add {
+    display: none;
+}
+
 .modal-content.client .modal-footer {
     display: none;
 }

@@ -83,10 +83,11 @@ if (isset($_POST['status']) && $_POST['status'] == 'addfirstform' && !isset($_PO
 		'city_id' => $city,
 		'bank_id' => $bank,
 		'meta_id' => $meta,
+		'adress' => '',
 		'manager_id' => $manager,
 		'vidygodi_id' => $vidygodi,
 		'nomerygodi' => $nomerygodi,
-		'dateygodi' => $dateygodi,
+		'dateygodi' => $dateygodi != '' ? $dateygodi : '1900-01-01',
 		'status' => 'n',
 	);
 
@@ -236,7 +237,7 @@ if (isset($_POST['status']) && $_POST['status'] == 'addfirstform' && !isset($_PO
 		'manager_id' => $manager,
 		'vidygodi_id' => $vidygodi,
 		'nomerygodi' => $nomerygodi,
-		'dateygodi' => $dateygodi,
+		'dateygodi' => $dateygodi != '' ? $dateygodi : '1900-01-01',
 		'status' => 'n',
 	);
 

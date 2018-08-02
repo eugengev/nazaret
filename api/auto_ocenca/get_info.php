@@ -62,8 +62,8 @@ foreach($rowr as $record){
 	$list = array(
 		"id"         => $record['id'],
 		"nomber"     => $record['nomber'],
-		"date"       => $record['date'],
-		"datework"   => $record['datework'],
+		"date"       => datf($record['date']),
+		"datework"   => datf($record['datework']),
 		"old_nomber" => $record['prev_id'],
 		"client"     => $record['client'],
 		"firma"      => $record['firma'],
@@ -72,7 +72,7 @@ foreach($rowr as $record){
 		"meta"       => $record['meta'],
 		"manager"    => $record['manager'],
 		"nomer_act"  => $record['nomer_act'],
-		"date_act"   => $record['date_act'],
+		"date_act"   => datf($record['date_act']),
 	);
 }
 $data['reestr'] = $list;
@@ -85,14 +85,14 @@ foreach($rowm as $record){
 		"mname"    => $record['mname'],
 		"vid_id"   => $record['vid_id'],
 		"nomber"   => $record['nomber'],
-		"datework" => $record['datework'],
+		"datework" => datf($record['datework']),
 		"status"   => $record['status'],
 		"city"     => $record['city'],
 		"count"    => $record['count'],
 		"bank"     => $record['bank'],
 		"meta"     => $record['meta'],
 		"rid"      => $record['rid'],
-		"oglad_date"   => $record['oglad_date'],
+		"oglad_date"   => datf($record['oglad_date']),
 		"oglad_sutok"  => $record['oglad_sutok'],
 		"oglad_prisut" => $record['oglad_prisut'],
 	);

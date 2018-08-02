@@ -22,6 +22,14 @@ if (isset($_POST['type']) && $_POST['type'] == 'upadetedz') {
 		$id   = $_POST['id'];
 		unset( $post['id'] );
 		unset( $post['maino_id'] );
+		unset( $post['dz_json'] );
+		unset( $post['dz'] );
+		unset( $post['koefic'] );
+		unset( $post['probeg_norm'] );
+		unset( $post['probeg_fact'] );
+		unset( $post['probeg_fact_sred'] );
+		unset( $post['probeg_nedop'] );
+		unset( $post['gk'] );
 		$rowr = $db->query_update( 'ocenca_auto', $post, 'id = ' . $id );
 
 		$sql  = "SELECT * FROM `ocenca_auto` WHERE `id` = " . $_POST['id'] . " LIMIT 1";

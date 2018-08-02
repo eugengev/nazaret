@@ -2,14 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f5dfd5-a51a-4175-bcc8-1616b2906d6c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/reestr/bank_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/recenzij/doc_create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/recenzij/get_info.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/recenzij/saveinfo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dompdf/lib/fonts/log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/dompdf/lib/fonts/log.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/listreestrsavefirst.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/listreestrsavefirst.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/nomfirm.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/nomfirm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/controller/reestrController.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/controller/reestrController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/model/ocencaauto.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/model/ocencaauto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/nzr/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nzr/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/view/ocancaautoView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocancaautoView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/view/ocenkaView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/ocenkaView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/view/reestrView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/reestrView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/print/schet.php" beforeDir="false" afterPath="$PROJECT_DIR$/print/schet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/firma.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/firma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/view/spravochView.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/view/spravochView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rybolov_nazaret (1).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/modal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/ocencaauto.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocencaauto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/ocenka.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/ocenka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/reestr.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/reestr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/template.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,7 +58,26 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="reestrController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="39" column="48" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reestrView.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="181" column="53" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,41 +90,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Область</find>
-      <find>js-edit-client-cancel</find>
-      <find>onClientCancelShow</find>
-      <find>onModalSprOpen</find>
-      <find>Доставка</find>
-      <find>Доставкаjs-edit-client-form</find>
-      <find>addFormClientFromReestr</find>
-      <find>js-client-add</find>
-      <find>tinymce</find>
-      <find>CKEDITOR</find>
-      <find>teh_har</find>
-      <find>Пробіг</find>
-      <find>updOcencaDz</find>
-      <find>showOcencaAu</find>
-      <find>dz</find>
-      <find>dz_</find>
-      <find>Вибір файлі справи</find>
-      <find>js-chose-file-change</find>
-      <find>probeg_fact</find>
-      <find>koefic</find>
-      <find>GK</find>
-      <find>GK]</find>
-      <find>onCalcFull</find>
-      <find>$rez_sum_tab</find>
-      <find>Выбор счера</find>
-      <find>Выбор счераВибор рахунку</find>
-      <find>bank</find>
-      <find>js-reest-show-bank</find>
-      <find>event.c</find>
-      <find>FirmaViewBanksListReestr</find>
+      <find>name=&quot;name&quot;</find>
+      <find>name=&quot;if</find>
+      <find>onModalSprClick</find>
+      <find>Підстава</find>
+      <find>getListSpr</find>
+      <find>Дата</find>
+      <find>ReestrFormView</find>
+      <find>pidhodi</find>
+      <find>Візуалізація</find>
+      <find>звіт</find>
+      <find>sp</find>
+      <find>docum</find>
+      <find>visnov3_list</find>
+      <find>&lt;p&gt;&lt;strong&gt;</find>
+      <find>Зауваження</find>
+      <find>Рецензенти</find>
+      <find>card</find>
+      <find>Висновок</find>
+      <find>Назва звіту</find>
+      <find>Розділ 5. Зауваження</find>
+      <find>listFirma</find>
+      <find>listClient</find>
+      <find>auto</find>
+      <find>onListCityAuto</find>
+      <find>onListCity</find>
+      <find>listClientSuccess</find>
+      <find>onListClientAutolistClientSuccess</find>
+      <find>listCitySuccess</find>
+      <find>getCityList</find>
+      <find>getSprFirstList</find>
     </findStrings>
     <replaceStrings>
-      <replace>MessageFormController</replace>
-      <replace>firmaListForm</replace>
-      <replace>FirmaList</replace>
       <replace>&quot;Client</replace>
       <replace>client</replace>
       <replace>s</replace>
@@ -114,6 +149,9 @@
       <replace>&lt;/strong&gt; -</replace>
       <replace>Номер Оцінки</replace>
       <replace>призвіще Керівника</replace>
+      <replace>і</replace>
+      <replace>&lt;p style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;strong&gt;</replace>
+      <replace>Recenzij</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -122,40 +160,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/listmainorow.php" />
-        <option value="$PROJECT_DIR$/modules/controller/mainoController.js" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_1.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_3.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_2.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_4.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_5.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_6.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_7.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_8.html" />
-        <option value="$PROJECT_DIR$/template/docx/ocenca_avto_9.html" />
-        <option value="$PROJECT_DIR$/api/import_csv.php" />
-        <option value="$PROJECT_DIR$/main.php" />
-        <option value="$PROJECT_DIR$/api/search_adres.php" />
-        <option value="$PROJECT_DIR$/template/template_buh.php" />
-        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
         <option value="$PROJECT_DIR$/modules/controller/clientController.js" />
         <option value="$PROJECT_DIR$/template/client.php" />
-        <option value="$PROJECT_DIR$/template/modal.php" />
         <option value="$PROJECT_DIR$/api/get_client_list.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
-        <option value="$PROJECT_DIR$/assets/css/styles.css" />
-        <option value="$PROJECT_DIR$/modules/model/ocencaauto.js" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" />
         <option value="$PROJECT_DIR$/modules/controller/ocencaautoController.js" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" />
-        <option value="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" />
-        <option value="$PROJECT_DIR$/template/ocencaauto.php" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_10.html" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_11.html" />
         <option value="$PROJECT_DIR$/modules/view/clientView.js" />
-        <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_12.html" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_15.html" />
         <option value="$PROJECT_DIR$/template/docx/ocenca_avto_17.html" />
@@ -167,12 +178,39 @@
         <option value="$PROJECT_DIR$/api/auto_ocenca/doc_create.php" />
         <option value="$PROJECT_DIR$/print.php" />
         <option value="$PROJECT_DIR$/print/zajava.php" />
-        <option value="$PROJECT_DIR$/template/reestr.php" />
         <option value="$PROJECT_DIR$/template/firma.php" />
         <option value="$PROJECT_DIR$/api/reestr/bank_info.php" />
-        <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
-        <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
         <option value="$PROJECT_DIR$/print/schet.php" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/get_file_list.php" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/get_info.php" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/get_info_one.php" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/upd_info.php" />
+        <option value="$PROJECT_DIR$/modules/view/ocancaautoView.js" />
+        <option value="$PROJECT_DIR$/api/auto_ocenca/upd_gk.php" />
+        <option value="$PROJECT_DIR$/template/ocencaauto.php" />
+        <option value="$PROJECT_DIR$/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/template/modal.php" />
+        <option value="$PROJECT_DIR$/api/nomfirm.php" />
+        <option value="$PROJECT_DIR$/template/reestr.php" />
+        <option value="$PROJECT_DIR$/modules/controller/reestrController.js" />
+        <option value="$PROJECT_DIR$/api/listreestrsavefirst.php" />
+        <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/template/ocenka.php" />
+        <option value="$PROJECT_DIR$/template/template.php" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/modules/nzr/init.js" />
+        <option value="$PROJECT_DIR$/modules/view/ocenkaView.js" />
+        <option value="$PROJECT_DIR$/modules/model/ocencaauto.js" />
+        <option value="$PROJECT_DIR$/modules/controller/recenzijController.js" />
+        <option value="$PROJECT_DIR$/modules/view/spravochView.js" />
+        <option value="$PROJECT_DIR$/modules/view/recenzijView.js" />
+        <option value="$PROJECT_DIR$/api/recenzij/saveinfo.php" />
+        <option value="$PROJECT_DIR$/template/docx/recenzij/recenzij_1.html" />
+        <option value="$PROJECT_DIR$/template/recenzij.php" />
+        <option value="$PROJECT_DIR$/modules/model/recenzij.js" />
+        <option value="$PROJECT_DIR$/api/recenzij/get_info.php" />
+        <option value="$PROJECT_DIR$/api/recenzij/doc_create.php" />
+        <option value="$PROJECT_DIR$/modules/view/reestrView.js" />
       </list>
     </option>
   </component>
@@ -181,6 +219,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -215,7 +256,7 @@
       <path value="$PROJECT_DIR$/vendor/_PHPExcel/Classes" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1040" />
@@ -230,92 +271,100 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="reestr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="auto_ocenca" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="recenzij" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="nzr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="print" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nazaret" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="template" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="docx" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="docx" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nazaret" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nazaret" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="docx" type="462c0819:PsiDirectoryNode" />
+              <item name="recenzij" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="C:/_WORK/_develop_site/en-prive" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -417,11 +466,21 @@
       <workItem from="1528637265402" duration="35189000" />
       <workItem from="1528802145823" duration="234000" />
       <workItem from="1529305556672" duration="1202000" />
+      <workItem from="1529344984846" duration="130000" />
+      <workItem from="1529660611314" duration="5523000" />
+      <workItem from="1531423332766" duration="13000" />
+      <workItem from="1531656065034" duration="54000" />
+      <workItem from="1532030349470" duration="3791000" />
+      <workItem from="1532265881559" duration="721000" />
+      <workItem from="1532268243850" duration="27460000" />
+      <workItem from="1532504739446" duration="2173000" />
+      <workItem from="1533194072909" duration="2421000" />
+      <workItem from="1533196546723" duration="1813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604366000" />
+    <option name="totallyTimeSpent" value="648465000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,9 +492,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="2576" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2344992" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3286638" />
@@ -464,244 +524,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="42" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/reestr/delete_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/reestr/bank_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/print/schet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/search_adres.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/mysql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="191" column="39" selection-start-line="191" selection-start-column="33" selection-end-line="191" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/save_bank.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" selection-start-line="40" selection-end-line="40" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/saveuserinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/import_csv.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="52" selection-end-line="38" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/template_buh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/get_client_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="346" column="14" lean-forward="true" selection-start-line="346" selection-start-column="14" selection-end-line="346" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/modal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="38" column="70" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/clientController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="396" column="72" selection-start-line="396" selection-start-column="49" selection-end-line="396" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_analog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/load_file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1942" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="232" column="16" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_gk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/ocencaautoController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="485" column="12" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info_one.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="61" selection-start-line="61" selection-end-line="68" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/model/ocencaauto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="95" column="11" selection-start-line="95" selection-start-column="9" selection-end-line="95" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_file_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_10.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="88" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/clientView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="475" column="27" lean-forward="true" selection-start-line="475" selection-start-column="27" selection-end-line="475" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="187" column="115" selection-start-line="187" selection-start-column="115" selection-end-line="187" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_11.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="14" column="219" lean-forward="true" selection-start-line="14" selection-start-column="219" selection-end-line="14" selection-end-column="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="29" selection-start-line="29" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_12.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_13.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_14.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -744,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/doc_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="191" column="17" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/docx/ocenca_avto_19.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -765,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/print.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/print/schet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -779,31 +591,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="472" column="53" selection-start-line="472" selection-start-column="53" selection-end-line="472" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/firma.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="502" column="49" selection-start-line="502" selection-start-column="49" selection-end-line="502" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/reestr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="404" column="68" selection-start-line="404" selection-start-column="50" selection-end-line="404" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -818,6 +609,453 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_liter_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_file_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info_one.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="57" column="64" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_analog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="58" column="18" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/reestr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/listreestrsavefirst.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/nomfirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/modal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/template_buh.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/print.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/nzr/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="82" column="55" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="64" column="36" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/ocenka.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="27" column="273" lean-forward="true" selection-start-line="27" selection-start-column="273" selection-end-line="27" selection-end-column="273" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/ocenkaView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="67" column="60" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/get_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="94" column="53" selection-end-line="119" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/ocenka.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/ocencaautoController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="120" column="43" selection-start-line="120" selection-start-column="33" selection-end-line="120" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/ocencaauto.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="188" selection-start-line="188" selection-end-line="193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/ocancaautoView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="341" column="41" selection-start-line="341" selection-start-column="34" selection-end-line="341" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/upd_gk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="76" selection-start-line="76" selection-end-line="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/reestr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="62" selection-start-line="59" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/spravochView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="107" column="100" selection-start-line="107" selection-start-column="100" selection-end-line="107" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/auto_ocenca/doc_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-811">
+          <caret line="169" column="25" lean-forward="true" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/recenzij/doc_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="e#28#34#0" expanded="true" />
+            <element signature="e#34#40#0" expanded="true" />
+            <element signature="e#40#46#0" expanded="true" />
+            <element signature="e#46#52#0" expanded="true" />
+            <element signature="e#52#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/recenzij.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="121" column="104" selection-start-line="121" selection-start-column="100" selection-end-line="121" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/docx/recenzij/recenzij_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#142#148#1" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#275#281#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/ocencaauto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="248" column="21" selection-start-line="248" selection-start-column="21" selection-end-line="248" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/model/recenzij.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="89" column="29" selection-start-line="89" selection-start-column="29" selection-end-line="89" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/recenzijController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/recenzij/saveinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/recenzij/get_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2240">
+          <caret line="133" column="33" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/recenzijView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="67" selection-start-line="181" selection-start-column="67" selection-end-line="181" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/controller/reestrController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="39" column="48" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/view/reestrView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="181" column="53" selection-start-line="181" selection-start-column="53" selection-end-line="181" selection-end-column="53" />
         </state>
       </provider>
     </entry>

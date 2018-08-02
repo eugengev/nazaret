@@ -7,7 +7,10 @@
             <a class="nav-link js-ocenca-show-oglad" id="pils-2-tab" data-toggle="pill" href="#pils-2" role="tab" aria-controls="pils-2" aria-selected="false"><i class="fa fa-bars"></i> Огляд</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="pils-5-tab" data-toggle="pill" href="#pils-5" role="tab" aria-controls="pils-5" aria-selected="false"><i class="fa fa-cloud"></i> Формування справи</a>
+            <a class="nav-link" id="pils-5-tab" data-toggle="pill" href="#pils-5" role="tab" aria-controls="pils-5" aria-selected="false"><i class="fa fa-cloud"></i> Формування звіту</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link js-ocenca-show-literal" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> література</a>
         </li>
     </ul>
     <div class="tab-content">
@@ -189,6 +192,15 @@
                 </div>
             </form>
         </div>
+        <div class="tab-pane fade show" id="pils-4" role="tabpanel" aria-labelledby="pils-4-tab">
+            <div class="row">
+                <div class="col"><h2>Використовувана література</h2></div>
+            </div>
+            <div class="js-ocenca-liter-list">
+
+            </div>
+        </div>
+
         <div class="tab-pane fade show" id="pils-2" role="tabpanel" aria-labelledby="pils-2-tab">
             <div class="row">
                 <div class='col'>
@@ -228,15 +240,12 @@
             </div>
         </div>
         <div class="tab-pane fade show" id="pils-5" role="tabpanel" aria-labelledby="pils-5-tab">
-            <div><a href="/api/auto_ocenca/doc_create.php?id={{=it.ocenca.id}}" target="_blank" class="btn btn-sm btn-primary js-ocenca-create-file" type="button">Формування справи</a></div>
+            <div><a href="/api/auto_ocenca/doc_create.php?id={{=it.ocenca.id}}" target="_blank" class="btn btn-sm btn-primary js-ocenca-create-file" type="button">Формування звіту</a></div>
             <br>
             <br>
             <ul class="nav nav-pills mb-2" id="pills-ocencaauto_full_1" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link js-ocenca-show-files" id="pils-3-tab" data-toggle="pill" href="#pils-3" role="tab" aria-controls="pils-3" aria-selected="false"><i class="fa fa-cloud"></i> Вибір файлі справи</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-ocenca-show-literal" id="pils-4-tab" data-toggle="pill" href="#pils-4" role="tab" aria-controls="pils-4" aria-selected="false"><i class="fa fa-cloud"></i> література</a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -257,14 +266,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade show" id="pils-4" role="tabpanel" aria-labelledby="pils-4-tab">
-                    <div class="row">
-                        <div class="col"><h2>Використовувана література</h2></div>
-                    </div>
-                    <div class="js-ocenca-liter-list">
-
                     </div>
                 </div>
             </div>
@@ -293,7 +294,7 @@
                             <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-5" role="tab" aria-controls="pills-5" aria-selected="false"><i class="fa fa-cloud"></i> ВТВ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Вибір Розрахунку</a>
+                            <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="pills-5-tab" data-toggle="pill" href="#pills-6" role="tab" aria-controls="pills-6" aria-selected="false"><i class="fa fa-cloud"></i> Розрахунок Ліквідаційной вартості</a>
@@ -796,7 +797,7 @@
                                     <div class="col">
                                         <div class="input-group input-group-sm mb-1">
                                             <div class="input-group-prepend w-50">
-                                                <span class="input-group-text w-100">Rоефіцієнт ринку регіону</span>
+                                                <span class="input-group-text w-100">Коефіцієнт ринку регіону</span>
                                             </div>
                                             <select class="form-control" name="koefic" >
                                                 <option value="0.97">0.97</option>
@@ -810,7 +811,7 @@
                                     <div class="col">
                                         <div class="input-group input-group-sm mb-1">
                                             <div class="input-group-prepend w-50">
-                                                <span class="input-group-text w-100">Пробіг нормативний</span>
+                                                <span class="input-group-text w-100">Пробіг нормативний (середньорічний)</span>
                                             </div>
                                             <input type="number" name="probeg_norm" class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
@@ -830,7 +831,7 @@
                                     <div class="col">
                                         <div class="input-group input-group-sm mb-1">
                                             <div class="input-group-prepend w-50">
-                                                <span class="input-group-text w-100">Фактичний середньогоддовий пробіг</span>
+                                                <span class="input-group-text w-100">Фактичний середньодобовий пробіг</span>
                                             </div>
                                             <input type="number"  name="probeg_fact_sred" readonly class="form-control text-right" value="0" min="0" max="999999" step="100" >
                                         </div>
@@ -920,8 +921,39 @@
 							</div>
 						</div>
 						<div class="tab-pane fade show" id="pills-5" role="tabpanel" aria-labelledby="pills-5-tab">
+                            <h1>В разработке</h1>
 						</div>
 						<div class="tab-pane fade show" id="pills-6" role="tabpanel" aria-labelledby="pills-6-tab">
+                            <table>
+                                <tr>
+                                    <td>Сср</td>
+                                    <td>=</td>
+                                    <td>Сд</td>
+                                    <td><input type="text" class="form-control form-control-sm insd" ></td>
+                                    <td>*</td>
+                                    <td>К</td>
+                                    <td><input type="text" class="form-control form-control-sm ink" ></td>
+                                    <td>=</td>
+                                    <td><input type="text" class="form-control form-control-sm inssr" ></td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table>
+                                <tr>
+                                    <td>С</td>
+                                    <td>=</td>
+                                    <td>Сср</td>
+                                    <td><input type="text" class="form-control form-control-sm inssr" ></td>
+                                    <td>*</td>
+                                    <td>(1+/-(Гк/100)</td>
+                                    <td><input type="text" class="form-control form-control-sm ingk" ></td>
+                                    <td>+/-(Дз/100))</td>
+                                    <td><input type="text" class="form-control form-control-sm indz" ></td>
+                                    <td>=</td>
+                                    <td><input type="text" class="form-control form-control-sm ins" ></td>
+                                </tr>
+                            </table>
+                            <br>
 						</div>
 					</div>
 				</div>
@@ -1008,7 +1040,7 @@
         <div class='col-md-4'>
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
-                    <span class="input-group-text">Наіменування</span>
+                    <span class="input-group-text">Найменування</span>
                 </div>
                 <input type="text" class="form-control" name="name" value="{{=it.name}}">
             </div>
@@ -1080,7 +1112,7 @@
         </div>
     </div>
     <div class="row">
-        <div class='col'>
+        <div class='col' style="display: none;">
             <div class="input-group input-group-sm mb-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Дата Введення</span>
@@ -1140,54 +1172,6 @@
                 <div class="input-group-append">
                     <span class="input-group-text">куб.см</span>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='col'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Дата видачі свідоцтва про реєстрацію / техпаспорт</span>
-                </div>
-                <input type="text" class="form-control js-date" data-id="#datesvidet"  name="datesvidet" value="{{=it.datesvidet}}" >
-            </div>
-        </div>
-        <div class='col'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Прийнята дата виробництва КТЗ</span>
-                </div>
-                <input type="text" class="form-control js-date" data-id="#datektsproiz" name="datektsproiz"  value="{{=it.datektsproiz}}"  >
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='col'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Рік випуску</span>
-                </div>
-                <select name="year" class="form-control js-year-chose">
-                    {{ for(var prop in it.yeara) { }}
-                    <option {{? it.year == prop}} selected {{?}} value="{{=prop}}">{{=prop}}</option>
-                    {{ } }}
-                </select>
-            </div>
-        </div>
-        <div class='col'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">кількість повних років Єксплуатаціі</span>
-                </div>
-                <input type="text" class="form-control js-fullyear" name="fullyear"  value="{{=it.fullyear}}"  >
-            </div>
-        </div>
-        <div class='col'>
-            <div class="input-group input-group-sm mb-2">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Кількість місяців Єксплуапаці</span>
-                </div>
-                <input type="text" class="form-control js-fullmonth" name="fullmonth"  value="{{=it.fullmonth}}"  >
             </div>
         </div>
     </div>
@@ -1315,6 +1299,55 @@
             </div>
         </div>
     </div>
+        <div class="row">
+            <div class='col'>
+                <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Дата видачі свідоцтва</span>
+                    </div>
+                    <input type="text" class="form-control js-date" data-id="#datesvidet"  name="datesvidet" value="{{=it.datesvidet}}" >
+                </div>
+            </div>
+            <div class='col'>
+                <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Дата виготовлення КТЗ</span>
+                    </div>
+                    <input type="text" class="form-control js-date js-year-chose" data-id="#datektsproiz" name="datektsproiz"  value="{{=it.datektsproiz}}"  >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class='col'>
+                <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Рік випуску</span>
+                    </div>
+                    <select name="year" class="form-control">
+                        {{ for(var prop in it.yeara) { }}
+                        <option {{? it.year == prop}} selected {{?}} value="{{=prop}}">{{=prop}}</option>
+                        {{ } }}
+                    </select>
+                </div>
+            </div>
+            <div class='col'>
+                <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">кількість повних років Єксплуатаціі</span>
+                    </div>
+                    <input type="text" class="form-control js-fullyear" name="fullyear"  value="{{=it.fullyear}}"  >
+                </div>
+            </div>
+            <div class='col'>
+                <div class="input-group input-group-sm mb-2">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Кількість місяців Єксплуапаці</span>
+                    </div>
+                    <input type="text" class="form-control js-fullmonth" name="fullmonth"  value="{{=it.fullmonth}}"  >
+                </div>
+            </div>
+        </div>
+
     <div class="row">
         <div class='col'>
             <div class="input-groupinput-group-sm mb-2">

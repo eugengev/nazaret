@@ -11,7 +11,8 @@ $db->connect();
 $data = [];
 
 if (isset($_POST['type']) && $_POST['type'] == 'changefile') {
-	if ($_POST['change']) {
+	$change = 0;
+	if ($_POST['change'] == 'true') {
 		$change = 1;
 	} else {
 		$change = 0;

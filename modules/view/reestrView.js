@@ -179,7 +179,7 @@ nzr.view = nzr.view || {};
             this.buttonsClientAdd.on('click', _.bind(this.onClientAdd, this));
 
             // $(nzr).trigger('ReestrFormView.listFirma');
-            // $(nzr).trigger('ReestrFormView.listClient');
+            $(nzr).trigger('ReestrFormView.listClient');
             $('#loader').hide();
         },
 

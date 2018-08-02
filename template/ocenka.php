@@ -25,7 +25,7 @@
 				<td>
 					{{? value.status == 'n' }} новое заданиеы {{?}}
 				</td>
-				<td class='text-center'><a href="#" class="btn btn-success btn-sm {{? value.vid_id == '3' }} js-ocenca-auto {{?}}" data-id="{{=value.id}}" data-rid="{{=value.rid}}"><i class="fa fa-pencil-square-o"></i></a></td>
+				<td class='text-center'><a href="#" class="btn btn-success btn-sm {{? value.vid_id == '3' }} js-ocenca-auto {{?}} {{? value.vid_id == '10' }} js-recenzij {{?}}" data-id="{{=value.id}}" data-rid="{{=value.rid}}"><i class="fa fa-pencil-square-o"></i></a></td>
 			</tr>
 			{{~}}
 			</tbody>

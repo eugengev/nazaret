@@ -428,6 +428,7 @@ nzr.controller = nzr.controller || {};
                 date:       this.reestr.date,
                 datework:   this.reestr.datework,
                 old_nomber: this.reestr.old_nomber,
+                cifr_nomer: this.reestr.cifr_nomer,
                 client:     this.reestr.client,
                 firma:      this.reestr.firma,
                 city:       this.reestr.city,

@@ -348,17 +348,64 @@ nzr.view = nzr.view || {};
 
         },
 
+        getDayDelta: function (
+            incomingDate, //новая дата
+            todayDate //текущая дата
+        ){
+            var incomingDate = new Date(incomingDate[0],incomingDate[1]-1,incomingDate[2]),
+                today = new Date(todayDate[0], todayDate[1]-1, todayDate[2]), delta;
+            today.setHours(0);
+            today.setMinutes(0);
+            today.setSeconds(0);
+            today.setMilliseconds(0);
+
+            delta = incomingDate - today;
+
+            return Math.round(delta / 1000 / 60 / 60/ 24);
+        },
+
         onYearChose: function(){
             console.log('onYearChose');
-            var year = this.btYearChose.val(),
-                Xmas = new Date(),
-                tekYear = Xmas.getFullYear(),
-                razYear = tekYear - year,
-                raMonth = (razYear * 12)-7;
-            console.log(Xmas);
-            console.log(year,tekYear,razYear,raMonth);
-            this.container.find('.js-fullyear').val(razYear);
-            this.container.find('.js-fullmonth').val(raMonth);
+            var dt = this.container.find('input[data-id="#datework"]').val(),
+                db = this.container.find('input[name="datektsproiz"]').val(),
+                dba = db.split('.'),
+                dta = dt.split('.');
+
+            var fulday =this.getDayDelta( [dta[2],dta[1],dta[0]], [dba[2],dba[1],dba[0]] );
+
+            console.log(fulday);
+
+            if (fulday > 365) {
+                var  yf = Math.round(fulday/365);
+            } else {
+                var  yf = 0;
+            }
+            fulday = fulday - (yf*365);
+
+            if (fulday > 30) {
+                var  ym = Math.round(fulday/30);
+            } else {
+                var  ym = 0;
+            }
+            fulday = fulday - (ym*30);
+
+            yd = fulday/30;
+
+            console.log(yf, ym, yd, fulday);
+
+            this.container.find('.js-fullyear').val(yf);
+            this.container.find('.js-fullmonth').val(parseFloat(ym)+parseFloat(yd.toFixed(2)));
+
+
+            // var year = this.btYearChose.val(),
+            //     Xmas = new Date(),
+            //     tekYear = Xmas.getFullYear(),
+            //     razYear = tekYear - year,
+            //     raMonth = (razYear * 12)-7;
+            // console.log(Xmas);
+            // console.log(year,tekYear,razYear,raMonth);
+            // this.container.find('.js-fullyear').val(razYear);
+            // this.container.find('.js-fullmonth').val(raMonth);
         },
 
         showOcencaAnalogAuto: function(event, data) {
@@ -478,8 +525,9 @@ nzr.view = nzr.view || {};
             var koefic = parseFloat(this.container.find('.js-calc-auto-gk [name=koefic]').val()),
                 probeg_norm = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_norm]').val()),
                 fullyear = parseFloat(this.container.find('input[name=fullyear]').val()),
+                fullmonth = parseFloat(this.container.find('input[name=fullmonth]').val()),
                 probeg_fact = parseFloat(this.container.find('.js-calc-auto-gk input[name=probeg_fact]').val()),
-                probeg_fact_sred = probeg_fact/fullyear,
+                probeg_fact_sred = probeg_fact/(fullyear+(fullmonth/12)),
                 probeg_nedop = probeg_fact_sred - probeg_norm;
 
             this.container.find('.js-calc-auto-gk input[name=probeg_fact_sred]').val(probeg_fact_sred);
@@ -490,6 +538,7 @@ nzr.view = nzr.view || {};
                 'probeg_norm': probeg_norm,
                 'id': this.container.find('#formOcencaAutoOne input[name=id]').val(),
                 'fullyear': fullyear,
+                'fullmonth': fullmonth,
                 'probeg_fact': probeg_fact,
                 'probeg_fact_sred': probeg_fact_sred,
                 'probeg_nedop': probeg_nedop,

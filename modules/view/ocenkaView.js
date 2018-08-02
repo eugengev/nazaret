@@ -40,6 +40,8 @@ nzr.view = nzr.view || {};
             this.container.html(tempReestrFormFirst);
             this.btnOcencaAuto = this.container.find('.js-ocenca-auto');
             this.btnOcencaAuto.on('click', _.bind(this.onOcencaAuto, this));
+            this.btnRecenzij = this.container.find('.js-recenzij');
+            this.btnRecenzij.on('click', _.bind(this.onRecenzij, this));
         },
 
         showOcenkaInit: function(event, ocentainit) {
@@ -59,7 +61,11 @@ nzr.view = nzr.view || {};
         onOcencaAuto: function (event ) {
             $('#loader').show();
             $(nzr).trigger('OcencaAutoFormView.getOcencaView');
+        },
 
+        onRecenzij: function (event ) {
+            $('#loader').show();
+            $(nzr).trigger('RecenzijFormView.getRecenzijView');
         }
 
     });

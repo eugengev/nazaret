@@ -105,7 +105,7 @@ nzr.view = nzr.view || {};
             var id = event.currentTarget.dataset.id,
                 name = event.currentTarget.dataset.value,
                 nameImput = this.modalSpr.data('name');
-            var input = this.container.find('input[name="'+nameImput+'"]');
+            var input = this.container.find('input[name="'+nameImput+'"],textarea[name="'+nameImput+'"]');
             console.log(name, id, nameImput);
             input.val(name);
             input.data('id',id);

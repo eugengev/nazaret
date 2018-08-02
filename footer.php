@@ -62,4 +62,8 @@
 <script src="/modules/controller/ocencaautoController.js" ></script>
 <script src="/modules/view/ocancaautoView.js" ></script>
 
+<script src="/modules/model/recenzij.js" ></script>
+<script src="/modules/controller/recenzijController.js" ></script>
+<script src="/modules/view/recenzijView.js" ></script>
+
 <script src="/modules/nzr/init.js" ></script>

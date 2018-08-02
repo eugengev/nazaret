@@ -64,6 +64,7 @@ if (isset($_POST['id']) && $_POST['id'] > 0) {
 		$gk = $rowgk['y02'];
 	}
 
+	$fullyearr = $_POST['fullyear'] + ($_POST['fullmonth']/12);
 
 	$field = array(
 		"koefic"                => $_POST['koefic'],

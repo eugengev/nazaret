@@ -253,9 +253,9 @@ function OcencaAutoLiteral(data) {
 };
 
 OcencaAutoLiteral.prototype.init = function(data) {
-    this.id           = data.id;
-    this.name         = data.name;
-    this.chose       = data.chose;
+    this.id    = data.id;
+    this.name  = data.name;
+    this.chose = data.chose;
 };
 
 function OcencaAutoLiteralList(data) {

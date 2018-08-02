@@ -80,6 +80,9 @@ $(document).ready(function() {
     //  И теперь контроллеры!
     var ocencaautoController = new nzr.controller.OcencaAutoFormController(ocenkaForm, ocenkaListForm);
 
+    var recenzijView = new nzr.view.RecenzijFormView(ocenkaForm, ocenkaListForm);
+    //  И теперь контроллеры!
+    var recenzijController = new nzr.controller.RecenzijFormController(ocenkaForm, ocenkaListForm);
 
 
 });

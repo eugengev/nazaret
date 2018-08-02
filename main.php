@@ -13,8 +13,8 @@
         <div class="main-menu">
             <h5 class="sidenav-heading">Меню</h5>
             <ul id="side-main-menu" class="side-menu list-unstyled">
-                        <li><a href="#" id="listReestr"><i class="icon-home"></i> Реєстр замовлень</a></li>
-                        <li><a href="#" id="js-ocenka-list"><i class="icon-home"></i> Реєстр робіт оцінки</a></li>
+                <li><a href="#" id="listReestr"><i class="icon-home"></i> Договора</a></li>
+                <li><a href="#" id="js-ocenka-list"><i class="icon-home"></i> Реєстр робіт оцінки</a></li>
                 <li><a href="#exampledropdownDropdown1" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Налаштування</a>
                     <ul id="exampledropdownDropdown1" class="collapse list-unstyled ">
                         <li><a href="#" id="js-user-list">Користувачи</a></li>
